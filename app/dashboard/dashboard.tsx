@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useMemo } from 'react';
-import { Person, peopleData } from '@/app/data/people';
+import { peopleData } from '@/app/data/people';
 import { filterPeople } from '@/app/utils/validation';
 import './dashboard.css';
 
