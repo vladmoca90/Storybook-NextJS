@@ -1,5 +1,4 @@
 'use client';
-
 import { useMemo, useState } from 'react';
 import { countries } from '../data/countries';
 import type { PopulationFilter, SortOption } from '../types';

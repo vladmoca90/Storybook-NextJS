@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import CountriesExplorer from './countries/components/CountriesExplorer';
+import CountriesExplorer from './components/CountriesExplorer';
 
 export const metadata: Metadata = {
   title: 'Europe Atlas | Countries, Capitals & Population',
