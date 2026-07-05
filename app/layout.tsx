@@ -13,8 +13,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Europe Atlas | Countries, Capitals & Population",
-  description: "Explore every country in Europe with flags, capitals, and population estimates.",
+  title: "Mini Projects",
+  description: "A collection of responsive Next.js projects.",
 };
 
 export default function RootLayout({
