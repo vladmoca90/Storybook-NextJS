@@ -35,7 +35,7 @@ export default async function CarDetailsPage({ params }: CarDetailsPageProps) {
   return (
     <main className="detail-page">
       <section className="detail-shell">
-        <Link className="back-link" href="/">
+        <Link className="back-link" href="/cars">
           Back to results
         </Link>
 

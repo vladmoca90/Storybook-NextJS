@@ -80,7 +80,7 @@ export default function CountriesExplorer() {
               <span className="h-px w-8 bg-[#3d7458]" />
               The continent at a glance
             </div>
-            <h1 className="max-w-2xl text-balance text-4xl font-semibold leading-[1.05] tracking-[-0.045em] text-[#173a29] sm:text-6xl lg:text-7xl">
+            <h1 className="max-w-3xl text-balance text-4xl font-semibold leading-[1.05] tracking-[-0.045em] text-[#173a29] sm:text-6xl lg:text-7xl">
               Every country in Europe, one clear view.
             </h1>
             <p className="mt-6 max-w-xl text-base leading-7 text-[#59665d] sm:text-lg">
