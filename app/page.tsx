@@ -1,11 +1,11 @@
-import type { Metadata } from 'next';
-import CountriesExplorer from './countries/components/CountriesExplorer';
+import type { Metadata } from "next";
+import QuickList from "./quick-list/QuickList";
 
 export const metadata: Metadata = {
-  title: 'Europe Atlas | Countries, Capitals & Population',
-  description: 'Explore every country in Europe with flags, capitals, and population estimates.',
+  title: "Quick List",
+  description: "A simple, friendly list for everything on your mind.",
 };
 
-export default function CountriesPage() {
-  return <CountriesExplorer />;
+export default function HomePage() {
+  return <QuickList />;
 }
