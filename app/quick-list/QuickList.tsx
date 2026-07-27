@@ -1,6 +1,6 @@
 "use client";
 import { useId, useState } from "react";
-import type { FormEvent } from "react";
+import type { SubmitEvent } from "react";
 import type { ListItem } from "../data/quick-list";
 import styles from "./quick-list.module.css";
 
@@ -9,7 +9,7 @@ export default function QuickList() {
   const [items, setItems] = useState<ListItem[]>([]);
   const inputId = useId();
 
-  function addItem(event: FormEvent<HTMLFormElement>) {
+  function addItem(event: SubmitEvent<HTMLFormElement>) {
     event.preventDefault();
 
     const label = value.trim();
@@ -158,7 +158,9 @@ export default function QuickList() {
                   <li
                     key={item.id}
                     className={
-                      item.completed ? styles.completed : undefined
+                      item.completed
+                        ? styles.completed
+                        : undefined
                     }
                   >
                     <button
