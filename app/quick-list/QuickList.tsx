@@ -1,5 +1,4 @@
 "use client";
-
 import { FormEvent, useId, useState } from "react";
 import styles from "./quick-list.module.css";
 
