@@ -1,14 +1,14 @@
-import type { FormEventHandler } from "react";
+import type { SubmitEventHandler } from "react";
 import styles from "./quick-list.module.css";
 
 type QuickListFormProps = {
   inputId: string;
   value: string;
   onValueChange: (value: string) => void;
-  onSubmit: FormEventHandler<HTMLFormElement>;
+  onSubmit: SubmitEventHandler<HTMLFormElement>;
 };
 
-export default function QuickListFormComponent({
+export default function QuickListForm({
   inputId,
   value,
   onValueChange,
