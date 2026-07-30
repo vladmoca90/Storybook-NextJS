@@ -1,4 +1,4 @@
-import type { ListItem } from "../data/quick-list";
+import type { ListItem } from "../../data/quick-list";
 import styles from "./quick-list.module.css";
 
 type QuickListContentProps = {
