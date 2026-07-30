@@ -8,7 +8,7 @@ type QuickListFormProps = {
   onSubmit: FormEventHandler<HTMLFormElement>;
 };
 
-export default function QuickListForm({
+export default function QuickListFormComponent({
   inputId,
   value,
   onValueChange,

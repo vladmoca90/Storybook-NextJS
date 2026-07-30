@@ -8,7 +8,7 @@ type QuickListContentProps = {
   onClearCompleted: () => void;
 };
 
-export default function QuickListContent({
+export default function QuickListContentComponent({
   items,
   onToggleItem,
   onDeleteItem,

@@ -2,8 +2,8 @@
 import { useId, useState } from "react";
 import type { SubmitEvent } from "react";
 import type { ListItem } from "../data/quick-list";
-import QuickListContent from "./components/QuickListContent";
-import QuickListForm from "./components/QuickListForm";
+import QuickListContent from "./components/QuickListContentComponent";
+import QuickListForm from "./components/QuickListFormComponent";
 import styles from "./quick-list.module.css";
 
 export default function QuickList() {
