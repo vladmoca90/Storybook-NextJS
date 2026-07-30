@@ -1,5 +1,4 @@
 'use client';
-
 import { useMemo, useState } from 'react';
 import { peopleData } from '@/app/data/people';
 import { filterPeople } from '@/app/utils/validation';
