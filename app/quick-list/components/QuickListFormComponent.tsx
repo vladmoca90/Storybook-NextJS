@@ -1,5 +1,5 @@
 import type { SubmitEventHandler } from "react";
-import styles from "./quick-list.module.css";
+import styles from "../quick-list.module.css";
 
 type QuickListFormProps = {
   inputId: string;
