@@ -1,0 +1,19 @@
+.wrapper { width: 100%; }
+.legend { display: flex; justify-content: center; gap: 28px; margin: 8px 0 12px; color: #35403a; font-size: 15px; }
+.legendItem { display: flex; align-items: center; gap: 9px; }
+.legendItem span { width: 13px; height: 13px; border-radius: 3px; box-shadow: inset 0 0 0 1px rgb(0 0 0 / 8%); }
+.chart { position: relative; width: 100%; min-height: 430px; }
+.chart svg { display: block; width: 100%; height: auto; overflow: visible; }
+.grid line { stroke: #d9dedb; stroke-width: 1; }
+.grid path { display: none; }
+.xAxis, .yAxis { color: #66716b; font-family: var(--font-geist-sans), Arial, sans-serif; font-size: 13px; }
+.yAxis { color: #27322c; font-size: 14px; font-weight: 550; }
+.row rect { cursor: pointer; outline: none; transition: filter 160ms ease, opacity 160ms ease; }
+.row rect:hover, .row rect:focus { filter: brightness(0.93); stroke: #27322c; stroke-width: 1.5; }
+.tooltip { position: absolute; z-index: 2; min-width: 150px; padding: 10px 12px; transform: translate(12px, -50%); border: 1px solid rgb(255 255 255 / 18%); border-radius: 8px; background: #16201b; box-shadow: 0 8px 24px rgb(18 29 23 / 22%); color: #fff; font-size: 13px; line-height: 1.45; pointer-events: none; }
+.tooltip span { display: block; margin-bottom: 2px; color: #c9d2cd; }
+.tooltip strong { font-size: 17px; }
+@media (max-width: 639px) {
+  .legend { gap: 16px; font-size: 13px; }
+  .yAxis { font-size: 11px; }
+}
