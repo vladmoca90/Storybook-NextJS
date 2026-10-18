@@ -140,3 +140,5 @@ export const airlines = [
     color: "#d3353d",
   },
 ];
+
+export type Airline = (typeof airlines)[number];
