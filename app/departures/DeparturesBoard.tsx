@@ -1,5 +1,4 @@
 "use client";
-
 import { Fragment, useState } from "react";
 import {
   ArrowUpRight,
@@ -19,6 +18,7 @@ export default function DeparturesBoard() {
   const [status, setStatus] = useState("All statuses");
   const [expanded, setExpanded] = useState<string | null>(null);
   const [reverse, setReverse] = useState(false);
+
   const filtered = flights.filter(
     (f) =>
       `${f.airline} ${f.country} ${f.destination} ${f.airport} ${f.flight}`
@@ -27,12 +27,14 @@ export default function DeparturesBoard() {
       (terminal === "All terminals" || f.terminal === terminal) &&
       (status === "All statuses" || f.status === status),
   );
+
   const visible = reverse ? [...filtered].reverse() : filtered;
   function reset() {
     setQuery("");
     setTerminal("All terminals");
     setStatus("All statuses");
   }
+
   return (
     <div
       className={`min-h-screen bg-[#f7f7fa] text-[#282434] [font-family:Arial,_Helvetica,_sans-serif] text-[14px] w-full min-w-0 ${styles.page}`}
