@@ -1,4 +1,4 @@
-import MedalChart from "./MedalChart";
+import MedalChart from "./components/MedalChart";
 import styles from "../page.module.css";
 
 export default function OlympicsPage() {

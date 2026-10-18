@@ -2,12 +2,9 @@
 
 import * as d3 from "d3";
 import { useEffect, useRef, useState } from "react";
-import styles from "./MedalChart.module.css";
+import { medalTypes, type MedalType, type CountryMedals } from "../medal-types";
+import styles from "../MedalChart.module.css";
 
-const medalTypes = ["Gold", "Silver", "Bronze"] as const;
-type MedalType = (typeof medalTypes)[number];
-
-type CountryMedals = { country: string } & Record<MedalType, number>;
 type Tooltip = {
   country: string;
   medal: MedalType;
@@ -16,21 +13,12 @@ type Tooltip = {
   y: number;
 };
 
-const colors: Record<MedalType, string> = {
-  Gold: "#fcc723",
-  Silver: "#cfcfcf",
-  Bronze: "#e38120",
-};
+interface MedalPlotProps {
+  data: CountryMedals[];
+  colors: Record<MedalType, string>;
+}
 
-const data: CountryMedals[] = [
-  { country: "Germany", Gold: 17, Silver: 10, Bronze: 15 },
-  { country: "Russian Federation", Gold: 19, Silver: 17, Bronze: 19 },
-  { country: "PR China", Gold: 26, Silver: 18, Bronze: 26 },
-  { country: "United Kingdom", Gold: 27, Silver: 23, Bronze: 17 },
-  { country: "United States", Gold: 46, Silver: 37, Bronze: 38 },
-];
-
-export default function MedalChart() {
+export default function MedalPlot({ data, colors }: MedalPlotProps) {
   const containerRef = useRef<HTMLDivElement>(null);
   const svgRef = useRef<SVGSVGElement>(null);
   const [tooltip, setTooltip] = useState<Tooltip | null>(null);
@@ -114,32 +102,22 @@ export default function MedalChart() {
     const resizeObserver = new ResizeObserver(draw);
     resizeObserver.observe(container);
     return () => resizeObserver.disconnect();
-  }, []);
+  }, [data, colors]);
 
   return (
-    <div className={styles.wrapper}>
-      <div className={styles.legend} aria-label="Medal types">
-        {medalTypes.map((medal) => (
-          <div key={medal} className={styles.legendItem}>
-            <span style={{ backgroundColor: colors[medal] }} />
-            {medal}
-          </div>
-        ))}
-      </div>
-      <div ref={containerRef} className={styles.chart}>
-        <svg ref={svgRef} aria-labelledby="chart-title chart-description">
-          <desc id="chart-description">
-            Grouped horizontal bar chart comparing gold, silver and bronze medal counts for Germany,
-            the Russian Federation, China, the United Kingdom and the United States.
-          </desc>
-        </svg>
-        {tooltip && (
-          <div className={styles.tooltip} role="status" style={{ left: tooltip.x, top: tooltip.y }}>
-            <span>{tooltip.country}</span>
-            <strong>{tooltip.value}</strong> {tooltip.medal.toLowerCase()} medals
-          </div>
-        )}
-      </div>
+    <div ref={containerRef} className={styles.chart}>
+      <svg ref={svgRef} aria-labelledby="chart-title chart-description">
+        <desc id="chart-description">
+          Grouped horizontal bar chart comparing gold, silver and bronze medal counts for Germany,
+          the Russian Federation, China, the United Kingdom and the United States.
+        </desc>
+      </svg>
+      {tooltip && (
+        <div className={styles.tooltip} role="status" style={{ left: tooltip.x, top: tooltip.y }}>
+          <span>{tooltip.country}</span>
+          <strong>{tooltip.value}</strong> {tooltip.medal.toLowerCase()} medals
+        </div>
+      )}
     </div>
   );
 }
