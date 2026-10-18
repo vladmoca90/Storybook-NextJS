@@ -1,20 +1,158 @@
 "use client";
 
 import { Fragment, useState } from "react";
-import { ArrowUpRight, ChevronDown, Clock3, Globe2, Plane, Search, SlidersHorizontal } from "lucide-react";
+import {
+  ArrowUpRight,
+  ChevronDown,
+  Clock3,
+  Globe2,
+  Plane,
+  Search,
+  SlidersHorizontal,
+} from "lucide-react";
 import styles from "./departures.module.css";
 
 const flights = [
-  { airline: "British Airways", country: "United Kingdom", flag: "🇬🇧", code: "BA", flight: "BA 117", time: "08:20", destination: "New York", airport: "JFK", terminal: "5", gate: "B34", status: "Boarding", color: "#233569" },
-  { airline: "Lufthansa", country: "Germany", flag: "🇩🇪", code: "LH", flight: "LH 901", time: "08:30", destination: "Frankfurt", airport: "FRA", terminal: "2", gate: "A16", status: "Gate open", color: "#182755" },
-  { airline: "Air France", country: "France", flag: "🇫🇷", code: "AF", flight: "AF 1681", time: "08:45", destination: "Paris", airport: "CDG", terminal: "4", gate: "12", status: "Boarding", color: "#263b7d" },
-  { airline: "Emirates", country: "United Arab Emirates", flag: "🇦🇪", code: "EK", flight: "EK 008", time: "09:10", destination: "Dubai", airport: "DXB", terminal: "3", gate: "23", status: "On time", color: "#bb253b" },
-  { airline: "Qatar Airways", country: "Qatar", flag: "🇶🇦", code: "QR", flight: "QR 006", time: "09:25", destination: "Doha", airport: "DOH", terminal: "4", gate: "—", status: "Delayed", color: "#70234b" },
-  { airline: "KLM", country: "Netherlands", flag: "🇳🇱", code: "KL", flight: "KL 1002", time: "09:40", destination: "Amsterdam", airport: "AMS", terminal: "4", gate: "17", status: "On time", color: "#087cb4" },
-  { airline: "Singapore Airlines", country: "Singapore", flag: "🇸🇬", code: "SQ", flight: "SQ 305", time: "10:05", destination: "Singapore", airport: "SIN", terminal: "2", gate: "—", status: "On time", color: "#b48228" },
-  { airline: "American Airlines", country: "United States", flag: "🇺🇸", code: "AA", flight: "AA 051", time: "10:20", destination: "Dallas", airport: "DFW", terminal: "3", gate: "—", status: "On time", color: "#28618a" },
-  { airline: "Turkish Airlines", country: "Türkiye", flag: "🇹🇷", code: "TK", flight: "TK 1980", time: "10:45", destination: "Istanbul", airport: "IST", terminal: "2", gate: "—", status: "On time", color: "#c92e3a" },
-  { airline: "Air Canada", country: "Canada", flag: "🇨🇦", code: "AC", flight: "AC 855", time: "11:10", destination: "Vancouver", airport: "YVR", terminal: "2", gate: "—", status: "On time", color: "#d3353d" },
+  {
+    airline: "British Airways",
+    country: "United Kingdom",
+    flag: "🇬🇧",
+    code: "BA",
+    flight: "BA 117",
+    time: "08:20",
+    destination: "New York",
+    airport: "JFK",
+    terminal: "5",
+    gate: "B34",
+    status: "Boarding",
+    color: "#233569",
+  },
+  {
+    airline: "Lufthansa",
+    country: "Germany",
+    flag: "🇩🇪",
+    code: "LH",
+    flight: "LH 901",
+    time: "08:30",
+    destination: "Frankfurt",
+    airport: "FRA",
+    terminal: "2",
+    gate: "A16",
+    status: "Gate open",
+    color: "#182755",
+  },
+  {
+    airline: "Air France",
+    country: "France",
+    flag: "🇫🇷",
+    code: "AF",
+    flight: "AF 1681",
+    time: "08:45",
+    destination: "Paris",
+    airport: "CDG",
+    terminal: "4",
+    gate: "12",
+    status: "Boarding",
+    color: "#263b7d",
+  },
+  {
+    airline: "Emirates",
+    country: "United Arab Emirates",
+    flag: "🇦🇪",
+    code: "EK",
+    flight: "EK 008",
+    time: "09:10",
+    destination: "Dubai",
+    airport: "DXB",
+    terminal: "3",
+    gate: "23",
+    status: "On time",
+    color: "#bb253b",
+  },
+  {
+    airline: "Qatar Airways",
+    country: "Qatar",
+    flag: "🇶🇦",
+    code: "QR",
+    flight: "QR 006",
+    time: "09:25",
+    destination: "Doha",
+    airport: "DOH",
+    terminal: "4",
+    gate: "—",
+    status: "Delayed",
+    color: "#70234b",
+  },
+  {
+    airline: "KLM",
+    country: "Netherlands",
+    flag: "🇳🇱",
+    code: "KL",
+    flight: "KL 1002",
+    time: "09:40",
+    destination: "Amsterdam",
+    airport: "AMS",
+    terminal: "4",
+    gate: "17",
+    status: "On time",
+    color: "#087cb4",
+  },
+  {
+    airline: "Singapore Airlines",
+    country: "Singapore",
+    flag: "🇸🇬",
+    code: "SQ",
+    flight: "SQ 305",
+    time: "10:05",
+    destination: "Singapore",
+    airport: "SIN",
+    terminal: "2",
+    gate: "—",
+    status: "On time",
+    color: "#b48228",
+  },
+  {
+    airline: "American Airlines",
+    country: "United States",
+    flag: "🇺🇸",
+    code: "AA",
+    flight: "AA 051",
+    time: "10:20",
+    destination: "Dallas",
+    airport: "DFW",
+    terminal: "3",
+    gate: "—",
+    status: "On time",
+    color: "#28618a",
+  },
+  {
+    airline: "Turkish Airlines",
+    country: "Türkiye",
+    flag: "🇹🇷",
+    code: "TK",
+    flight: "TK 1980",
+    time: "10:45",
+    destination: "Istanbul",
+    airport: "IST",
+    terminal: "2",
+    gate: "—",
+    status: "On time",
+    color: "#c92e3a",
+  },
+  {
+    airline: "Air Canada",
+    country: "Canada",
+    flag: "🇨🇦",
+    code: "AC",
+    flight: "AC 855",
+    time: "11:10",
+    destination: "Vancouver",
+    airport: "YVR",
+    terminal: "2",
+    gate: "—",
+    status: "On time",
+    color: "#d3353d",
+  },
 ];
 
 export default function DeparturesBoard() {
@@ -23,24 +161,359 @@ export default function DeparturesBoard() {
   const [status, setStatus] = useState("All statuses");
   const [expanded, setExpanded] = useState<string | null>(null);
   const [reverse, setReverse] = useState(false);
-  const filtered = flights.filter(f => `${f.airline} ${f.country} ${f.destination} ${f.airport} ${f.flight}`.toLowerCase().includes(query.trim().toLowerCase()) && (terminal === "All terminals" || f.terminal === terminal) && (status === "All statuses" || f.status === status));
+  const filtered = flights.filter(
+    (f) =>
+      `${f.airline} ${f.country} ${f.destination} ${f.airport} ${f.flight}`
+        .toLowerCase()
+        .includes(query.trim().toLowerCase()) &&
+      (terminal === "All terminals" || f.terminal === terminal) &&
+      (status === "All statuses" || f.status === status),
+  );
   const visible = reverse ? [...filtered].reverse() : filtered;
-  function reset() { setQuery(""); setTerminal("All terminals"); setStatus("All statuses"); }
-  return <div className={`min-h-screen bg-[#f7f7fa] text-[#282434] [font-family:Arial,_Helvetica,_sans-serif] text-[14px] w-full min-w-0 ${styles.page}`}>
-    <header className={"h-[84px] bg-white [border-bottom:1px_solid_#e8e5ed] flex items-center justify-between [padding:0_max(5%,_calc((100vw_-_1320px)_/_2))] [@media(max-width:800px)]:h-[70px] [@media(max-width:800px)]:[padding:0_20px]"}><a href="/departures" className={`flex items-center text-[28px] font-extrabold tracking-[-1px] text-[#44216c] no-underline ${styles.brand}`}><span className={`bg-[#5b3284] text-white p-[9px] rounded-[11px] mr-[10px] flex ${styles.brandIcon}`}><Plane size={22}/></span>london<span>air</span><small>LHR</small></a><div className={`flex items-center gap-[10px] text-[12px] text-[#736d7d] [@media(max-width:800px)]:text-[10px] ${styles.headerRight}`}><Globe2 size={16}/> London Heathrow <span className={"[margin:0_13px] text-[#ddd]"}>|</span><span>Flight information</span></div></header>
-    <main className={"max-w-[1320px] m-auto [padding:28px_28px_0] w-full min-w-0 min-[1500px]:pt-[35px] [@media(max-width:800px)]:[padding:23px_18px_0]"}>
-      <div className={`text-[11px] text-[#827b8b] flex gap-[14px] ${styles.breadcrumb}`}>London Heathrow <span>/</span> Flight information <span>/</span> Departures</div>
-      <section className={`flex items-center justify-between [padding:43px_0_34px] [@media(max-width:800px)]:[padding:32px_0] ${styles.hero}`}><div><div className={"flex gap-[9px] items-center tracking-[1.8px] text-[10px] font-bold text-[#76558e]"}><Plane size={17}/> YOUR NEXT CHAPTER STARTS HERE</div><h1>Departures<span>↗</span></h1><p>From London to the world. Find your flight and get ready to go.</p></div><div className={`[border-left:1px_solid_#dcd5e4] [padding:8px_0_8px_28px] flex flex-col gap-[9px] [@media(max-width:800px)]:hidden ${styles.airportCard}`}><span>LONDON HEATHROW</span><strong>LHR <ArrowUpRight size={32}/></strong><small>All times shown in London local time</small></div></section>
-      <div className={`flex items-center gap-[26px] [margin:9px_0_20px] text-[12px] text-[#837a8c] [@media(max-width:800px)]:gap-3 ${styles.overview}`}><span><i/> Departure board</span><span>10 airlines <b>·</b> 10 destinations <b>·</b> 4 terminals</span><span className={"ml-auto [border:1px_solid_#ded5e7] bg-[#f0eaf5] text-[#77558d] [padding:5px_9px] rounded-[5px] text-[10px]"}>Sample schedule</span></div>
-      <section className={`bg-white [border:1px_solid_#e6e1eb] rounded-3 overflow-hidden [box-shadow:0_5px_20px_#30203d04] min-w-0 ${styles.board}`} aria-label="Flight departures">
-        <div className={"flex gap-3 p-6 [border-bottom:1px_solid_#eeeaf2] [@media(max-width:800px)]:flex-wrap [@media(max-width:800px)]:p-4 [@media(max-width:800px)]:gap-[10px]"}><label className={`flex items-center gap-3 [border:1px_solid_#ddd7e4] rounded-[6px] [padding:0_13px] flex-1 text-[#8b7d98] min-w-[180px] [@media(max-width:800px)]:basis-full ${styles.search}`}><Search size={20}/><input aria-label="Search flights" placeholder="Search airline, destination or flight number" value={query} onChange={e => setQuery(e.target.value)}/>{query && <button aria-label="Clear search" onClick={() => setQuery("")}>×</button>}</label><label className={`flex items-center gap-[6px] [border:1px_solid_#ddd7e4] rounded-[6px] [padding:0_12px] text-[#71627d] [@media(max-width:800px)]:flex-1 ${styles.select}`}><SlidersHorizontal size={16}/><select aria-label="Filter terminal" value={terminal} onChange={e => setTerminal(e.target.value)}>{["All terminals", "2", "3", "4", "5"].map(t => <option key={t} value={t}>{t === "All terminals" ? t : `Terminal ${t}`}</option>)}</select></label><label className={`flex items-center gap-[6px] [border:1px_solid_#ddd7e4] rounded-[6px] [padding:0_12px] text-[#71627d] [@media(max-width:800px)]:flex-1 ${styles.select}`}><select aria-label="Filter status" value={status} onChange={e => setStatus(e.target.value)}>{["All statuses", "Boarding", "Gate open", "On time", "Delayed"].map(s => <option key={s}>{s}</option>)}</select></label></div>
-        <div className={`flex justify-between items-center [padding:23px_25px] text-[#918699] text-[10px] [@media(max-width:800px)]:[padding:20px_16px] ${styles.tableTop}`}><div><strong>Sunday, 18 October 2026</strong><span>Morning departures</span></div><span aria-live="polite">Showing {visible.length} of 10 flights</span></div>
-        <div className={"overflow-x-auto max-w-full"}><table><thead><tr><th aria-sort={reverse ? "descending" : "ascending"}><button onClick={() => setReverse(!reverse)}>Departure {reverse ? "↑" : "↓"}</button></th><th>Destination</th><th>Airline</th><th>Country of origin</th><th>Terminal</th><th>Status</th><th><span className={styles.srOnly}>Details</span></th></tr></thead><tbody>{visible.map(f => <Fragment key={f.flight}><tr><td><strong className={styles.time}>{f.time}</strong>{f.status === "Delayed" && <small className={styles.delayedTime}>Est. 10:00</small>}</td><td><strong>{f.destination}</strong><small>{f.airport}</small></td><td><div className={"flex items-center gap-[11px]"}><span className={"w-[33px] h-[33px] grid place-items-center italic font-extrabold text-[12px] rounded-full"} style={{color:f.color, background:`${f.color}0d`}}>{f.code}</span><div><strong>{f.airline}</strong><small>{f.flight}</small></div></div></td><td><span className={"flex items-center gap-[9px] text-[11px] text-[#74687f]"}><span role="img" aria-label={`${f.country} flag`} className={"[font-family:\"Segoe_UI_Emoji\",_\"Apple_Color_Emoji\",_sans-serif] text-[21px]"}>{f.flag}</span>{f.country}</span></td><td><span className={"inline-block [border:1px_solid_#e8e2ef] bg-[#faf8fc] rounded-[5px] [padding:5px_8px] text-[11px] text-[#736280]"}>T{f.terminal}</span></td><td><span className={`inline-flex items-center gap-[6px] rounded-[4px] px-[9px] py-[6px] text-[10px] font-semibold ${styles.status} ${f.status === "Boarding" ? "bg-[#eee5f9] text-[#71439c]" : f.status === "Delayed" ? "bg-[#fff4df] text-[#ad771e]" : f.status === "Gate open" ? "bg-[#eaf1fc] text-[#4974ac]" : "bg-[#edf6f1] text-[#4c8a69]"}`}><i/>{f.status}</span></td><td><button className={`flex bg-transparent border-0 text-[#9a8aa7] cursor-pointer p-[7px] rounded-[5px] ${styles.expand}`} aria-label={`Details for ${f.flight}`} aria-expanded={expanded === f.flight} onClick={() => setExpanded(expanded === f.flight ? null : f.flight)}><ChevronDown size={18} style={{transform: expanded === f.flight ? "rotate(180deg)" : undefined}}/></button></td></tr>{expanded === f.flight && <tr className={styles.detail}><td colSpan={7}><strong>{f.flight} · London Heathrow → {f.destination} ({f.airport})</strong><p>Terminal {f.terminal} · {f.gate === "—" ? "Gate to be announced" : `Gate ${f.gate}`} · {f.status === "Delayed" ? "Estimated departure 10:00" : `Scheduled departure ${f.time}`} · Illustrative flight details</p></td></tr>}</Fragment>)}</tbody></table></div>
-        {!visible.length && <div className={`p-[55px] text-center text-[#8b789b] ${styles.empty}`}><Search size={28}/><h2>No flights found</h2><p>Try a different airline, destination or filter.</p><button onClick={reset}>Clear filters</button></div>}
-        <div className={`flex items-center gap-2 [padding:17px_25px] text-[10px] text-[#968b9f] [@media(max-width:800px)]:[padding:17px_16px] ${styles.boardFooter}`}><Clock3 size={15}/><span>Times are local to London (BST, UTC+1).</span><span>18 OCT 2026</span></div>
-      </section>
-      <aside className={`flex gap-3 [margin:24px_0_36px] text-[#8c8197] text-[11px] [line-height:1.8] ${styles.note}`}><span>i</span><p><strong>A little heads-up</strong>This is a demonstration using sample flight times, terminals and statuses. For travel, check your airline or the <a href="https://www.heathrow.com/departures" target="_blank" rel="noreferrer">official Heathrow departures board ↗</a>.</p></aside>
-      <footer className={`flex justify-between [border-top:1px_solid_#e6e0ed] [padding:22px_0_28px] text-[#92859c] text-[10px] [@media(max-width:800px)]:gap-5 ${styles.footer}`}><span>london<strong>air</strong> <span> / A departures board concept</span></span><span>10 airlines. A world of possibilities.</span></footer>
-    </main>
-  </div>;
+  function reset() {
+    setQuery("");
+    setTerminal("All terminals");
+    setStatus("All statuses");
+  }
+  return (
+    <div
+      className={`min-h-screen bg-[#f7f7fa] text-[#282434] [font-family:Arial,_Helvetica,_sans-serif] text-[14px] w-full min-w-0 ${styles.page}`}
+    >
+      <header
+        className={
+          "h-[84px] bg-white [border-bottom:1px_solid_#e8e5ed] flex items-center justify-between [padding:0_max(5%,_calc((100vw_-_1320px)_/_2))] [@media(max-width:800px)]:h-[70px] [@media(max-width:800px)]:[padding:0_20px]"
+        }
+      >
+        <a
+          href="/departures"
+          className={`flex items-center text-[28px] font-extrabold tracking-[-1px] text-[#44216c] no-underline ${styles.brand}`}
+        >
+          <span
+            className={`bg-[#5b3284] text-white p-[9px] rounded-[11px] mr-[10px] flex ${styles.brandIcon}`}
+          >
+            <Plane size={22} />
+          </span>
+          london<span>air</span>
+          <small>LHR</small>
+        </a>
+        <div
+          className={`flex items-center gap-[10px] text-[12px] text-[#736d7d] [@media(max-width:800px)]:text-[10px] ${styles.headerRight}`}
+        >
+          <Globe2 size={16} /> London Heathrow{" "}
+          <span className={"[margin:0_13px] text-[#ddd]"}>|</span>
+          <span>Flight information</span>
+        </div>
+      </header>
+      <main
+        className={
+          "max-w-[1320px] m-auto [padding:28px_28px_0] w-full min-w-0 min-[1500px]:pt-[35px] [@media(max-width:800px)]:[padding:23px_18px_0]"
+        }
+      >
+        <div
+          className={`text-[11px] text-[#827b8b] flex gap-[14px] ${styles.breadcrumb}`}
+        >
+          London Heathrow <span>/</span> Flight information <span>/</span>{" "}
+          Departures
+        </div>
+        <section
+          className={`flex items-center justify-between [padding:43px_0_34px] [@media(max-width:800px)]:[padding:32px_0] ${styles.hero}`}
+        >
+          <div>
+            <div
+              className={
+                "flex gap-[9px] items-center tracking-[1.8px] text-[10px] font-bold text-[#76558e]"
+              }
+            >
+              <Plane size={17} /> YOUR NEXT CHAPTER STARTS HERE
+            </div>
+            <h1>
+              Departures<span>↗</span>
+            </h1>
+            <p>
+              From London to the world. Find your flight and get ready to go.
+            </p>
+          </div>
+          <div
+            className={`[border-left:1px_solid_#dcd5e4] [padding:8px_0_8px_28px] flex flex-col gap-[9px] [@media(max-width:800px)]:hidden ${styles.airportCard}`}
+          >
+            <span>LONDON HEATHROW</span>
+            <strong>
+              LHR <ArrowUpRight size={32} />
+            </strong>
+            <small>All times shown in London local time</small>
+          </div>
+        </section>
+        <div
+          className={`flex items-center gap-[26px] [margin:9px_0_20px] text-[12px] text-[#837a8c] [@media(max-width:800px)]:gap-3 ${styles.overview}`}
+        >
+          <span>
+            <i /> Departure board
+          </span>
+          <span>
+            10 airlines <b>·</b> 10 destinations <b>·</b> 4 terminals
+          </span>
+          <span
+            className={
+              "ml-auto [border:1px_solid_#ded5e7] bg-[#f0eaf5] text-[#77558d] [padding:5px_9px] rounded-[5px] text-[10px]"
+            }
+          >
+            Sample schedule
+          </span>
+        </div>
+        <section
+          className={`bg-white [border:1px_solid_#e6e1eb] rounded-3 overflow-hidden [box-shadow:0_5px_20px_#30203d04] min-w-0 ${styles.board}`}
+          aria-label="Flight departures"
+        >
+          <div
+            className={
+              "flex gap-3 p-6 [border-bottom:1px_solid_#eeeaf2] [@media(max-width:800px)]:flex-wrap [@media(max-width:800px)]:p-4 [@media(max-width:800px)]:gap-[10px]"
+            }
+          >
+            <label
+              className={`flex items-center gap-3 [border:1px_solid_#ddd7e4] rounded-[6px] [padding:0_13px] flex-1 text-[#8b7d98] min-w-[180px] [@media(max-width:800px)]:basis-full ${styles.search}`}
+            >
+              <Search size={20} />
+              <input
+                aria-label="Search flights"
+                placeholder="Search airline, destination or flight number"
+                value={query}
+                onChange={(e) => setQuery(e.target.value)}
+              />
+              {query && (
+                <button aria-label="Clear search" onClick={() => setQuery("")}>
+                  ×
+                </button>
+              )}
+            </label>
+            <label
+              className={`flex items-center gap-[6px] [border:1px_solid_#ddd7e4] rounded-[6px] [padding:0_12px] text-[#71627d] [@media(max-width:800px)]:flex-1 ${styles.select}`}
+            >
+              <SlidersHorizontal size={16} />
+              <select
+                aria-label="Filter terminal"
+                value={terminal}
+                onChange={(e) => setTerminal(e.target.value)}
+              >
+                {["All terminals", "2", "3", "4", "5"].map((t) => (
+                  <option key={t} value={t}>
+                    {t === "All terminals" ? t : `Terminal ${t}`}
+                  </option>
+                ))}
+              </select>
+            </label>
+            <label
+              className={`flex items-center gap-[6px] [border:1px_solid_#ddd7e4] rounded-[6px] [padding:0_12px] text-[#71627d] [@media(max-width:800px)]:flex-1 ${styles.select}`}
+            >
+              <select
+                aria-label="Filter status"
+                value={status}
+                onChange={(e) => setStatus(e.target.value)}
+              >
+                {[
+                  "All statuses",
+                  "Boarding",
+                  "Gate open",
+                  "On time",
+                  "Delayed",
+                ].map((s) => (
+                  <option key={s}>{s}</option>
+                ))}
+              </select>
+            </label>
+          </div>
+          <div
+            className={`flex justify-between items-center [padding:23px_25px] text-[#918699] text-[10px] [@media(max-width:800px)]:[padding:20px_16px] ${styles.tableTop}`}
+          >
+            <div>
+              <strong>Sunday, 18 October 2026</strong>
+              <span>Morning departures</span>
+            </div>
+            <span aria-live="polite">
+              Showing {visible.length} of 10 flights
+            </span>
+          </div>
+          <div className={"overflow-x-auto max-w-full"}>
+            <table>
+              <thead>
+                <tr>
+                  <th aria-sort={reverse ? "descending" : "ascending"}>
+                    <button onClick={() => setReverse(!reverse)}>
+                      Departure {reverse ? "↑" : "↓"}
+                    </button>
+                  </th>
+                  <th>Destination</th>
+                  <th>Airline</th>
+                  <th>Country of origin</th>
+                  <th>Terminal</th>
+                  <th>Status</th>
+                  <th>
+                    <span className={styles.srOnly}>Details</span>
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                {visible.map((f) => (
+                  <Fragment key={f.flight}>
+                    <tr>
+                      <td>
+                        <strong className={styles.time}>{f.time}</strong>
+                        {f.status === "Delayed" && (
+                          <small className={styles.delayedTime}>
+                            Est. 10:00
+                          </small>
+                        )}
+                      </td>
+                      <td>
+                        <strong>{f.destination}</strong>
+                        <small>{f.airport}</small>
+                      </td>
+                      <td>
+                        <div className={"flex items-center gap-[11px]"}>
+                          <span
+                            className={
+                              "w-[33px] h-[33px] grid place-items-center italic font-extrabold text-[12px] rounded-full"
+                            }
+                            style={{
+                              color: f.color,
+                              background: `${f.color}0d`,
+                            }}
+                          >
+                            {f.code}
+                          </span>
+                          <div>
+                            <strong>{f.airline}</strong>
+                            <small>{f.flight}</small>
+                          </div>
+                        </div>
+                      </td>
+                      <td>
+                        <span
+                          className={
+                            "flex items-center gap-[9px] text-[11px] text-[#74687f]"
+                          }
+                        >
+                          <span
+                            role="img"
+                            aria-label={`${f.country} flag`}
+                            className={
+                              '[font-family:"Segoe_UI_Emoji",_"Apple_Color_Emoji",_sans-serif] text-[21px]'
+                            }
+                          >
+                            {f.flag}
+                          </span>
+                          {f.country}
+                        </span>
+                      </td>
+                      <td>
+                        <span
+                          className={
+                            "inline-block [border:1px_solid_#e8e2ef] bg-[#faf8fc] rounded-[5px] [padding:5px_8px] text-[11px] text-[#736280]"
+                          }
+                        >
+                          T{f.terminal}
+                        </span>
+                      </td>
+                      <td>
+                        <span
+                          className={`inline-flex items-center gap-[6px] rounded-[4px] px-[9px] py-[6px] text-[10px] font-semibold ${styles.status} ${f.status === "Boarding" ? "bg-[#eee5f9] text-[#71439c]" : f.status === "Delayed" ? "bg-[#fff4df] text-[#ad771e]" : f.status === "Gate open" ? "bg-[#eaf1fc] text-[#4974ac]" : "bg-[#edf6f1] text-[#4c8a69]"}`}
+                        >
+                          <i />
+                          {f.status}
+                        </span>
+                      </td>
+                      <td>
+                        <button
+                          className={`flex bg-transparent border-0 text-[#9a8aa7] cursor-pointer p-[7px] rounded-[5px] ${styles.expand}`}
+                          aria-label={`Details for ${f.flight}`}
+                          aria-expanded={expanded === f.flight}
+                          onClick={() =>
+                            setExpanded(expanded === f.flight ? null : f.flight)
+                          }
+                        >
+                          <ChevronDown
+                            size={18}
+                            style={{
+                              transform:
+                                expanded === f.flight
+                                  ? "rotate(180deg)"
+                                  : undefined,
+                            }}
+                          />
+                        </button>
+                      </td>
+                    </tr>
+                    {expanded === f.flight && (
+                      <tr className={styles.detail}>
+                        <td colSpan={7}>
+                          <strong>
+                            {f.flight} · London Heathrow → {f.destination} (
+                            {f.airport})
+                          </strong>
+                          <p>
+                            Terminal {f.terminal} ·{" "}
+                            {f.gate === "—"
+                              ? "Gate to be announced"
+                              : `Gate ${f.gate}`}{" "}
+                            ·{" "}
+                            {f.status === "Delayed"
+                              ? "Estimated departure 10:00"
+                              : `Scheduled departure ${f.time}`}{" "}
+                            · Illustrative flight details
+                          </p>
+                        </td>
+                      </tr>
+                    )}
+                  </Fragment>
+                ))}
+              </tbody>
+            </table>
+          </div>
+          {!visible.length && (
+            <div
+              className={`p-[55px] text-center text-[#8b789b] ${styles.empty}`}
+            >
+              <Search size={28} />
+              <h2>No flights found</h2>
+              <p>Try a different airline, destination or filter.</p>
+              <button onClick={reset}>Clear filters</button>
+            </div>
+          )}
+          <div
+            className={`flex items-center gap-2 [padding:17px_25px] text-[10px] text-[#968b9f] [@media(max-width:800px)]:[padding:17px_16px] ${styles.boardFooter}`}
+          >
+            <Clock3 size={15} />
+            <span>Times are local to London (BST, UTC+1).</span>
+            <span>18 OCT 2026</span>
+          </div>
+        </section>
+        <aside
+          className={`flex gap-3 [margin:24px_0_36px] text-[#8c8197] text-[11px] [line-height:1.8] ${styles.note}`}
+        >
+          <span>i</span>
+          <p>
+            <strong>A little heads-up</strong>This is a demonstration using
+            sample flight times, terminals and statuses. For travel, check your
+            airline or the{" "}
+            <a
+              href="https://www.heathrow.com/departures"
+              target="_blank"
+              rel="noreferrer"
+            >
+              official Heathrow departures board ↗
+            </a>
+            .
+          </p>
+        </aside>
+        <footer
+          className={`flex justify-between [border-top:1px_solid_#e6e0ed] [padding:22px_0_28px] text-[#92859c] text-[10px] [@media(max-width:800px)]:gap-5 ${styles.footer}`}
+        >
+          <span>
+            london<strong>air</strong>{" "}
+            <span> / A departures board concept</span>
+          </span>
+          <span>10 airlines. A world of possibilities.</span>
+        </footer>
+      </main>
+    </div>
+  );
 }
