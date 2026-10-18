@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import OlympicsPage from "./medal-chart/OlympicsPage";
+import OlympicsPage from "./OlympicsPage";
 
 export const metadata: Metadata = {
   title: "2016 Summer Olympics Medal Count",
