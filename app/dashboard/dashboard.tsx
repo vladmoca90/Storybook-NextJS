@@ -7,7 +7,7 @@ import { EmptyState } from "./dashboard-components/EmptyState";
 import { FilterSection } from "./dashboard-components/FilterSection";
 import { PeopleGrid } from "./dashboard-components/PeopleGrid";
 import { ResultsInfo } from "./dashboard-components/ResultsInfo";
-import { FilterState } from "./types";
+import type { FilterState } from "@/app/data/types/dashboard";
 import "./dashboard.css";
 
 export default function Dashboard() {

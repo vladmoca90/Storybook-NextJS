@@ -1,11 +1,4 @@
-export interface Person {
-  id: number;
-  name: string;
-  age: number;
-  job: string;
-  nationality: string;
-  maritalStatus: 'single' | 'married' | 'divorced' | 'widowed';
-}
+import type { Person } from "./types/people";
 
 export const peopleData: Person[] = [
   {

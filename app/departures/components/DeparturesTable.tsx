@@ -1,6 +1,6 @@
 import { Fragment } from "react";
 import { ChevronDown } from "lucide-react";
-import type { Airline } from "../../data/airlines";
+import type { Airline } from "@/app/data/types/airlines";
 import styles from "../departures.module.css";
 
 interface DeparturesTableProps {

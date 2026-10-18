@@ -2,7 +2,8 @@
 
 import * as d3 from "d3";
 import { useEffect, useRef, useState } from "react";
-import { medalTypes, type MedalType, type CountryMedals } from "../medal-types";
+import { medalTypes } from "@/app/data/medals";
+import type { MedalType, CountryMedals } from "@/app/data/types/medals";
 import styles from "../MedalChart.module.css";
 
 type Tooltip = {

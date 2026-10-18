@@ -1,4 +1,4 @@
-import type { Country } from '../types';
+import type { Country } from "@/app/data/types/countries";
 
 export const countries: Country[] = [
   { name: 'Albania', code: 'AL', flag: '🇦🇱', capital: 'Tirana', population: 2402113 },

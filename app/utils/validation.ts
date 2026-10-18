@@ -1,4 +1,4 @@
-import { Person } from '@/app/data/people';
+import type { Person } from "@/app/data/types/people";
 
 export const validatePerson = (person: Person): string[] => {
   const errors: string[] = [];

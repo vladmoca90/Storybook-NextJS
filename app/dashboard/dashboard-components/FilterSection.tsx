@@ -1,5 +1,5 @@
 import type { Dispatch, SetStateAction } from 'react';
-import type { FilterState } from '../types';
+import type { FilterState } from "@/app/data/types/dashboard";
 
 type FilterSectionProps = {
   filters: FilterState;

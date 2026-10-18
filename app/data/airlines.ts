@@ -1,4 +1,6 @@
-export const airlines = [
+import type { Airline } from "./types/airlines";
+
+export const airlines: Airline[] = [
   {
     airline: "British Airways",
     country: "United Kingdom",
@@ -140,5 +142,3 @@ export const airlines = [
     color: "#d3353d",
   },
 ];
-
-export type Airline = (typeof airlines)[number];

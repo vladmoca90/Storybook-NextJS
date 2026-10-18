@@ -1,4 +1,5 @@
-import { medalTypes, type MedalType } from "../medal-types";
+import { medalTypes } from "@/app/data/medals";
+import type { MedalType } from "@/app/data/types/medals";
 import styles from "../MedalChart.module.css";
 
 interface MedalLegendProps {
