@@ -1,14 +1,14 @@
 "use client";
 import { useState } from "react";
 import {
-  ArrowUpRight,
   Clock3,
   Globe2,
   Plane,
   Search,
-  SlidersHorizontal,
 } from "lucide-react";
 import styles from "./departures.module.css";
+import DepartureFilters from "./components/DepartureFilters";
+import DeparturesIntro from "./components/DeparturesIntro";
 import DeparturesTable from "./components/DeparturesTable";
 import { airlines as flights } from "../data/airlines";
 
@@ -69,118 +69,23 @@ export default function DeparturesBoard() {
           "max-w-[1320px] m-auto [padding:28px_28px_0] w-full min-w-0 min-[1500px]:pt-[35px] [@media(max-width:800px)]:[padding:23px_18px_0]"
         }
       >
-        <div
-          className={`text-[11px] text-[#827b8b] flex gap-[14px] ${styles.breadcrumb}`}
-        >
-          London Heathrow <span>/</span> Flight information <span>/</span>{" "}
-          Departures
-        </div>
-        <section
-          className={`flex items-center justify-between [padding:43px_0_34px] [@media(max-width:800px)]:[padding:32px_0] ${styles.hero}`}
-        >
-          <div>
-            <div
-              className={
-                "flex gap-[9px] items-center tracking-[1.8px] text-[10px] font-bold text-[#76558e]"
-              }
-            >
-              <Plane size={17} /> YOUR NEXT CHAPTER STARTS HERE
-            </div>
-            <h1>
-              Departures<span>↗</span>
-            </h1>
-            <p>
-              From London to the world. Find your flight and get ready to go.
-            </p>
-          </div>
-          <div
-            className={`[border-left:1px_solid_#dcd5e4] [padding:8px_0_8px_28px] flex flex-col gap-[9px] [@media(max-width:800px)]:hidden ${styles.airportCard}`}
-          >
-            <span>LONDON HEATHROW</span>
-            <strong>
-              LHR <ArrowUpRight size={32} />
-            </strong>
-            <small>All times shown in London local time</small>
-          </div>
-        </section>
-        <div
-          className={`flex items-center gap-[26px] [margin:9px_0_20px] text-[12px] text-[#837a8c] [@media(max-width:800px)]:gap-3 ${styles.overview}`}
-        >
-          <span>
-            <i /> Departure board
-          </span>
-          <span>
-            10 airlines <b>·</b> 10 destinations <b>·</b> 4 terminals
-          </span>
-          <span
-            className={
-              "ml-auto [border:1px_solid_#ded5e7] bg-[#f0eaf5] text-[#77558d] [padding:5px_9px] rounded-[5px] text-[10px]"
-            }
-          >
-            Sample schedule
-          </span>
-        </div>
+        <DeparturesIntro
+          airlineCount={new Set(flights.map((flight) => flight.airline)).size}
+          destinationCount={new Set(flights.map((flight) => flight.destination)).size}
+          terminalCount={new Set(flights.map((flight) => flight.terminal)).size}
+        />
         <section
           className={`bg-white [border:1px_solid_#e6e1eb] rounded-3 overflow-hidden [box-shadow:0_5px_20px_#30203d04] min-w-0 ${styles.board}`}
           aria-label="Flight departures"
         >
-          <div
-            className={
-              "flex gap-3 p-6 [border-bottom:1px_solid_#eeeaf2] [@media(max-width:800px)]:flex-wrap [@media(max-width:800px)]:p-4 [@media(max-width:800px)]:gap-[10px]"
-            }
-          >
-            <label
-              className={`flex items-center gap-3 [border:1px_solid_#ddd7e4] rounded-[6px] [padding:0_13px] flex-1 text-[#8b7d98] min-w-[180px] [@media(max-width:800px)]:basis-full ${styles.search}`}
-            >
-              <Search size={20} />
-              <input
-                aria-label="Search flights"
-                placeholder="Search airline, destination or flight number"
-                value={query}
-                onChange={(e) => setQuery(e.target.value)}
-              />
-              {query && (
-                <button aria-label="Clear search" onClick={() => setQuery("")}>
-                  ×
-                </button>
-              )}
-            </label>
-            <label
-              className={`flex items-center gap-[6px] [border:1px_solid_#ddd7e4] rounded-[6px] [padding:0_12px] text-[#71627d] [@media(max-width:800px)]:flex-1 ${styles.select}`}
-            >
-              <SlidersHorizontal size={16} />
-              <select
-                aria-label="Filter terminal"
-                value={terminal}
-                onChange={(e) => setTerminal(e.target.value)}
-              >
-                {["All terminals", "2", "3", "4", "5"].map((t) => (
-                  <option key={t} value={t}>
-                    {t === "All terminals" ? t : `Terminal ${t}`}
-                  </option>
-                ))}
-              </select>
-            </label>
-            <label
-              className={`flex items-center gap-[6px] [border:1px_solid_#ddd7e4] rounded-[6px] [padding:0_12px] text-[#71627d] [@media(max-width:800px)]:flex-1 ${styles.select}`}
-            >
-              <select
-                aria-label="Filter status"
-                value={status}
-                onChange={(e) => setStatus(e.target.value)}
-              >
-                {[
-                  "All statuses",
-                  "Boarding",
-                  "Gate open",
-                  "On time",
-                  "Delayed",
-                ].map((s) => (
-                  <option key={s}>{s}</option>
-                ))}
-              </select>
-            </label>
-          </div>
+          <DepartureFilters
+            query={query}
+            terminal={terminal}
+            status={status}
+            onQueryChange={setQuery}
+            onTerminalChange={setTerminal}
+            onStatusChange={setStatus}
+          />
           <div
             className={`flex justify-between items-center [padding:23px_25px] text-[#918699] text-[10px] [@media(max-width:800px)]:[padding:20px_16px] ${styles.tableTop}`}
           >
