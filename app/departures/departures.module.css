@@ -566,3 +566,7 @@
 .tableScroll {
     max-width: 100%;
 }
+
+.board th {
+    position: relative;
+}
