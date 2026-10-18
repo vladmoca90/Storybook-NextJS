@@ -548,6 +548,28 @@
     outline-offset: 3px;
 }
 
+.page {
+    width: 100%;
+    min-width: 0;
+}
+
+.main {
+    width: 100%;
+    min-width: 0;
+}
+
+.board {
+    min-width: 0;
+}
+
+.tableScroll {
+    max-width: 100%;
+}
+
+.board th {
+    position: relative;
+}
+
 @media (min-width: 1500px) {
     .main {
         padding-top: 35px;
@@ -649,26 +671,4 @@
     .boardFooter span:last-child {
         display: none;
     }
-}
-
-.page {
-    width: 100%;
-    min-width: 0;
-}
-
-.main {
-    width: 100%;
-    min-width: 0;
-}
-
-.board {
-    min-width: 0;
-}
-
-.tableScroll {
-    max-width: 100%;
-}
-
-.board th {
-    position: relative;
 }
