@@ -5,6 +5,7 @@ import { ArrowRight, Search, Sparkles, Tag } from "lucide-react";
 import { calculateDiscountAmount, calculateSalePrice, products } from "../data/products";
 import type { ProductCategory } from "../data/types/products";
 import { ProductArt } from "./ProductArt";
+import ProductCard from "./components/ProductCard";
 import colors from "./discount-colors.module.css";
 
 const money = new Intl.NumberFormat("en-US", { style: "currency", currency: "USD" });
@@ -67,17 +68,9 @@ export default function DiscountShop() {
           <label className="flex items-center gap-2 border-b border-[var(--store-search-line)] p-2"><Search size={17} /><span className="sr-only">Search products</span><input className="w-36 bg-transparent outline-none" value={query} onChange={(event) => setQuery(event.target.value)} placeholder="Search products" /></label>
         </div>
         <div className="grid grid-cols-2 gap-x-2.5 gap-y-7 md:grid-cols-3 lg:grid-cols-5 lg:gap-x-[18px]">
-          {visibleProducts.map((product) => {
-            const salePrice = calculateSalePrice(product.price, product.discount);
-            return <article className="group min-w-0" key={product.id}>
-              <div className="relative grid aspect-square place-items-center overflow-hidden" style={{ backgroundColor: `${product.accent}20` }}>
-                <span className="absolute left-3 top-3 z-20 px-[9px] py-[7px] text-[11px] font-extrabold text-white" style={{ backgroundColor: product.accent }}>−{product.discount}%</span>
-                <div className="absolute size-[70%] rounded-full border" style={{ borderColor: `${product.accent}55` }} />
-                <div className="z-10 w-[73%] text-[var(--store-product-ink)] transition-transform duration-300 group-hover:scale-105 group-hover:-rotate-2"><ProductArt type={product.image} accent={product.accent} /></div>
-              </div>
-              <div><p className="mb-1.5 mt-4 text-[9px] font-extrabold uppercase tracking-[.15em] text-[var(--store-category)]">{product.category}</p><h3 className="mb-3 font-serif text-base font-normal lg:text-lg">{product.name}</h3><div className="flex items-baseline gap-2"><strong className="text-[15px]">{money.format(salePrice)}</strong><s className="text-xs text-[var(--store-strike)]">{money.format(product.price)}</s></div><button className="mt-3 flex cursor-pointer items-center gap-2 border-b border-[var(--store-ink)] bg-transparent text-[11px] font-extrabold" onClick={() => selectProduct(product.id)}>Try in calculator <ArrowRight size={15} /></button></div>
-            </article>;
-          })}
+          {visibleProducts.map((product) => (
+            <ProductCard key={product.id} product={product} onSelect={selectProduct} />
+          ))}
         </div>
         {visibleProducts.length === 0 && <p className="py-16 text-center text-[var(--store-muted)]">No products match that search. Try another word.</p>}
       </section>
