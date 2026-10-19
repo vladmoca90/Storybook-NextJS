@@ -1,0 +1,28 @@
+.theme {
+  --store-canvas: #f4f0e8;
+  --store-paper: #fffdf8;
+  --store-ink: #20221f;
+  --store-nav-line: #20221f26;
+  --store-accent: #e5583c;
+  --store-hero: #e4d3b4;
+  --store-body: #5e605a;
+  --store-copy: #6d6e68;
+  --store-muted: #777970;
+  --store-filter: #6b6b66;
+  --store-category: #8a8a83;
+  --store-strike: #999;
+  --store-line: #ddd8cf;
+  --store-search-line: #aaa49a;
+  --store-product-ink: #292b27;
+  --store-illustration: #252722;
+  --store-inverse-copy: #b7b8b2;
+  --store-formula: #d5d5cf;
+  --store-card: #f7f1e7;
+  --store-input-line: #cac3b8;
+  --store-divider: #d2ccc1;
+  --store-label: #74746e;
+  --store-footer: #131512;
+  --store-footer-copy: #8f918a;
+  --store-badge-shadow: #9f342c33;
+  --store-art-shadow: #78684e45;
+}
