@@ -1,6 +1,6 @@
 'use client';
 import { useMemo, useState } from 'react';
-import { countries } from '../data/countries';
+import { countries } from "@/app/data/countries";
 import type { PopulationFilter, SortOption } from "@/app/data/types/countries";
 
 const populationFormatter = new Intl.NumberFormat('en-GB');
