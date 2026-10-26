@@ -2,8 +2,8 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-  padding: 15px 20px;
+  border-bottom: 0.0625rem solid rgba(0, 0, 0, 0.1);
+  padding: 0.9375rem 1.25rem;
   font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
@@ -15,18 +15,18 @@
 .storybook-header h1 {
   display: inline-block;
   vertical-align: top;
-  margin: 6px 0 6px 10px;
+  margin: 0.375rem 0 0.375rem 0.625rem;
   font-weight: 700;
-  font-size: 20px;
+  font-size: 1.25rem;
   line-height: 1;
 }
 
 .storybook-header button + button {
-  margin-left: 10px;
+  margin-left: 0.625rem;
 }
 
 .storybook-header .welcome {
-  margin-right: 10px;
+  margin-right: 0.625rem;
   color: #333;
-  font-size: 14px;
+  font-size: 0.875rem;
 }

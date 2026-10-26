@@ -50,7 +50,7 @@
 .search-panel input:focus,
 .search-panel select:focus {
   border-color: #2563eb;
-  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.13);
+  box-shadow: 0 0 0 0.1875rem rgba(37, 99, 235, 0.13);
 }
 
 .reset-button {

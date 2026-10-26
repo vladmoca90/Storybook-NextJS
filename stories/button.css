@@ -12,19 +12,19 @@
   color: white;
 }
 .storybook-button--secondary {
-  box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 0px 1px inset;
+  box-shadow: rgba(0, 0, 0, 0.15) 0rem 0rem 0rem 0.0625rem inset;
   background-color: transparent;
   color: #333;
 }
 .storybook-button--small {
-  padding: 10px 16px;
-  font-size: 12px;
+  padding: 0.625rem 1rem;
+  font-size: 0.75rem;
 }
 .storybook-button--medium {
-  padding: 11px 20px;
-  font-size: 14px;
+  padding: 0.6875rem 1.25rem;
+  font-size: 0.875rem;
 }
 .storybook-button--large {
-  padding: 12px 24px;
-  font-size: 16px;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
 }

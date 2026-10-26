@@ -3,11 +3,11 @@
 }
 
 .brand small {
-    font-size: 10px;
-    letter-spacing: 1px;
-    margin: 6px 0 0 12px;
-    border-left: 1px solid #ddd;
-    padding-left: 12px;
+    font-size: 0.625rem;
+    letter-spacing: 0.0625rem;
+    margin: 0.375rem 0 0 0.75rem;
+    border-left: 0.0625rem solid #ddd;
+    padding-left: 0.75rem;
 }
 
 .breadcrumb span {
@@ -15,43 +15,43 @@
 }
 
 .hero h1 {
-    font-size: 58px;
+    font-size: 3.625rem;
     line-height: 1.2;
-    letter-spacing: -2.5px;
-    margin: 12px 0;
+    letter-spacing: -0.15625rem;
+    margin: 0.75rem 0;
     color: #39214e;
     font-weight: 500;
 }
 
 .hero h1 span {
-    font-size: 48px;
+    font-size: 3rem;
     color: #a491b6;
-    margin-left: 23px;
+    margin-left: 1.4375rem;
 }
 
 .hero p {
     color: #797180;
-    font-size: 14px;
-    margin-top: 13px;
+    font-size: 0.875rem;
+    margin-top: 0.8125rem;
 }
 
 .airportCard > span {
-    font-size: 9px;
-    letter-spacing: 1.8px;
+    font-size: 0.5625rem;
+    letter-spacing: 0.1125rem;
     color: #7e718a;
 }
 
 .airportCard strong {
-    font-size: 34px;
+    font-size: 2.125rem;
     font-weight: 500;
     color: #4e3267;
     display: flex;
     align-items: center;
-    gap: 70px;
+    gap: 4.375rem;
 }
 
 .airportCard small {
-    font-size: 10px;
+    font-size: 0.625rem;
     color: #8d8295;
 }
 
@@ -60,28 +60,28 @@
     color: #43245e;
     display: flex;
     align-items: center;
-    gap: 9px;
+    gap: 0.5625rem;
 }
 
 .overview i {
-    width: 7px;
-    height: 7px;
+    width: 0.4375rem;
+    height: 0.4375rem;
     border-radius: 50%;
     background: #8863a5;
 }
 
 .overview b {
-    margin: 0 9px;
+    margin: 0 0.5625rem;
     font-weight: 400;
     color: #b2a9bc;
 }
 
 .search input {
     width: 100%;
-    padding: 13px 0;
+    padding: 0.8125rem 0;
     outline: none;
     background: transparent;
-    font-size: 12px;
+    font-size: 0.75rem;
     color: #39214e;
     border: 0;
 }
@@ -89,33 +89,33 @@
 .search button {
     border: 0;
     background: none;
-    font-size: 20px;
+    font-size: 1.25rem;
     cursor: pointer;
 }
 
 .search:focus-within {
-    outline: 2px solid #8b65a8;
-    outline-offset: 2px;
+    outline: 0.125rem solid #8b65a8;
+    outline-offset: 0.125rem;
 }
 
 .select select {
     background: white;
-    padding: 12px 4px;
+    padding: 0.75rem 0.25rem;
     border: 0;
-    font-size: 12px;
+    font-size: 0.75rem;
     color: #54465e;
-    max-width: 160px;
+    max-width: 10rem;
 }
 
 .tableTop > div {
     display: flex;
-    gap: 14px;
+    gap: 0.875rem;
     align-items: center;
 }
 
 .tableTop strong {
     color: #52445f;
-    font-size: 12px;
+    font-size: 0.75rem;
 }
 
 .board table {
@@ -128,16 +128,16 @@
 .board th {
     background: #f8f6fa;
     color: #8a7e95;
-    font-size: 10px;
+    font-size: 0.625rem;
     font-weight: 500;
-    padding: 13px 16px;
-    border-top: 1px solid #eeeaf2;
-    border-bottom: 1px solid #eeeaf2;
+    padding: 0.8125rem 1rem;
+    border-top: 0.0625rem solid #eeeaf2;
+    border-bottom: 0.0625rem solid #eeeaf2;
 }
 
 .board th:first-child,
 .board td:first-child {
-    padding-left: 25px;
+    padding-left: 1.5625rem;
 }
 
 .board th button {
@@ -150,9 +150,9 @@
 }
 
 .board td {
-    padding: 19px 16px;
-    border-bottom: 1px solid #f0edf4;
-    font-size: 12px;
+    padding: 1.1875rem 1rem;
+    border-bottom: 0.0625rem solid #f0edf4;
+    font-size: 0.75rem;
 }
 
 .board td strong {
@@ -162,15 +162,15 @@
 .board td small {
     display: block;
     color: #9a8fa4;
-    font-size: 10px;
-    margin-top: 6px;
-    letter-spacing: 0.5px;
+    font-size: 0.625rem;
+    margin-top: 0.375rem;
+    letter-spacing: 0.03125rem;
 }
 
 .board .time {
-    font-size: 19px;
+    font-size: 1.1875rem;
     font-weight: 500;
-    letter-spacing: -0.3px;
+    letter-spacing: -0.01875rem;
     font-variant-numeric: tabular-nums;
 }
 
@@ -180,8 +180,8 @@
 }
 
 .status i {
-    width: 5px;
-    height: 5px;
+    width: 0.3125rem;
+    height: 0.3125rem;
     border-radius: 50%;
     background: currentColor;
 }
@@ -192,30 +192,30 @@
 
 .detail td {
     background: #faf7fd;
-    padding: 22px !important;
+    padding: 1.375rem !important;
     color: #655073;
 }
 
 .detail p {
-    margin: 10px 0 0;
-    font-size: 12px;
+    margin: 0.625rem 0 0;
+    font-size: 0.75rem;
 }
 
 .boardFooter span:last-child {
     margin-left: auto;
-    letter-spacing: 1px;
+    letter-spacing: 0.0625rem;
 }
 
 .note > span {
-    border: 1px solid #baadc6;
+    border: 0.0625rem solid #baadc6;
     border-radius: 50%;
-    width: 17px;
-    height: 17px;
+    width: 1.0625rem;
+    height: 1.0625rem;
     display: grid;
     place-items: center;
     flex-shrink: 0;
-    font-size: 10px;
-    margin-top: 3px;
+    font-size: 0.625rem;
+    margin-top: 0.1875rem;
 }
 
 .note p {
@@ -225,24 +225,24 @@
 .note strong {
     display: block;
     color: #665673;
-    font-size: 12px;
+    font-size: 0.75rem;
     font-weight: 600;
 }
 
 .note a {
     color: #72508e;
     text-decoration: underline;
-    text-underline-offset: 3px;
+    text-underline-offset: 0.1875rem;
 }
 
 .footer > span:first-child {
     color: #614976;
-    font-size: 15px;
+    font-size: 0.9375rem;
 }
 
 .footer > span:first-child span {
-    font-size: 10px;
-    margin-left: 10px;
+    font-size: 0.625rem;
+    margin-left: 0.625rem;
     color: #92859c;
 }
 
@@ -251,51 +251,51 @@
 }
 
 .empty h2 {
-    font-size: 20px;
-    margin: 12px;
+    font-size: 1.25rem;
+    margin: 0.75rem;
 }
 
 .empty button {
-    margin-top: 18px;
+    margin-top: 1.125rem;
     background: #603c7f;
     color: white;
-    padding: 10px 18px;
-    border-radius: 6px;
+    padding: 0.625rem 1.125rem;
+    border-radius: 0.375rem;
     cursor: pointer;
 }
 
 .srOnly {
     position: absolute;
-    width: 1px;
-    height: 1px;
+    width: 0.0625rem;
+    height: 0.0625rem;
     overflow: hidden;
     clip: rect(0, 0, 0, 0);
 }
 
 .page button:focus-visible,
 .page select:focus-visible {
-    outline: 2px solid #795199;
-    outline-offset: 3px;
+    outline: 0.125rem solid #795199;
+    outline-offset: 0.1875rem;
 }
 
 .board th {
     position: relative;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 50rem) {
 
     .headerRight > span {
         display: none;
     }
 
     .hero h1 {
-        font-size: 45px;
+        font-size: 2.8125rem;
     }
 
     .hero p {
-        font-size: 12px;
+        font-size: 0.75rem;
         line-height: 1.8;
-        max-width: 300px;
+        max-width: 18.75rem;
     }
 
     .select select {
@@ -313,11 +313,11 @@
 
     .tableTop > div > span {
         display: block;
-        margin-top: 6px;
+        margin-top: 0.375rem;
     }
 
     .board table {
-        min-width: 1000px;
+        min-width: 62.5rem;
     }
 
     .footer > span:last-child {

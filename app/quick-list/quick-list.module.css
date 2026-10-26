@@ -6,7 +6,7 @@
   min-height: 100vh;
   display: grid;
   place-items: center;
-  padding: 48px 20px;
+  padding: 3rem 1.25rem;
   position: relative;
   overflow: hidden;
   background:
@@ -26,27 +26,27 @@
 
 .glow {
   position: absolute;
-  width: 360px;
-  height: 360px;
-  right: -140px;
-  bottom: -150px;
+  width: 22.5rem;
+  height: 22.5rem;
+  right: -8.75rem;
+  bottom: -9.375rem;
   border-radius: 50%;
   background: rgba(236, 180, 72, 0.16);
-  filter: blur(2px);
+  filter: blur(0.125rem);
 }
 
 .app {
   position: relative;
-  width: min(100%, 670px);
-  min-height: 650px;
-  padding: 48px 52px 28px;
-  border: 1px solid rgba(71, 61, 47, 0.12);
-  border-radius: 28px;
+  width: min(100%, 41.875rem);
+  min-height: 40.625rem;
+  padding: 3rem 3.25rem 1.75rem;
+  border: 0.0625rem solid rgba(71, 61, 47, 0.12);
+  border-radius: 1.75rem;
   background: rgba(255, 253, 249, 0.94);
   box-shadow:
-    0 30px 70px rgba(77, 59, 39, 0.12),
-    0 2px 8px rgba(77, 59, 39, 0.05);
-  backdrop-filter: blur(12px);
+    0 1.875rem 4.375rem rgba(77, 59, 39, 0.12),
+    0 0.125rem 0.5rem rgba(77, 59, 39, 0.05);
+  backdrop-filter: blur(0.75rem);
 }
 
 .header {
@@ -56,8 +56,8 @@
 .brand {
   display: inline-flex;
   align-items: center;
-  gap: 10px;
-  margin-bottom: 35px;
+  gap: 0.625rem;
+  margin-bottom: 2.1875rem;
   color: #4a4640;
   font-size: 0.85rem;
   font-weight: 700;
@@ -67,18 +67,18 @@
 
 .logo {
   display: grid;
-  width: 29px;
-  height: 29px;
+  width: 1.8125rem;
+  height: 1.8125rem;
   place-items: center;
-  border-radius: 9px;
+  border-radius: 0.5625rem;
   background: var(--orange);
-  box-shadow: 0 5px 12px rgba(232, 98, 43, 0.25);
+  box-shadow: 0 0.3125rem 0.75rem rgba(232, 98, 43, 0.25);
   color: white;
   transform: rotate(-3deg);
 }
 
 .logo svg {
-  width: 17px;
+  width: 1.0625rem;
   fill: none;
   stroke: currentColor;
   stroke-linecap: round;
@@ -87,7 +87,7 @@
 }
 
 .eyebrow {
-  margin-bottom: 10px;
+  margin-bottom: 0.625rem;
   color: var(--orange);
   font-size: 0.72rem;
   font-weight: 750;
@@ -105,7 +105,7 @@
 }
 
 .intro {
-  margin: 15px 0 30px;
+  margin: 0.9375rem 0 1.875rem;
   color: var(--muted);
   font-size: 0.97rem;
   line-height: 1.6;
@@ -113,24 +113,24 @@
 
 .form {
   display: flex;
-  gap: 10px;
-  padding: 7px;
-  border: 1px solid #ded8cf;
-  border-radius: 15px;
+  gap: 0.625rem;
+  padding: 0.4375rem;
+  border: 0.0625rem solid #ded8cf;
+  border-radius: 0.9375rem;
   background: white;
-  box-shadow: 0 7px 24px rgba(76, 59, 40, 0.06);
+  box-shadow: 0 0.4375rem 1.5rem rgba(76, 59, 40, 0.06);
   transition: border-color 160ms ease, box-shadow 160ms ease;
 }
 
 .form:focus-within {
   border-color: rgba(232, 98, 43, 0.65);
-  box-shadow: 0 0 0 4px rgba(232, 98, 43, 0.09);
+  box-shadow: 0 0 0 0.25rem rgba(232, 98, 43, 0.09);
 }
 
 .form input {
   min-width: 0;
   flex: 1;
-  padding: 11px 13px;
+  padding: 0.6875rem 0.8125rem;
   border: 0;
   outline: 0;
   background: transparent;
@@ -145,12 +145,12 @@
 .form button {
   display: inline-flex;
   align-items: center;
-  gap: 7px;
-  padding: 0 19px;
+  gap: 0.4375rem;
+  padding: 0 1.1875rem;
   border: 0;
-  border-radius: 10px;
+  border-radius: 0.625rem;
   background: var(--orange);
-  box-shadow: 0 5px 13px rgba(232, 98, 43, 0.23);
+  box-shadow: 0 0.3125rem 0.8125rem rgba(232, 98, 43, 0.23);
   color: white;
   cursor: pointer;
   font-size: 0.9rem;
@@ -160,7 +160,7 @@
 
 .form button:hover:not(:disabled) {
   background: var(--orange-dark);
-  transform: translateY(-1px);
+  transform: translateY(-0.0625rem);
 }
 
 .form button:disabled {
@@ -170,7 +170,7 @@
 }
 
 .form button svg {
-  width: 17px;
+  width: 1.0625rem;
   fill: none;
   stroke: currentColor;
   stroke-linecap: round;
@@ -178,26 +178,26 @@
 }
 
 .content {
-  margin-top: 28px;
+  margin-top: 1.75rem;
 }
 
 .empty {
   display: flex;
-  min-height: 245px;
+  min-height: 15.3125rem;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  border: 1px dashed #ddd5ca;
-  border-radius: 17px;
+  border: 0.0625rem dashed #ddd5ca;
+  border-radius: 1.0625rem;
   background: #fbf9f5;
   text-align: center;
 }
 
 .emptyIcon {
   display: grid;
-  width: 54px;
-  height: 54px;
-  margin-bottom: 17px;
+  width: 3.375rem;
+  height: 3.375rem;
+  margin-bottom: 1.0625rem;
   place-items: center;
   border-radius: 50%;
   background: #f5e8de;
@@ -205,7 +205,7 @@
 }
 
 .emptyIcon svg {
-  width: 25px;
+  width: 1.5625rem;
   fill: currentColor;
   stroke: currentColor;
   stroke-linecap: round;
@@ -220,7 +220,7 @@
 }
 
 .empty p {
-  margin: 7px 0 0;
+  margin: 0.4375rem 0 0;
   color: #8b857d;
   font-size: 0.88rem;
 }
@@ -229,7 +229,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin: 0 4px 10px;
+  margin: 0 0.25rem 0.625rem;
   color: #8a847b;
   font-size: 0.75rem;
   font-weight: 700;
@@ -238,7 +238,7 @@
 }
 
 .listHeader button {
-  padding: 4px;
+  padding: 0.25rem;
   border: 0;
   background: transparent;
   color: var(--orange);
@@ -250,22 +250,22 @@
 
 .list {
   display: grid;
-  max-height: 290px;
+  max-height: 18.125rem;
   margin: 0;
   padding: 0;
-  gap: 9px;
+  gap: 0.5625rem;
   overflow-y: auto;
   list-style: none;
 }
 
 .list li {
   display: flex;
-  min-height: 55px;
+  min-height: 3.4375rem;
   align-items: center;
-  gap: 12px;
-  padding: 9px 11px;
-  border: 1px solid #e5dfd6;
-  border-radius: 13px;
+  gap: 0.75rem;
+  padding: 0.5625rem 0.6875rem;
+  border: 0.0625rem solid #e5dfd6;
+  border-radius: 0.8125rem;
   background: #fff;
   animation: itemIn 220ms ease-out both;
   transition: border-color 150ms ease, background 150ms ease;
@@ -293,17 +293,17 @@
 }
 
 .check {
-  width: 27px;
-  height: 27px;
-  border: 1.5px solid #cec7bd;
-  border-radius: 8px;
+  width: 1.6875rem;
+  height: 1.6875rem;
+  border: 0.09375rem solid #cec7bd;
+  border-radius: 0.5rem;
   background: #fff;
   color: transparent;
   transition: all 150ms ease;
 }
 
 .check svg {
-  width: 17px;
+  width: 1.0625rem;
   fill: none;
   stroke: currentColor;
   stroke-linecap: round;
@@ -327,9 +327,9 @@
 }
 
 .delete {
-  width: 32px;
-  height: 32px;
-  border-radius: 8px;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 0.5rem;
   background: transparent;
   color: #aaa49b;
   opacity: 0;
@@ -347,7 +347,7 @@
 }
 
 .delete svg {
-  width: 17px;
+  width: 1.0625rem;
   fill: none;
   stroke: currentColor;
   stroke-linecap: round;
@@ -355,17 +355,17 @@
 }
 
 .app footer {
-  margin-top: 24px;
+  margin-top: 1.5rem;
   color: #a19b92;
   font-size: 0.73rem;
   text-align: center;
 }
 
 .app kbd {
-  padding: 2px 6px;
-  border: 1px solid #dad4ca;
-  border-bottom-width: 2px;
-  border-radius: 5px;
+  padding: 0.125rem 0.375rem;
+  border: 0.0625rem solid #dad4ca;
+  border-bottom-width: 0.125rem;
+  border-radius: 0.3125rem;
   background: white;
   color: #777168;
   font-family: inherit;
@@ -374,10 +374,10 @@
 
 .srOnly {
   position: absolute;
-  width: 1px;
-  height: 1px;
+  width: 0.0625rem;
+  height: 0.0625rem;
   padding: 0;
-  margin: -1px;
+  margin: -0.0625rem;
   overflow: hidden;
   clip: rect(0, 0, 0, 0);
   white-space: nowrap;
@@ -387,32 +387,32 @@
 @keyframes itemIn {
   from {
     opacity: 0;
-    transform: translateY(-6px);
+    transform: translateY(-0.375rem);
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 37.5rem) {
   .page {
     align-items: start;
-    padding: 18px 12px;
+    padding: 1.125rem 0.75rem;
   }
 
   .app {
-    min-height: calc(100vh - 36px);
-    padding: 32px 20px 22px;
-    border-radius: 22px;
+    min-height: calc(100vh - 2.25rem);
+    padding: 2rem 1.25rem 1.375rem;
+    border-radius: 1.375rem;
   }
 
   .brand {
-    margin-bottom: 28px;
+    margin-bottom: 1.75rem;
   }
 
   .intro {
-    margin-bottom: 24px;
+    margin-bottom: 1.5rem;
   }
 
   .form button {
-    padding: 0 14px;
+    padding: 0 0.875rem;
   }
 }
 
