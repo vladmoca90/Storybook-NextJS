@@ -171,7 +171,7 @@ export default function Home() {
               <div className="car-card-body p-4">
                 <div className="car-title-row mb-[14px] grid grid-cols-[1fr_auto] gap-3 max-[620px]:grid-cols-1">
                   <div>
-                    <h2 className="mb-1 mt-0 font-bold">{car.make} {car.model}</h2>
+                    <h2 className="mb-1 mt-0 font-bold leading-[1.2]">{car.make} {car.model}</h2>
                     <p className="m-0">{car.trim}</p>
                   </div>
                   <strong className="whitespace-nowrap">{formatPrice(car.price)}</strong>
