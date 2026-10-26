@@ -3,7 +3,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { useMemo, useState } from 'react';
 import { cars, formatMileage, formatPrice } from '@/app/data/cars';
-import '@/app/showroom.css';
+import '@/app/cars/showroom.css';
 
 type SortOption = 'recommended' | 'price-low' | 'price-high' | 'mileage-low' | 'newest';
 

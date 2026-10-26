@@ -2,7 +2,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { notFound } from 'next/navigation';
 import { cars, formatMileage, formatPrice } from '@/app/data/cars';
-import '@/app/showroom.css';
+import '@/app/cars/showroom.css';
 
 type CarDetailsPageProps = {
   params: Promise<{
