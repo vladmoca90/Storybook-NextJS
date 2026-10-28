@@ -1,4 +1,5 @@
 import type { ListItem } from "@/app/data/types/quick-list";
+import ReorderHandle from "./ReorderHandle";
 import styles from "../quick-list.module.css";
 
 type QuickListContentProps = {
@@ -6,6 +7,7 @@ type QuickListContentProps = {
   onToggleItem: (id: number) => void;
   onDeleteItem: (id: number) => void;
   onClearCompleted: () => void;
+  onMoveItem: (id: number, destination: number) => void;
 };
 
 export default function QuickListContentComponent({
@@ -13,6 +15,7 @@ export default function QuickListContentComponent({
   onToggleItem,
   onDeleteItem,
   onClearCompleted,
+  onMoveItem,
 }: QuickListContentProps) {
   const completedCount = items.filter((item) => item.completed).length;
 
@@ -48,11 +51,12 @@ export default function QuickListContentComponent({
           </div>
 
           <ul className={`${styles.list} m-0 grid max-h-[18.125rem] list-none gap-[0.5625rem] overflow-y-auto p-0 [&_li]:flex [&_li]:min-h-[3.4375rem] [&_li]:items-center [&_li]:gap-3 [&_li]:rounded-[0.8125rem] [&_li]:border-[0.0625rem] [&_li]:px-[0.6875rem] [&_li]:py-[0.5625rem]`}>
-            {items.map((item) => (
+            {items.map((item, index) => (
               <li
                 key={item.id}
                 className={item.completed ? styles.completed : undefined}
               >
+                <ReorderHandle label={item.label} index={index} count={items.length} onMove={(destination) => onMoveItem(item.id, destination)} />
                 <button
                   type="button"
                   className={`${styles.check} grid size-[1.6875rem] flex-none cursor-pointer place-items-center rounded-lg border-[0.09375rem] [&_svg]:w-[1.0625rem]`}

@@ -43,6 +43,17 @@ export default function QuickList() {
     );
   }
 
+  function moveItem(id: number, destination: number) {
+    setItems((current) => {
+      const from = current.findIndex((item) => item.id === id);
+      if (from < 0 || destination < 0 || destination >= current.length || from === destination) return current;
+      const reordered = [...current];
+      const [moved] = reordered.splice(from, 1);
+      reordered.splice(destination, 0, moved);
+      return reordered;
+    });
+  }
+
   function deleteItem(id: number) {
     setItems((currentItems) =>
       currentItems.filter((item) => item.id !== id),
@@ -100,6 +111,7 @@ export default function QuickList() {
           onToggleItem={toggleItem}
           onDeleteItem={deleteItem}
           onClearCompleted={clearCompletedItems}
+          onMoveItem={moveItem}
         />
 
         <footer>
