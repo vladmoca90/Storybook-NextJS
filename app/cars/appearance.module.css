@@ -1,0 +1,65 @@
+/* Colors, backgrounds, and typography. Layout and responsive geometry stay in Tailwind. */
+
+.leading098 {
+  --tw-leading: 0.98;
+  line-height: 0.98;
+}
+
+@property --tw-leading {
+  syntax: "*";
+  inherits: false;
+}
+
+.leading12 {
+  --tw-leading: 1.2;
+  line-height: 1.2;
+}
+
+.leading104 {
+  --tw-leading: 1.04;
+  line-height: 1.04;
+}
+
+.leading16 {
+  --tw-leading: 1.6;
+  line-height: 1.6;
+}
+
+.leading165 {
+  --tw-leading: 1.65;
+  line-height: 1.65;
+}
+
+.font750 {
+  font-weight: 750;
+}
+
+.font850 {
+  font-weight: 850;
+}
+
+.fontBold {
+  font-weight: 700;
+}
+
+.fontExtrabold {
+  font-weight: 800;
+}
+
+.trackingNormal {
+  letter-spacing: 0em;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.noUnderline {
+  text-decoration-line: none;
+}
+
+@media (hover: hover) {
+  .hoverShadow01rem2375remRgba152342012:hover {
+    box-shadow: 0 1rem 2.375rem rgba(15,23,42,0.12);
+  }
+}

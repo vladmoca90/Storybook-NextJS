@@ -5,9 +5,9 @@ type ResultsInfoProps = {
 
 export function ResultsInfo({ filteredCount, totalCount }: ResultsInfoProps) {
   return (
-    <div className="results-info">
-      Showing <span className="results-count">{filteredCount}</span> of{' '}
-      <span className="results-count">{totalCount}</span> people
+    <div className={`results-info mb-[1.5rem]`}>
+      Showing <span className={`results-count`}>{filteredCount}</span> of{' '}
+      <span className={`results-count`}>{totalCount}</span> people
     </div>
   );
 }

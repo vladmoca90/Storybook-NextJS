@@ -1,0 +1,239 @@
+/* Colors, backgrounds, and typography. Layout and responsive geometry stay in Tailwind. */
+
+.BorderColorDdd7e4 {
+  border-color: #ddd7e4;
+}
+
+.BorderColorDed5e7 {
+  border-color: #ded5e7;
+}
+
+.BorderColorE6e1eb {
+  border-color: #e6e1eb;
+}
+
+.BorderColorE8e2ef {
+  border-color: #e8e2ef;
+}
+
+.BorderTopColorE6e0ed {
+  border-top-color: #e6e0ed;
+}
+
+.BorderBottomColorE8e5ed {
+  border-bottom-color: #e8e5ed;
+}
+
+.BorderBottomColorEeeaf2 {
+  border-bottom-color: #eeeaf2;
+}
+
+.BorderLeftColorDcd5e4 {
+  border-left-color: #dcd5e4;
+}
+
+.bg5b3284 {
+  background-color: #5b3284;
+}
+
+.bgEaf1fc {
+  background-color: #eaf1fc;
+}
+
+.bgEdf6f1 {
+  background-color: #edf6f1;
+}
+
+.bgEee5f9 {
+  background-color: #eee5f9;
+}
+
+.bgF0eaf5 {
+  background-color: #f0eaf5;
+}
+
+.bgF7f7fa {
+  background-color: #f7f7fa;
+}
+
+.bgFaf8fc {
+  background-color: #faf8fc;
+}
+
+.bgFff4df {
+  background-color: #fff4df;
+}
+
+.bgTransparent {
+  background-color: transparent;
+}
+
+.bgWhite {
+  background-color: #fff;
+}
+
+.FontFamilySegoeUIEmojiAppleColorEmojiSansSerif {
+  font-family: "Segoe UI Emoji", "Apple Color Emoji", sans-serif;
+}
+
+.FontFamilyArialHelveticaSansSerif {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.text075rem {
+  font-size: 0.75rem;
+}
+
+.text0625rem {
+  font-size: 0.625rem;
+}
+
+.text0875rem {
+  font-size: 0.875rem;
+}
+
+.text06875rem {
+  font-size: 0.6875rem;
+}
+
+.text175rem {
+  font-size: 1.75rem;
+}
+
+.text13125rem {
+  font-size: 1.3125rem;
+}
+
+.LineHeight18 {
+  line-height: 1.8;
+}
+
+.fontBold {
+  font-weight: 700;
+}
+
+.fontExtrabold {
+  font-weight: 800;
+}
+
+.fontSemibold {
+  font-weight: 600;
+}
+
+.tracking00625rem {
+  letter-spacing: -0.0625rem;
+}
+
+.tracking01125rem {
+  letter-spacing: 0.1125rem;
+}
+
+.text4c8a69 {
+  color: #4c8a69;
+}
+
+.text8b7d98 {
+  color: #8b7d98;
+}
+
+.text8b789b {
+  color: #8b789b;
+}
+
+.text8c8197 {
+  color: #8c8197;
+}
+
+.text9a8aa7 {
+  color: #9a8aa7;
+}
+
+.text736d7d {
+  color: #736d7d;
+}
+
+.text827b8b {
+  color: #827b8b;
+}
+
+.text837a8c {
+  color: #837a8c;
+}
+
+.text968b9f {
+  color: #968b9f;
+}
+
+.text4974ac {
+  color: #4974ac;
+}
+
+.text44216c {
+  color: #44216c;
+}
+
+.text71439c {
+  color: #71439c;
+}
+
+.text71627d {
+  color: #71627d;
+}
+
+.text74687f {
+  color: #74687f;
+}
+
+.text76558e {
+  color: #76558e;
+}
+
+.text77558d {
+  color: #77558d;
+}
+
+.text92859c {
+  color: #92859c;
+}
+
+.text282434 {
+  color: #282434;
+}
+
+.text736280 {
+  color: #736280;
+}
+
+.text918699 {
+  color: #918699;
+}
+
+.textAd771e {
+  color: #ad771e;
+}
+
+.textDdd {
+  color: #ddd;
+}
+
+.textWhite {
+  color: #fff;
+}
+
+.italic {
+  font-style: italic;
+}
+
+.noUnderline {
+  text-decoration-line: none;
+}
+
+.BoxShadow003125rem125rem30203d04 {
+  box-shadow: 0 0.3125rem 1.25rem #30203d04;
+}
+
+@media (max-width:50rem) {
+  .MediaMaxWidth50remText0625rem {
+    font-size: 0.625rem;
+  }
+}

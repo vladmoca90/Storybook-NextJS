@@ -56,7 +56,7 @@ export default function MedalPlot({ data, colors }: MedalPlotProps) {
       const ticks = compact ? 5 : 10;
 
       chart.append("g")
-        .attr("class", styles.grid)
+        .attr("class", `${styles.grid} [&_path]:hidden`)
         .call(d3.axisBottom(x).ticks(ticks).tickSize(innerHeight).tickFormat(() => ""));
       chart.append("g")
         .attr("class", styles.xAxis)
@@ -68,10 +68,10 @@ export default function MedalPlot({ data, colors }: MedalPlotProps) {
         .call(d3.axisLeft(yCountry).tickSize(0).tickPadding(compact ? 10 : 18))
         .call((axis) => axis.select(".domain").remove());
 
-      const rows = chart.selectAll<SVGGElement, CountryMedals>(`.${styles.row}`)
+      const rows = chart.selectAll<SVGGElement, CountryMedals>(`.${styles.row} [&_rect]:cursor-pointer [&_rect]:outline-none`)
         .data(data)
         .join("g")
-        .attr("class", styles.row)
+        .attr("class", `${styles.row} [&_rect]:cursor-pointer [&_rect]:outline-none`)
         .attr("transform", (item) => `translate(0,${yCountry(item.country) ?? 0})`);
 
       rows.selectAll<SVGRectElement, { medal: MedalType; value: number; country: string }>("rect")
@@ -106,7 +106,7 @@ export default function MedalPlot({ data, colors }: MedalPlotProps) {
   }, [data, colors]);
 
   return (
-    <div ref={containerRef} className={styles.chart}>
+    <div ref={containerRef} className={`relative w-[100%] min-h-[26.875rem] [&_svg]:block [&_svg]:w-[100%] [&_svg]:h-[auto] [&_svg]:overflow-[visible]`}>
       <svg ref={svgRef} aria-labelledby="chart-title chart-description">
         <desc id="chart-description">
           Grouped horizontal bar chart comparing gold, silver and bronze medal counts for Germany,
@@ -114,7 +114,7 @@ export default function MedalPlot({ data, colors }: MedalPlotProps) {
         </desc>
       </svg>
       {tooltip && (
-        <div className={styles.tooltip} role="status" style={{ left: tooltip.x, top: tooltip.y }}>
+        <div className={`${styles.tooltip} absolute z-[2] min-w-[9.375rem] [padding:0.625rem_0.75rem] border-[0.0625rem] rounded-[0.5rem] pointer-events-none [&_span]:block [&_span]:mb-[0.125rem]`} role="status" style={{ left: tooltip.x, top: tooltip.y }}>
           <span>{tooltip.country}</span>
           <strong>{tooltip.value}</strong> {tooltip.medal.toLowerCase()} medals
         </div>

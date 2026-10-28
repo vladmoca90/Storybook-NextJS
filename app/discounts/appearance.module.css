@@ -1,0 +1,316 @@
+/* Colors, backgrounds, and typography. Layout and responsive geometry stay in Tailwind. */
+
+.borderStoreAccent {
+  border-color: var(--store-accent);
+}
+
+.borderStoreDivider {
+  border-color: var(--store-divider);
+}
+
+.borderStoreInk {
+  border-color: var(--store-ink);
+}
+
+.borderStoreInputLine {
+  border-color: var(--store-input-line);
+}
+
+.borderStoreLine {
+  border-color: var(--store-line);
+}
+
+.borderStoreNavLine {
+  border-color: var(--store-nav-line);
+}
+
+.borderStoreSearchLine {
+  border-color: var(--store-search-line);
+}
+
+.bgStoreAccent {
+  background-color: var(--store-accent);
+}
+
+.bgStoreCanvas {
+  background-color: var(--store-canvas);
+}
+
+.bgStoreCard {
+  background-color: var(--store-card);
+}
+
+.bgStoreFooter {
+  background-color: var(--store-footer);
+}
+
+.bgStoreHero {
+  background-color: var(--store-hero);
+}
+
+.bgStoreInk {
+  background-color: var(--store-ink);
+}
+
+.bgStorePaper {
+  background-color: var(--store-paper);
+}
+
+.bgTransparent {
+  background-color: transparent;
+}
+
+.fontMono {
+  font-family: var(--font-geist-mono), monospace;
+}
+
+.fontSans {
+  font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
+}
+
+.fontSerif {
+  font-family: ui-serif, Georgia, Cambria, 'Times New Roman', Times, serif;
+}
+
+.textBase {
+  font-size: 1rem;
+  line-height: var(--tw-leading, calc(1.5 / 1));
+}
+
+.textLg {
+  font-size: 1.125rem;
+  line-height: var(--tw-leading, calc(1.75 / 1.125));
+}
+
+.textSm {
+  font-size: 0.875rem;
+  line-height: var(--tw-leading, calc(1.25 / 0.875));
+}
+
+.textXl {
+  font-size: 1.25rem;
+  line-height: var(--tw-leading, calc(1.75 / 1.25));
+}
+
+.textXs {
+  font-size: 0.75rem;
+  line-height: var(--tw-leading, calc(1 / 0.75));
+}
+
+.text0625rem {
+  font-size: 0.625rem;
+}
+
+.text05625rem {
+  font-size: 0.5625rem;
+}
+
+.text06875rem {
+  font-size: 0.6875rem;
+}
+
+.text08125rem {
+  font-size: 0.8125rem;
+}
+
+.text09375rem {
+  font-size: 0.9375rem;
+}
+
+.text11875rem {
+  font-size: 1.1875rem;
+}
+
+.text15625rem {
+  font-size: 1.5625rem;
+}
+
+.text19375rem {
+  font-size: 1.9375rem;
+}
+
+.text23125rem {
+  font-size: 2.3125rem;
+}
+
+.textClamp2375rem5vw4rem {
+  font-size: clamp(2.375rem, 5vw, 4rem);
+}
+
+.textClamp3625rem7vw675rem {
+  font-size: clamp(3.625rem, 7vw, 6.75rem);
+}
+
+.textClamp3rem6vw4875rem {
+  font-size: clamp(3rem, 6vw, 4.875rem);
+}
+
+.leading87 {
+  --tw-leading: .87;
+  line-height: .87;
+}
+
+@property --tw-leading {
+  syntax: "*";
+  inherits: false;
+}
+
+.leading95 {
+  --tw-leading: .95;
+  line-height: .95;
+}
+
+.leading16 {
+  --tw-leading: 1.6;
+  line-height: 1.6;
+}
+
+.leading17 {
+  --tw-leading: 1.7;
+  line-height: 1.7;
+}
+
+.leadingNone {
+  --tw-leading: 1;
+  line-height: 1;
+}
+
+.fontBlack {
+  font-weight: 900;
+}
+
+.fontBold {
+  font-weight: 700;
+}
+
+.fontExtrabold {
+  font-weight: 800;
+}
+
+.fontNormal {
+  font-weight: 400;
+}
+
+.tracking055em {
+  letter-spacing: -.055em;
+}
+
+.tracking12em {
+  letter-spacing: .12em;
+}
+
+.tracking13em {
+  letter-spacing: .13em;
+}
+
+.tracking15em {
+  letter-spacing: .15em;
+}
+
+.tracking16em {
+  letter-spacing: .16em;
+}
+
+.tracking17em {
+  letter-spacing: .17em;
+}
+
+.textStoreAccent {
+  color: var(--store-accent);
+}
+
+.textStoreBody {
+  color: var(--store-body);
+}
+
+.textStoreCategory {
+  color: var(--store-category);
+}
+
+.textStoreCopy {
+  color: var(--store-copy);
+}
+
+.textStoreFilter {
+  color: var(--store-filter);
+}
+
+.textStoreFooterCopy {
+  color: var(--store-footer-copy);
+}
+
+.textStoreFormula {
+  color: var(--store-formula);
+}
+
+.textStoreIllustration {
+  color: var(--store-illustration);
+}
+
+.textStoreInk {
+  color: var(--store-ink);
+}
+
+.textStoreInverseCopy {
+  color: var(--store-inverse-copy);
+}
+
+.textStoreLabel {
+  color: var(--store-label);
+}
+
+.textStoreMuted {
+  color: var(--store-muted);
+}
+
+.textStoreProductInk {
+  color: var(--store-product-ink);
+}
+
+.textStoreStrike {
+  color: var(--store-strike);
+}
+
+.textWhite {
+  color: #fff;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.accentStoreAccent {
+  accent-color: var(--store-accent);
+}
+
+.shadow05rem05rem0StoreAccent {
+  box-shadow: 0.5rem 0.5rem 0 var(--store-accent);
+}
+
+.shadow00875rem15625remStoreBadgeShadow {
+  box-shadow: 0 0.875rem 1.5625rem var(--store-badge-shadow);
+}
+
+.beforeBorderWhite60::before {
+  content: var(--tw-content);
+  border-color: color-mix(in oklab, #fff 60%, transparent);
+}
+
+@media (width >= 64rem) {
+  .lgTextLg {
+    font-size: 1.125rem;
+    line-height: var(--tw-leading, calc(1.75 / 1.125));
+  }
+}
+
+@media (width >= 64rem) {
+  .lgText19375rem {
+    font-size: 1.9375rem;
+  }
+}
+
+@media (width >= 64rem) {
+  .lgShadow0875rem0875rem0StoreAccent {
+    box-shadow: 0.875rem 0.875rem 0 var(--store-accent);
+  }
+}

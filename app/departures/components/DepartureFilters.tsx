@@ -1,3 +1,4 @@
+import appearance from "../appearance.module.css";
 import { Search, SlidersHorizontal } from "lucide-react";
 import styles from "../departures.module.css";
 
@@ -17,11 +18,11 @@ export default function DepartureFilters({
     <>
       <div
         className={
-          "flex gap-3 p-6 [border-bottom:1px_solid_#eeeaf2] [@media(max-width:800px)]:flex-wrap [@media(max-width:800px)]:p-4 [@media(max-width:800px)]:gap-[10px]"
+          `flex gap-3 p-6 [border-bottom-width:0.0625rem] [border-bottom-style:solid] ${appearance.BorderBottomColorEeeaf2} [@media(max-width:50rem)]:flex-wrap [@media(max-width:50rem)]:p-4 [@media(max-width:50rem)]:gap-[0.625rem]`
         }
       >
         <label
-          className={`flex items-center gap-3 [border:1px_solid_#ddd7e4] rounded-[6px] [padding:0_13px] flex-1 text-[#8b7d98] min-w-[180px] [@media(max-width:800px)]:basis-full ${styles.search}`}
+          className={`flex items-center gap-3 [border-width:0.0625rem] [border-style:solid] ${appearance.BorderColorDdd7e4} rounded-[0.375rem] [padding:0_0.8125rem] flex-1 ${appearance.text8b7d98} min-w-[11.25rem] [@media(max-width:50rem)]:basis-full ${styles.search} [&_input]:w-[100%] [&_input]:[padding:0.8125rem_0] [&_input]:outline-none [&_input]:border-0 [&_button]:border-0 [&_button]:cursor-pointer`}
         >
           <Search size={20} />
           <input
@@ -37,7 +38,7 @@ export default function DepartureFilters({
           )}
         </label>
         <label
-          className={`flex items-center gap-[6px] [border:1px_solid_#ddd7e4] rounded-[6px] [padding:0_12px] text-[#71627d] [@media(max-width:800px)]:flex-1 ${styles.select}`}
+          className={`flex items-center gap-[0.375rem] [border-width:0.0625rem] [border-style:solid] ${appearance.BorderColorDdd7e4} rounded-[0.375rem] [padding:0_0.75rem] ${appearance.text71627d} [@media(max-width:50rem)]:flex-1 ${styles.select} [&_select]:[padding:0.75rem_0.25rem] [&_select]:border-0 [&_select]:max-w-[10rem] [@media(max-width:50rem)]:[&_select]:max-w-[none] [@media(max-width:50rem)]:[&_select]:w-[100%]`}
         >
           <SlidersHorizontal size={16} />
           <select
@@ -53,7 +54,7 @@ export default function DepartureFilters({
           </select>
         </label>
         <label
-          className={`flex items-center gap-[6px] [border:1px_solid_#ddd7e4] rounded-[6px] [padding:0_12px] text-[#71627d] [@media(max-width:800px)]:flex-1 ${styles.select}`}
+          className={`flex items-center gap-[0.375rem] [border-width:0.0625rem] [border-style:solid] ${appearance.BorderColorDdd7e4} rounded-[0.375rem] [padding:0_0.75rem] ${appearance.text71627d} [@media(max-width:50rem)]:flex-1 ${styles.select} [&_select]:[padding:0.75rem_0.25rem] [&_select]:border-0 [&_select]:max-w-[10rem] [@media(max-width:50rem)]:[&_select]:max-w-[none] [@media(max-width:50rem)]:[&_select]:w-[100%]`}
         >
           <select
             aria-label="Filter status"

@@ -1,3 +1,4 @@
+import appearance from "../appearance.module.css";
 import { ArrowUpRight, Plane } from "lucide-react";
 import styles from "../departures.module.css";
 
@@ -13,18 +14,18 @@ export default function DeparturesIntro({
   return (
     <>
     <div
-      className={`text-[11px] text-[#827b8b] flex gap-[14px] ${styles.breadcrumb}`}
+      className={`${appearance.text06875rem} ${appearance.text827b8b} flex gap-[0.875rem] ${styles.breadcrumb}`}
     >
       London Heathrow <span>/</span> Flight information <span>/</span>{" "}
       Departures
     </div>
     <section
-      className={`flex items-center justify-between [padding:43px_0_34px] [@media(max-width:800px)]:[padding:32px_0] ${styles.hero}`}
+      className={`flex items-center justify-between [padding:2.6875rem_0_2.125rem] [@media(max-width:50rem)]:[padding:2rem_0] ${styles.hero} [&_h1]:[margin:0.75rem_0] [&_h1_span]:ml-[1.4375rem] [&_p]:mt-[0.8125rem] [@media(max-width:50rem)]:[&_p]:max-w-[18.75rem]`}
     >
       <div>
         <div
           className={
-            "flex gap-[9px] items-center tracking-[1.8px] text-[10px] font-bold text-[#76558e]"
+            `flex gap-[0.5625rem] items-center ${appearance.tracking01125rem} ${appearance.text0625rem} ${appearance.fontBold} ${appearance.text76558e}`
           }
         >
           <Plane size={17} /> YOUR NEXT CHAPTER STARTS HERE
@@ -37,7 +38,7 @@ export default function DeparturesIntro({
         </p>
       </div>
       <div
-        className={`[border-left:1px_solid_#dcd5e4] [padding:8px_0_8px_28px] flex flex-col gap-[9px] [@media(max-width:800px)]:hidden ${styles.airportCard}`}
+        className={`[border-left-width:0.0625rem] [border-left-style:solid] ${appearance.BorderLeftColorDcd5e4} [padding:0.5rem_0_0.5rem_1.75rem] flex flex-col gap-[0.5625rem] [@media(max-width:50rem)]:hidden ${styles.airportCard} [&_strong]:flex [&_strong]:items-center [&_strong]:gap-[4.375rem]`}
       >
         <span>LONDON HEATHROW</span>
         <strong>
@@ -47,7 +48,7 @@ export default function DeparturesIntro({
       </div>
     </section>
     <div
-      className={`flex items-center gap-[26px] [margin:9px_0_20px] text-[12px] text-[#837a8c] [@media(max-width:800px)]:gap-3 ${styles.overview}`}
+      className={`flex items-center gap-[1.625rem] [margin:0.5625rem_0_1.25rem] ${appearance.text075rem} ${appearance.text837a8c} [@media(max-width:50rem)]:gap-3 ${styles.overview} [&_>_span:first-child]:flex [&_>_span:first-child]:items-center [&_>_span:first-child]:gap-[0.5625rem] [&_i]:w-[0.4375rem] [&_i]:h-[0.4375rem] [&_i]:rounded-[50%] [&_b]:[margin:0_0.5625rem] [@media(max-width:50rem)]:[&_>_span:nth-child(2)]:hidden`}
     >
       <span>
         <i /> Departure board
@@ -57,7 +58,7 @@ export default function DeparturesIntro({
       </span>
       <span
         className={
-          "ml-auto [border:1px_solid_#ded5e7] bg-[#f0eaf5] text-[#77558d] [padding:5px_9px] rounded-[5px] text-[10px]"
+          `ml-auto [border-width:0.0625rem] [border-style:solid] ${appearance.BorderColorDed5e7} ${appearance.bgF0eaf5} ${appearance.text77558d} [padding:0.3125rem_0.5625rem] rounded-[0.3125rem] ${appearance.text0625rem}`
         }
       >
         Sample schedule

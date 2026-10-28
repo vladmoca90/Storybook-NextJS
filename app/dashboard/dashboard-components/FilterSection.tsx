@@ -32,30 +32,30 @@ export function FilterSection({
   };
 
   return (
-    <div className="filter-section">
-      <h2 className="filter-title">Filters</h2>
-      <div className="filter-grid">
-        <div className="filter-group">
-          <label htmlFor="search-name" className="filter-label">
+    <div className={`filter-section rounded-[0.5rem] p-[1.5rem] mb-[2rem] border-[0.0625rem]`}>
+      <h2 className={`filter-title [margin:0_0_1rem_0]`}>Filters</h2>
+      <div className={`filter-grid grid [grid-template-columns:repeat(auto-fit,_minmax(12.5rem,_1fr))] gap-[1rem] [@media(max-width:48rem)]:grid-cols-[1fr]`}>
+        <div className={`filter-group flex flex-col gap-[0.5rem]`}>
+          <label htmlFor="search-name" className={`filter-label`}>
             Search by Name
           </label>
           <input
             id="search-name"
             type="text"
-            className="filter-input"
+            className={`filter-input p-[0.75rem] border-[0.0625rem] rounded-[0.25rem] [&:focus]:outline-none`}
             placeholder="e.g., Emma"
             value={filters.searchName}
             onChange={(event) => updateFilter('searchName', event.target.value)}
           />
         </div>
 
-        <div className="filter-group">
-          <label htmlFor="job-filter" className="filter-label">
+        <div className={`filter-group flex flex-col gap-[0.5rem]`}>
+          <label htmlFor="job-filter" className={`filter-label`}>
             Job Title
           </label>
           <select
             id="job-filter"
-            className="filter-select"
+            className={`filter-select p-[0.75rem] border-[0.0625rem] rounded-[0.25rem] [&:focus]:outline-none`}
             value={filters.jobFilter}
             onChange={(event) => updateFilter('jobFilter', event.target.value)}
           >
@@ -68,13 +68,13 @@ export function FilterSection({
           </select>
         </div>
 
-        <div className="filter-group">
-          <label htmlFor="nationality-filter" className="filter-label">
+        <div className={`filter-group flex flex-col gap-[0.5rem]`}>
+          <label htmlFor="nationality-filter" className={`filter-label`}>
             Nationality
           </label>
           <select
             id="nationality-filter"
-            className="filter-select"
+            className={`filter-select p-[0.75rem] border-[0.0625rem] rounded-[0.25rem] [&:focus]:outline-none`}
             value={filters.nationalityFilter}
             onChange={(event) => updateFilter('nationalityFilter', event.target.value)}
           >
@@ -87,13 +87,13 @@ export function FilterSection({
           </select>
         </div>
 
-        <div className="filter-group">
-          <label htmlFor="status-filter" className="filter-label">
+        <div className={`filter-group flex flex-col gap-[0.5rem]`}>
+          <label htmlFor="status-filter" className={`filter-label`}>
             Marital Status
           </label>
           <select
             id="status-filter"
-            className="filter-select"
+            className={`filter-select p-[0.75rem] border-[0.0625rem] rounded-[0.25rem] [&:focus]:outline-none`}
             value={filters.maritalStatusFilter}
             onChange={(event) => updateFilter('maritalStatusFilter', event.target.value)}
           >
@@ -106,14 +106,14 @@ export function FilterSection({
           </select>
         </div>
 
-        <div className="filter-group">
-          <label htmlFor="min-age" className="filter-label">
+        <div className={`filter-group flex flex-col gap-[0.5rem]`}>
+          <label htmlFor="min-age" className={`filter-label`}>
             Min Age: {filters.ageRange[0]}
           </label>
           <input
             id="min-age"
             type="range"
-            className="filter-input"
+            className={`filter-input p-[0.75rem] border-[0.0625rem] rounded-[0.25rem] [&:focus]:outline-none`}
             min="18"
             max="100"
             value={filters.ageRange[0]}
@@ -124,14 +124,14 @@ export function FilterSection({
           />
         </div>
 
-        <div className="filter-group">
-          <label htmlFor="max-age" className="filter-label">
+        <div className={`filter-group flex flex-col gap-[0.5rem]`}>
+          <label htmlFor="max-age" className={`filter-label`}>
             Max Age: {filters.ageRange[1]}
           </label>
           <input
             id="max-age"
             type="range"
-            className="filter-input"
+            className={`filter-input p-[0.75rem] border-[0.0625rem] rounded-[0.25rem] [&:focus]:outline-none`}
             min="18"
             max="100"
             value={filters.ageRange[1]}
@@ -142,7 +142,7 @@ export function FilterSection({
           />
         </div>
       </div>
-      <button className="clear-filters-btn" onClick={() => onFiltersChange(initialFilters)}>
+      <button className={`clear-filters-btn [padding:0.5rem_1rem] border-[0.0625rem] rounded-[0.25rem] cursor-pointer self-[flex-end] [@media(max-width:48rem)]:self-[stretch]`} onClick={() => onFiltersChange(initialFilters)}>
         Clear All Filters
       </button>
     </div>

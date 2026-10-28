@@ -45,7 +45,7 @@ export default function Dashboard() {
   }, [filters]);
 
   return (
-    <div className="dashboard-container">
+    <div className={`dashboard-container max-w-[75rem] [margin:0_auto] p-[2rem] [@media(max-width:48rem)]:p-[1rem]`}>
       <DashboardHeader />
 
       <FilterSection
