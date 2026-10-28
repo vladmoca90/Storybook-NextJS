@@ -10,12 +10,12 @@ type PeoplePaginationProps = {
 
 export default function PeoplePagination({ page, pageCount, pageSize, totalPeople, onPageChange }: PeoplePaginationProps) {
   return (
-    <div className={`${styles.footer} mt-6 flex items-center justify-between gap-5 max-[641px]:flex-col max-[641px]:items-start`}>
+    <div className={`${styles.footer} mt-6 flex items-center justify-between gap-5 max-[40.0625rem]:flex-col max-[40.0625rem]:items-start`}>
       <p className="m-0" role="status">
         Showing {(page - 1) * pageSize + 1}–{Math.min(page * pageSize, totalPeople)} of{" "}
         {totalPeople} people
       </p>
-      <nav className={`${styles.pagination} flex gap-3 max-[641px]:w-full max-[641px]:justify-between max-[641px]:gap-2 [&_button]:h-11 [&_button]:min-w-11 [&_button]:cursor-pointer [&_button]:rounded-[10px] [&_button]:border [&_button]:px-4 [&_button]:py-0 [&_button]:transition-[background] [&_button]:duration-150 [&_button:disabled]:cursor-not-allowed`} aria-label="People pagination">
+      <nav className={`${styles.pagination} flex gap-3 max-[40.0625rem]:w-full max-[40.0625rem]:justify-between max-[40.0625rem]:gap-2 [&_button]:h-11 [&_button]:min-w-11 [&_button]:cursor-pointer [&_button]:rounded-[0.625rem] [&_button]:border-[0.0625rem] [&_button]:px-4 [&_button]:py-0 [&_button]:transition-[background] [&_button]:duration-150 [&_button:disabled]:cursor-not-allowed`} aria-label="People pagination">
         <button
           disabled={page === 1}
           onClick={() => onPageChange(Math.max(1, page - 1))}

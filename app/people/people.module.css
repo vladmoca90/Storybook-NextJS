@@ -5,7 +5,7 @@
 
 .header {
   border-bottom-color: #e3e6eb;
-  font-size: 16px;
+  font-size: 1rem;
   font-weight: 600;
 }
 
@@ -14,21 +14,21 @@
 }
 
 .intro h1 {
-  font-size: 50px;
+  font-size: 3.125rem;
   line-height: 1.2;
   font-weight: 650;
-  letter-spacing: -2px;
+  letter-spacing: -0.125rem;
 }
 
 .intro p {
-  font-size: 19px;
+  font-size: 1.1875rem;
   line-height: 1.6;
   color: #667085;
 }
 
 .count {
   color: #667085;
-  font-size: 18px;
+  font-size: 1.125rem;
 }
 
 .tableWrapper {
@@ -36,14 +36,14 @@
 }
 
 .tableWrapper table {
-  font-size: 16px;
+  font-size: 1rem;
 }
 
 .tableWrapper th {
   background: #f6f7f8;
   color: #5d687b;
   font-weight: 550;
-  font-size: 14px;
+  font-size: 0.875rem;
 }
 
 .tableWrapper td {
@@ -57,11 +57,11 @@
 .tableWrapper code {
   font-family: var(--font-geist-mono), monospace;
   color: #778297;
-  font-size: 14px;
+  font-size: 0.875rem;
 }
 
 .avatar {
-  font-size: 13px;
+  font-size: 0.8125rem;
   font-weight: 500;
   background: #ffe6eb;
   color: #9d243c;
@@ -93,7 +93,7 @@
 }
 
 .footer p {
-  font-size: 15px;
+  font-size: 0.9375rem;
   color: #667085;
 }
 
@@ -101,7 +101,7 @@
   border-color: #dfe3e9;
   background: white;
   color: #111827;
-  font-size: 15px;
+  font-size: 0.9375rem;
 }
 
 .pagination button:hover:not(:disabled) {
@@ -120,25 +120,25 @@
 }
 
 .directory :focus-visible {
-  outline: 3px solid #159f70;
-  outline-offset: 3px;
+  outline: 0.1875rem solid #159f70;
+  outline-offset: 0.1875rem;
 }
 
 .note {
   color: #8892a3;
-  font-size: 14px;
+  font-size: 0.875rem;
 }
 
-@media (max-width: 640px) {
+@media (max-width: 40rem) {
   .intro h1 {
-    font-size: 38px;
+    font-size: 2.375rem;
   }
 
   .intro p {
-    font-size: 15px;
+    font-size: 0.9375rem;
   }
 
   .count {
-    font-size: 14px;
+    font-size: 0.875rem;
   }
 }

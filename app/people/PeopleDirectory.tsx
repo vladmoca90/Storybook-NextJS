@@ -18,7 +18,7 @@ export default function PeopleDirectory() {
   return (
     <div className={`${styles.directory} min-h-screen`}>
       <DirectoryHeader title="People directory" />
-      <main className="mx-auto mt-[60px] mb-20 max-w-[1128px] px-6 max-[641px]:mt-9 max-[641px]:px-5">
+      <main className="mx-auto mt-[3.75rem] mb-20 max-w-[70.5rem] px-6 max-[40.0625rem]:mt-9 max-[40.0625rem]:px-5">
         <PeopleIntro
           title="People"
           description="A small directory of people from around the world."
@@ -32,7 +32,7 @@ export default function PeopleDirectory() {
           totalPeople={people.length}
           onPageChange={setPage}
         />
-        <p className={`${styles.note} mt-[25px] mb-0`}>Sample data · {PAGE_SIZE} people per page</p>
+        <p className={`${styles.note} mt-[1.5625rem] mb-0`}>Sample data · {PAGE_SIZE} people per page</p>
       </main>
     </div>
   );

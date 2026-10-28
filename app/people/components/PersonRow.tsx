@@ -7,7 +7,7 @@ export default function PersonRow({ person, colorIndex }: PersonRowProps) {
   return (
     <tr>
       <td>
-        <div className="flex items-center gap-[18px]">
+        <div className="flex items-center gap-[1.125rem]">
           <span
             className={`${styles.avatar} grid size-9 shrink-0 place-items-center rounded-full`}
             data-color={colorIndex % 6}
