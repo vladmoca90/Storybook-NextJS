@@ -1,8 +1,8 @@
 .page {
   --ink: #23211e;
   --muted: #77726a;
-  --orange: #e8622b;
-  --orange-dark: #ce4e1c;
+  --orange: #d85e2d;
+  --orange-dark: #dd490e;
   background:
     radial-gradient(circle at 15% 10%, rgba(232, 98, 43, 0.1), transparent 26rem),
     linear-gradient(145deg, #f7f3ed 0%, #f2eee7 100%);
