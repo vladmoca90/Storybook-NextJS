@@ -17,10 +17,10 @@ export default function QuickListContentComponent({
   const completedCount = items.filter((item) => item.completed).length;
 
   return (
-    <div className={styles.content} aria-live="polite">
+    <div className={"mt-7"} aria-live="polite">
       {items.length === 0 ? (
-        <div className={styles.empty}>
-          <span className={styles.emptyIcon} aria-hidden="true">
+        <div className={`${styles.empty} flex min-h-[15.3125rem] flex-col items-center justify-center rounded-[1.0625rem] border-[0.0625rem] border-dashed text-center [&_h2]:m-0 [&_p]:mt-[0.4375rem] [&_p]:mb-0`}>
+          <span className={`${styles.emptyIcon} mb-[1.0625rem] grid size-[3.375rem] place-items-center rounded-full [&_svg]:w-[1.5625rem]`} aria-hidden="true">
             <svg viewBox="0 0 24 24">
               <path d="M8 6h11M8 12h11M8 18h7" />
               <circle cx="4" cy="6" r="1" />
@@ -35,7 +35,7 @@ export default function QuickListContentComponent({
         </div>
       ) : (
         <>
-          <div className={styles.listHeader}>
+          <div className={`${styles.listHeader} mx-1 mt-0 mb-2.5 flex items-center justify-between [&_button]:cursor-pointer [&_button]:border-0 [&_button]:p-1`}>
             <span>
               {items.length} {items.length === 1 ? "item" : "items"}
             </span>
@@ -47,7 +47,7 @@ export default function QuickListContentComponent({
             )}
           </div>
 
-          <ul className={styles.list}>
+          <ul className={`${styles.list} m-0 grid max-h-[18.125rem] list-none gap-[0.5625rem] overflow-y-auto p-0 [&_li]:flex [&_li]:min-h-[3.4375rem] [&_li]:items-center [&_li]:gap-3 [&_li]:rounded-[0.8125rem] [&_li]:border-[0.0625rem] [&_li]:px-[0.6875rem] [&_li]:py-[0.5625rem]`}>
             {items.map((item) => (
               <li
                 key={item.id}
@@ -55,7 +55,7 @@ export default function QuickListContentComponent({
               >
                 <button
                   type="button"
-                  className={styles.check}
+                  className={`${styles.check} grid size-[1.6875rem] flex-none cursor-pointer place-items-center rounded-lg border-[0.09375rem] [&_svg]:w-[1.0625rem]`}
                   onClick={() => onToggleItem(item.id)}
                   aria-label={
                     item.completed
@@ -69,11 +69,11 @@ export default function QuickListContentComponent({
                   </svg>
                 </button>
 
-                <span className={styles.itemLabel}>{item.label}</span>
+                <span className={`${styles.itemLabel} min-w-0 flex-1 [overflow-wrap:anywhere]`}>{item.label}</span>
 
                 <button
                   type="button"
-                  className={styles.delete}
+                  className={`${styles.delete} grid size-8 flex-none cursor-pointer place-items-center rounded-lg border-0 [&_svg]:w-[1.0625rem]`}
                   onClick={() => onDeleteItem(item.id)}
                   aria-label={`Delete ${item.label}`}
                 >

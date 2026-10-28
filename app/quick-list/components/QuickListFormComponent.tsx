@@ -15,8 +15,8 @@ export default function QuickListForm({
   onSubmit,
 }: QuickListFormProps) {
   return (
-    <form className={styles.form} onSubmit={onSubmit}>
-      <label className={styles.srOnly} htmlFor={inputId}>
+    <form className={`${styles.form} flex gap-2.5 rounded-[0.9375rem] border-[0.0625rem] p-[0.4375rem] [&_input]:min-w-0 [&_input]:flex-1 [&_input]:border-0 [&_input]:px-[0.8125rem] [&_input]:py-[0.6875rem] [&_input]:outline-0 [&_button]:inline-flex [&_button]:cursor-pointer [&_button]:items-center [&_button]:gap-[0.4375rem] [&_button]:rounded-[0.625rem] [&_button]:border-0 [&_button]:px-[1.1875rem] [&_button]:py-0 [&_button:disabled]:cursor-not-allowed max-[37.5rem]:[&_button]:px-3.5 [&_svg]:w-[1.0625rem]`} onSubmit={onSubmit}>
+      <label className="sr-only" htmlFor={inputId}>
         New list item
       </label>
 

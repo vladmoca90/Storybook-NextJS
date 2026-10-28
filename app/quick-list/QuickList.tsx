@@ -56,16 +56,16 @@ export default function QuickList() {
   }
 
   return (
-    <main className={styles.page}>
-      <div className={styles.glow} aria-hidden="true" />
+    <main className={`${styles.page} relative grid min-h-screen place-items-center overflow-hidden px-5 py-12 before:pointer-events-none before:absolute before:inset-0 max-[37.5rem]:items-start max-[37.5rem]:px-3 max-[37.5rem]:py-[1.125rem]`}>
+      <div className={`${styles.glow} absolute -right-[8.75rem] -bottom-[9.375rem] size-90 rounded-full`} aria-hidden="true" />
 
       <section
-        className={styles.app}
+        className={`${styles.app} relative w-full max-w-[41.875rem] min-h-[40.625rem] rounded-[1.75rem] border-[0.0625rem] px-13 pt-12 pb-7 max-[37.5rem]:min-h-[calc(100vh-2.25rem)] max-[37.5rem]:rounded-[1.375rem] max-[37.5rem]:px-5 max-[37.5rem]:pt-8 max-[37.5rem]:pb-[1.375rem] [&_footer]:mt-6 [&_footer]:text-center [&_kbd]:rounded-[0.3125rem] [&_kbd]:border-[0.0625rem] [&_kbd]:border-b-[0.125rem] [&_kbd]:px-1.5 [&_kbd]:py-0.5`}
         aria-labelledby="list-title"
       >
-        <header className={styles.header}>
-          <div className={styles.brand}>
-            <span className={styles.logo} aria-hidden="true">
+        <header className={`${styles.header} text-center [&_h1]:m-0`}>
+          <div className={`${styles.brand} mb-[2.1875rem] inline-flex items-center gap-2.5 max-[37.5rem]:mb-7`}>
+            <span className={`${styles.logo} grid size-[1.8125rem] place-items-center rounded-[0.5625rem] [&_svg]:w-[1.0625rem]`} aria-hidden="true">
               <svg viewBox="0 0 24 24">
                 <path d="m5 12 4 4L19 6" />
               </svg>
@@ -74,7 +74,7 @@ export default function QuickList() {
             <span>Quick List</span>
           </div>
 
-          <div className={styles.eyebrow}>
+          <div className={`${styles.eyebrow} mb-2.5`}>
             A little space for big plans
           </div>
 
@@ -82,7 +82,7 @@ export default function QuickList() {
             What&apos;s on your mind?
           </h1>
 
-          <p className={styles.intro}>
+          <p className={`${styles.intro} mt-[0.9375rem] mb-[1.875rem] max-[37.5rem]:mb-6`}>
             Add anything you want to remember. One thought at a
             time.
           </p>

@@ -3,12 +3,6 @@
   --muted: #77726a;
   --orange: #e8622b;
   --orange-dark: #ce4e1c;
-  min-height: 100vh;
-  display: grid;
-  place-items: center;
-  padding: 3rem 1.25rem;
-  position: relative;
-  overflow: hidden;
   background:
     radial-gradient(circle at 15% 10%, rgba(232, 98, 43, 0.1), transparent 26rem),
     linear-gradient(145deg, #f7f3ed 0%, #f2eee7 100%);
@@ -17,31 +11,17 @@
 
 .page::before {
   content: "";
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
   opacity: 0.32;
   background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.08'/%3E%3C/svg%3E");
 }
 
 .glow {
-  position: absolute;
-  width: 22.5rem;
-  height: 22.5rem;
-  right: -8.75rem;
-  bottom: -9.375rem;
-  border-radius: 50%;
   background: rgba(236, 180, 72, 0.16);
   filter: blur(0.125rem);
 }
 
 .app {
-  position: relative;
-  width: min(100%, 41.875rem);
-  min-height: 40.625rem;
-  padding: 3rem 3.25rem 1.75rem;
-  border: 0.0625rem solid rgba(71, 61, 47, 0.12);
-  border-radius: 1.75rem;
+  border-color: rgba(71, 61, 47, 0.12);
   background: rgba(255, 253, 249, 0.94);
   box-shadow:
     0 1.875rem 4.375rem rgba(77, 59, 39, 0.12),
@@ -49,15 +29,7 @@
   backdrop-filter: blur(0.75rem);
 }
 
-.header {
-  text-align: center;
-}
-
 .brand {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.625rem;
-  margin-bottom: 2.1875rem;
   color: #4a4640;
   font-size: 0.85rem;
   font-weight: 700;
@@ -66,11 +38,6 @@
 }
 
 .logo {
-  display: grid;
-  width: 1.8125rem;
-  height: 1.8125rem;
-  place-items: center;
-  border-radius: 0.5625rem;
   background: var(--orange);
   box-shadow: 0 0.3125rem 0.75rem rgba(232, 98, 43, 0.25);
   color: white;
@@ -78,7 +45,6 @@
 }
 
 .logo svg {
-  width: 1.0625rem;
   fill: none;
   stroke: currentColor;
   stroke-linecap: round;
@@ -87,7 +53,6 @@
 }
 
 .eyebrow {
-  margin-bottom: 0.625rem;
   color: var(--orange);
   font-size: 0.72rem;
   font-weight: 750;
@@ -96,7 +61,6 @@
 }
 
 .header h1 {
-  margin: 0;
   font-family: Georgia, "Times New Roman", serif;
   font-size: clamp(2.15rem, 6vw, 3.2rem);
   font-weight: 500;
@@ -105,18 +69,13 @@
 }
 
 .intro {
-  margin: 0.9375rem 0 1.875rem;
   color: var(--muted);
   font-size: 0.97rem;
   line-height: 1.6;
 }
 
 .form {
-  display: flex;
-  gap: 0.625rem;
-  padding: 0.4375rem;
-  border: 0.0625rem solid #ded8cf;
-  border-radius: 0.9375rem;
+  border-color: #ded8cf;
   background: white;
   box-shadow: 0 0.4375rem 1.5rem rgba(76, 59, 40, 0.06);
   transition: border-color 160ms ease, box-shadow 160ms ease;
@@ -128,11 +87,6 @@
 }
 
 .form input {
-  min-width: 0;
-  flex: 1;
-  padding: 0.6875rem 0.8125rem;
-  border: 0;
-  outline: 0;
   background: transparent;
   color: var(--ink);
   font-size: 1rem;
@@ -143,16 +97,9 @@
 }
 
 .form button {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.4375rem;
-  padding: 0 1.1875rem;
-  border: 0;
-  border-radius: 0.625rem;
   background: var(--orange);
   box-shadow: 0 0.3125rem 0.8125rem rgba(232, 98, 43, 0.23);
   color: white;
-  cursor: pointer;
   font-size: 0.9rem;
   font-weight: 700;
   transition: background 150ms ease, transform 150ms ease, opacity 150ms ease;
@@ -164,48 +111,28 @@
 }
 
 .form button:disabled {
-  cursor: not-allowed;
   opacity: 0.48;
   box-shadow: none;
 }
 
 .form button svg {
-  width: 1.0625rem;
   fill: none;
   stroke: currentColor;
   stroke-linecap: round;
   stroke-width: 2.2;
 }
 
-.content {
-  margin-top: 1.75rem;
-}
-
 .empty {
-  display: flex;
-  min-height: 15.3125rem;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  border: 0.0625rem dashed #ddd5ca;
-  border-radius: 1.0625rem;
+  border-color: #ddd5ca;
   background: #fbf9f5;
-  text-align: center;
 }
 
 .emptyIcon {
-  display: grid;
-  width: 3.375rem;
-  height: 3.375rem;
-  margin-bottom: 1.0625rem;
-  place-items: center;
-  border-radius: 50%;
   background: #f5e8de;
   color: var(--orange);
 }
 
 .emptyIcon svg {
-  width: 1.5625rem;
   fill: currentColor;
   stroke: currentColor;
   stroke-linecap: round;
@@ -213,23 +140,17 @@
 }
 
 .empty h2 {
-  margin: 0;
   font-family: Georgia, "Times New Roman", serif;
   font-size: 1.3rem;
   font-weight: 500;
 }
 
 .empty p {
-  margin: 0.4375rem 0 0;
   color: #8b857d;
   font-size: 0.88rem;
 }
 
 .listHeader {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin: 0 0.25rem 0.625rem;
   color: #8a847b;
   font-size: 0.75rem;
   font-weight: 700;
@@ -238,34 +159,15 @@
 }
 
 .listHeader button {
-  padding: 0.25rem;
-  border: 0;
   background: transparent;
   color: var(--orange);
-  cursor: pointer;
   font-size: 0.7rem;
   font-weight: 700;
   text-transform: uppercase;
 }
 
-.list {
-  display: grid;
-  max-height: 18.125rem;
-  margin: 0;
-  padding: 0;
-  gap: 0.5625rem;
-  overflow-y: auto;
-  list-style: none;
-}
-
 .list li {
-  display: flex;
-  min-height: 3.4375rem;
-  align-items: center;
-  gap: 0.75rem;
-  padding: 0.5625rem 0.6875rem;
-  border: 0.0625rem solid #e5dfd6;
-  border-radius: 0.8125rem;
+  border-color: #e5dfd6;
   background: #fff;
   animation: itemIn 220ms ease-out both;
   transition: border-color 150ms ease, background 150ms ease;
@@ -276,34 +178,18 @@
 }
 
 .itemLabel {
-  min-width: 0;
-  flex: 1;
-  overflow-wrap: anywhere;
   line-height: 1.4;
   transition: color 150ms ease;
 }
 
-.check,
-.delete {
-  display: grid;
-  flex: 0 0 auto;
-  place-items: center;
-  border: 0;
-  cursor: pointer;
-}
-
 .check {
-  width: 1.6875rem;
-  height: 1.6875rem;
-  border: 0.09375rem solid #cec7bd;
-  border-radius: 0.5rem;
+  border-color: #cec7bd;
   background: #fff;
   color: transparent;
   transition: all 150ms ease;
 }
 
 .check svg {
-  width: 1.0625rem;
   fill: none;
   stroke: currentColor;
   stroke-linecap: round;
@@ -327,9 +213,6 @@
 }
 
 .delete {
-  width: 2rem;
-  height: 2rem;
-  border-radius: 0.5rem;
   background: transparent;
   color: #aaa49b;
   opacity: 0;
@@ -347,7 +230,6 @@
 }
 
 .delete svg {
-  width: 1.0625rem;
   fill: none;
   stroke: currentColor;
   stroke-linecap: round;
@@ -355,33 +237,16 @@
 }
 
 .app footer {
-  margin-top: 1.5rem;
   color: #a19b92;
   font-size: 0.73rem;
-  text-align: center;
 }
 
 .app kbd {
-  padding: 0.125rem 0.375rem;
-  border: 0.0625rem solid #dad4ca;
-  border-bottom-width: 0.125rem;
-  border-radius: 0.3125rem;
+  border-color: #dad4ca;
   background: white;
   color: #777168;
   font-family: inherit;
   font-size: 0.7rem;
-}
-
-.srOnly {
-  position: absolute;
-  width: 0.0625rem;
-  height: 0.0625rem;
-  padding: 0;
-  margin: -0.0625rem;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  white-space: nowrap;
-  border: 0;
 }
 
 @keyframes itemIn {
@@ -391,36 +256,10 @@
   }
 }
 
-@media (max-width: 37.5rem) {
-  .page {
-    align-items: start;
-    padding: 1.125rem 0.75rem;
-  }
-
-  .app {
-    min-height: calc(100vh - 2.25rem);
-    padding: 2rem 1.25rem 1.375rem;
-    border-radius: 1.375rem;
-  }
-
-  .brand {
-    margin-bottom: 1.75rem;
-  }
-
-  .intro {
-    margin-bottom: 1.5rem;
-  }
-
-  .form button {
-    padding: 0 0.875rem;
-  }
-}
-
 @media (prefers-reduced-motion: reduce) {
   .list li {
     animation: none;
   }
-
   .form button,
   .check,
   .delete {
