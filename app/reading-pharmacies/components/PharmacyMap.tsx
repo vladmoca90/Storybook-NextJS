@@ -44,7 +44,7 @@ export default function PharmacyMap({ pharmacies, selectedId, onSelect, resetKey
     markers.current.forEach(marker => marker.remove());
     markers.current.clear();
     const icon = L.divIcon({
-      className: `${styles.marker} grid place-items-center rounded-full border-[0.1875rem]`,
+      className: `${styles.marker} grid! place-items-center rounded-full border-[0.1875rem]`,
       html: '<span aria-hidden="true">+</span>',
       iconSize: [32, 32], iconAnchor: [16, 16],
     });
@@ -75,3 +75,4 @@ export default function PharmacyMap({ pharmacies, selectedId, onSelect, resetKey
     {tileError && <p role="status" className={`${styles.mapNotice} absolute top-20 right-4 left-4 z-[1000] rounded-lg border p-3`}>Some map tiles could not load. You can still select pharmacies from the list.</p>}
   </>;
 }
+
