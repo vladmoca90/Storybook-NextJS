@@ -26,7 +26,7 @@ export default function PharmacyFinder({ pharmacies, updatedAt }: PharmacyFinder
   function showAll() { setQuery(""); setSelectedId(null); setResetKey(key => key + 1); }
 
   return (
-    <div className={`${styles.page} flex min-h-dvh flex-col md:h-dvh md:overflow-hidden`}>
+    <div className={`${styles.page} flex min-h-dvh flex-col md:h-dvh md:overflow-hidden [&_button:focus-visible]:outline-[0.1875rem] [&_button:focus-visible]:outline-solid [&_button:focus-visible]:outline-offset-2 [&_a:focus-visible]:outline-[0.1875rem] [&_a:focus-visible]:outline-solid [&_a:focus-visible]:outline-offset-2`}>
       <header className={`${styles.header} flex min-h-18 shrink-0 flex-wrap items-center gap-x-8 gap-y-2 border-b px-5 py-4 sm:px-7`}>
         <div className="flex items-center gap-3"><span className={styles.brandCross} aria-hidden="true">✚</span><span className={styles.brand}>Reading pharmacies</span></div>
         <span className={`${styles.location} flex items-center gap-2`}><MapPin size={17} />Reading, Berkshire</span>
@@ -45,18 +45,18 @@ export default function PharmacyFinder({ pharmacies, updatedAt }: PharmacyFinder
           </div>
           <ul className="max-h-[24rem] flex-1 overflow-y-auto px-4 md:max-h-none" aria-label="Pharmacies">
             {results.map(p => <li key={p.id}>
-              <button aria-pressed={selectedId === p.id} className={`${styles.pharmacyRow} flex w-full cursor-pointer items-center gap-3.5 border-t px-2 py-4 text-left`} onClick={() => setSelectedId(p.id)}>
+              <button aria-pressed={selectedId === p.id} className={`${styles.pharmacyRow} transition-[background] duration-150 ease-[ease] flex w-full cursor-pointer items-center gap-3.5 border-t px-2 py-4 text-left`} onClick={() => setSelectedId(p.id)}>
                 <span className={`${styles.medicalIcon} grid size-11 shrink-0 place-items-center rounded-full`} aria-hidden="true">+</span>
                 <span className="min-w-0 flex-1"><span className={`${styles.pharmacyName} block`}>{p.name}</span><span className={`${styles.address} mt-1 block`}>{p.address || "Reading area · address not listed"}</span>{p.postcode && <span className={`${styles.address} block`}>{p.postcode}</span>}<span className={`${styles.distance} mt-1 block`}>{p.distance.toFixed(1)} km from town centre</span></span>
                 <ChevronRight size={18} className="shrink-0" aria-hidden="true" />
               </button>
             </li>)}
-            {!results.length && <li className="px-2 py-8"><p className={styles.pharmacyName}>No pharmacies found</p><p className={`${styles.address} mt-2`}>Try a different name, street or postcode.</p><button onClick={showAll} className={`${styles.sourceLink} mt-3 cursor-pointer`}>Clear search</button></li>}
+            {!results.length && <li className="px-2 py-8"><p className={styles.pharmacyName}>No pharmacies found</p><p className={`${styles.address} mt-2`}>Try a different name, street or postcode.</p><button onClick={showAll} className={`${styles.sourceLink} underline underline-offset-[0.15em] mt-3 cursor-pointer`}>Clear search</button></li>}
           </ul>
           <footer className={`${styles.sidebarFooter} shrink-0 border-t px-6 py-4`}>
             <p>Mapped pharmacies within 6.5 km of Reading centre. Listings may be incomplete; check details before visiting.</p>
             <p className="mt-2">OSM snapshot: {updatedAt}</p>
-            <a className={`${styles.sourceLink} mt-2 inline-block`} href="https://www.openstreetmap.org/copyright" target="_blank" rel="noreferrer">© OpenStreetMap contributors · ODbL</a>
+            <a className={`${styles.sourceLink} underline underline-offset-[0.15em] mt-2 inline-block`} href="https://www.openstreetmap.org/copyright" target="_blank" rel="noreferrer">© OpenStreetMap contributors · ODbL</a>
           </footer>
         </aside>
         <section className={`${styles.mapPanel} relative order-first h-[32rem] min-w-0 md:order-none md:h-full`} aria-label="Reading pharmacy map">

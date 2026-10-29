@@ -18,7 +18,7 @@ export default function PharmacyDetails({ pharmacy, onClose }: PharmacyDetailsPr
         {pharmacy.openingHours && <p className="flex items-start gap-2"><Clock3 size={15} className="mt-0.5 shrink-0" /><span>Listed hours: {pharmacy.openingHours}</span></p>}
       </div>
       <a className={`${styles.directions} flex items-center justify-center gap-2 rounded-lg px-4 py-3`} href={`https://www.google.com/maps/dir/?api=1&destination=${pharmacy.latitude},${pharmacy.longitude}`} target="_blank" rel="noreferrer">Get directions <ArrowUpRight size={17} /></a>
-      <a href={pharmacy.sourceUrl} target="_blank" rel="noreferrer" className={`${styles.sourceLink} mt-3 block text-center`}>View OpenStreetMap listing ↗</a>
+      <a href={pharmacy.sourceUrl} target="_blank" rel="noreferrer" className={`${styles.sourceLink} underline underline-offset-[0.15em] mt-3 block text-center`}>View OpenStreetMap listing ↗</a>
     </section>
   );
 }
