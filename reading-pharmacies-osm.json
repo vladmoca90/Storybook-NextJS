@@ -1,1 +1,655 @@
-null
+{
+  "version": 0.6,
+  "generator": "Overpass API 0.7.62.11 87bfad18",
+  "osm3s": {
+    "timestamp_osm_base": "2026-10-29T09:26:01Z",
+    "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL."
+  },
+  "elements": [
+    {
+      "type": "node",
+      "id": 318739219,
+      "lat": 51.4709135,
+      "lon": -0.9588092,
+      "tags": {
+        "amenity": "pharmacy",
+        "dispensing": "yes",
+        "fhrs:id": "867839",
+        "healthcare": "pharmacy",
+        "name": "Markand Pharmacy"
+      }
+    },
+    {
+      "type": "node",
+      "id": 319094628,
+      "lat": 51.4598634,
+      "lon": -1.0091589,
+      "tags": {
+        "amenity": "pharmacy",
+        "check_date:opening_hours": "2022-07-15",
+        "healthcare": "pharmacy",
+        "name": "Grovelands Pharmacy",
+        "opening_hours": "Mo-Fr 09:00-18:30, Sa 09:00-13:00",
+        "wheelchair": "yes"
+      }
+    },
+    {
+      "type": "node",
+      "id": 530650156,
+      "lat": 51.4551054,
+      "lon": -0.8885424,
+      "tags": {
+        "amenity": "pharmacy"
+      }
+    },
+    {
+      "type": "node",
+      "id": 565345711,
+      "lat": 51.426951,
+      "lon": -0.9462527,
+      "tags": {
+        "amenity": "pharmacy",
+        "healthcare": "pharmacy",
+        "name": "Vantage Chemist"
+      }
+    },
+    {
+      "type": "node",
+      "id": 588998540,
+      "lat": 51.4454308,
+      "lon": -0.9856462,
+      "tags": {
+        "amenity": "pharmacy",
+        "healthcare": "pharmacy",
+        "name": "Coley Park"
+      }
+    },
+    {
+      "type": "node",
+      "id": 648151374,
+      "lat": 51.4244697,
+      "lon": -0.9328301,
+      "tags": {
+        "amenity": "pharmacy",
+        "brand": "Boots",
+        "brand:wikidata": "Q6123139",
+        "contact:website": "https://www.boots.com/EStoreStoreDetailNonAjaxView?storeLocatorStoreId=5763",
+        "healthcare": "pharmacy",
+        "name": "Boots",
+        "wheelchair": "yes"
+      }
+    },
+    {
+      "type": "node",
+      "id": 911842199,
+      "lat": 51.4558004,
+      "lon": -0.9731476,
+      "tags": {
+        "amenity": "pharmacy",
+        "brand": "Boots",
+        "brand:wikidata": "Q6123139",
+        "healthcare": "pharmacy",
+        "name": "Boots",
+        "opening_hours": "Mo-Sa 08:00-18:00; Su 11:00-17:00",
+        "source": "survey",
+        "website": "https://www.boots.com/stores/2079-reading-broad-street-rg1-2ae",
+        "wheelchair": "yes"
+      }
+    },
+    {
+      "type": "node",
+      "id": 911842303,
+      "lat": 51.4557098,
+      "lon": -0.9740689,
+      "tags": {
+        "amenity": "pharmacy",
+        "brand": "Superdrug",
+        "brand:wikidata": "Q7643261",
+        "contact:website": "https://www.superdrug.com/store/reading",
+        "healthcare": "pharmacy",
+        "name": "Superdrug",
+        "note": "appears to be open as usual on bank holidays",
+        "opening_hours": "Mo-Fr 08:00-19:00; Sa 08:30-19:00; Su 11:00-17:00; PH 08:00-19:00",
+        "source": "survey"
+      }
+    },
+    {
+      "type": "node",
+      "id": 912280618,
+      "lat": 51.4675226,
+      "lon": -0.9742759,
+      "tags": {
+        "addr:city": "Caversham, Reading",
+        "addr:housenumber": "47-49",
+        "addr:postcode": "RG4 8BA",
+        "addr:street": "Church Street",
+        "amenity": "pharmacy",
+        "brand": "Boots",
+        "brand:wikidata": "Q6123139",
+        "check_date": "2025-08-29",
+        "dispensing": "yes",
+        "drive_through": "no",
+        "healthcare": "pharmacy",
+        "name": "Boots",
+        "source": "survey",
+        "website": "https://www.boots.com/stores/1506-reading-caversham-rg4-8ba",
+        "wheelchair": "yes"
+      }
+    },
+    {
+      "type": "node",
+      "id": 966268727,
+      "lat": 51.4562274,
+      "lon": -0.9939853,
+      "tags": {
+        "addr:city": "Reading",
+        "addr:housenumber": "351",
+        "addr:postcode": "RG30 1AY",
+        "addr:street": "Oxford Road",
+        "amenity": "pharmacy",
+        "healthcare": "pharmacy",
+        "name": "Western Elms Pharmacy",
+        "opening_hours": "Mo-Fr 08:30-17:30; Sa 09:00-14:00",
+        "operator": "Enimed Group",
+        "website": "https://www.enimed.co.uk/branches/western-elms-pharmacy/",
+        "wheelchair": "limited"
+      }
+    },
+    {
+      "type": "node",
+      "id": 1394136729,
+      "lat": 51.4283641,
+      "lon": -0.9136002,
+      "tags": {
+        "amenity": "pharmacy",
+        "phone": "+44 118 935 1848",
+        "shop": "chemist"
+      }
+    },
+    {
+      "type": "node",
+      "id": 1873679368,
+      "lat": 51.4334462,
+      "lon": -0.968092,
+      "tags": {
+        "addr:city": "Reading",
+        "addr:housenumber": "277",
+        "addr:postcode": "RG2 0JA",
+        "addr:street": "Basingstoke Road",
+        "amenity": "pharmacy",
+        "check_date": "2013-02-17",
+        "healthcare": "pharmacy",
+        "old_name": "Lloyds Pharmacy",
+        "source:addr": "FHRS Open Data"
+      }
+    },
+    {
+      "type": "node",
+      "id": 1935484958,
+      "lat": 51.4696787,
+      "lon": -0.97348,
+      "tags": {
+        "amenity": "pharmacy",
+        "dispensing": "yes",
+        "healthcare": "pharmacy",
+        "name": "Caversham Pharmacy",
+        "opening_hours": "Mo-Fr 08:30-18:30; Sa 09:00-13:00"
+      }
+    },
+    {
+      "type": "node",
+      "id": 2098179103,
+      "lat": 51.4600952,
+      "lon": -1.0252924,
+      "tags": {
+        "addr:city": "Reading",
+        "addr:housenumber": "2A",
+        "addr:postcode": "RG30 6BW",
+        "addr:street": "Tylers Place",
+        "amenity": "pharmacy",
+        "healthcare": "pharmacy",
+        "name": "Pottery Road Pharmacy",
+        "old_name": "Lloyds Pharmacy",
+        "opening_hours": "Mo-Fr 08:30-18:30",
+        "website": "https://potteryroadpharmacy.co.uk/",
+        "wheelchair": "yes"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4477460478,
+      "lat": 51.4549704,
+      "lon": -0.9710907,
+      "tags": {
+        "addr:city": "Reading",
+        "addr:housename": "Unit 5 Upper Ground Level,",
+        "addr:postcode": "RG1 2AH",
+        "addr:street": "The Oracle Centre",
+        "amenity": "pharmacy",
+        "brand": "Boots",
+        "brand:wikidata": "Q6123139",
+        "dispensing": "yes",
+        "healthcare": "pharmacy",
+        "level": "1;2",
+        "name": "Boots",
+        "source": "survey"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4807216281,
+      "lat": 51.4564123,
+      "lon": -0.9936314,
+      "tags": {
+        "addr:city": "Reading",
+        "addr:housenumber": "270-274",
+        "addr:postcode": "RG30 1AD",
+        "addr:street": "Oxford Road",
+        "amenity": "pharmacy",
+        "healthcare": "pharmacy",
+        "name": "Oxford Road Pharmacy",
+        "opening_hours": "Mo-Th 08:00-22:00; Fr-Sa 08:00-24:00; Su 08:00-18:00"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5586170293,
+      "lat": 51.4489729,
+      "lon": -1.0172739,
+      "tags": {
+        "addr:city": "Reading",
+        "addr:postcode": "RG30 4EL",
+        "addr:street": "Honey End Lane",
+        "amenity": "pharmacy",
+        "brand": "Asda",
+        "brand:wikidata": "Q297410",
+        "check_date": "2024-08-18",
+        "contact:phone": "+44 118 951 4710",
+        "contact:website": "https://storelocator.asda.com/south-east/tilehurst/honey-end-lane/pharmacy",
+        "dispensing": "yes",
+        "healthcare": "pharmacy",
+        "name": "Asda",
+        "opening_hours": "Mo-Sa 09:00-21:00; Su 10:00-16:00",
+        "operator": "Asda Stores Ltd"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5586723751,
+      "lat": 51.4551075,
+      "lon": -0.980401,
+      "tags": {
+        "addr:city": "Reading",
+        "addr:housenumber": "104A",
+        "addr:postcode": "RG1 7LL",
+        "addr:street": "Oxford Road",
+        "amenity": "pharmacy",
+        "healthcare": "pharmacy",
+        "name": "Saood Pharmacy",
+        "opening_hours": "Mo-Fr 09:00-13:00, 14:00-19:00; Th 09:00-13:00"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5599986761,
+      "lat": 51.4586178,
+      "lon": -0.9989783,
+      "tags": {
+        "addr:city": "Reading",
+        "addr:postcode": "RG30 1AH",
+        "addr:street": "Portman Road",
+        "amenity": "pharmacy",
+        "brand": "Tesco",
+        "brand:wikidata": "Q487494",
+        "dispensing": "yes",
+        "healthcare": "pharmacy",
+        "name": "Tesco Pharmacy",
+        "opening_hours": "Mo-Sa 08:00-21:00; Su 10:00-16:00",
+        "wheelchair": "yes"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5606949434,
+      "lat": 51.442387,
+      "lon": -1.0104156,
+      "tags": {
+        "addr:housenumber": "36",
+        "addr:postcode": "RG30 3QN",
+        "addr:street": "Coronation Square",
+        "amenity": "pharmacy",
+        "dispensing": "yes",
+        "fhrs:id": "867830",
+        "healthcare": "pharmacy",
+        "name": "Southcote Pharmacy",
+        "opening_hours": "Mo-Fr 09:00-18:00; Sa 09:00-13:00; Su off"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5817713261,
+      "lat": 51.4194774,
+      "lon": -0.9593037,
+      "tags": {
+        "addr:city": "Reading",
+        "addr:street": "Northumberland Avenue",
+        "amenity": "pharmacy",
+        "dispensing": "yes",
+        "fhrs:id": "280251",
+        "healthcare": "pharmacy",
+        "name": "Whitley Wood Pharmacy",
+        "opening_hours": "Mo-Fr 09:00-06:00, Sa 09:00-17:30"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5840333889,
+      "lat": 51.4396454,
+      "lon": -0.9670462,
+      "tags": {
+        "addr:city": "Reading",
+        "addr:housenumber": "71",
+        "addr:postcode": "RG2 0ER",
+        "addr:street": "Basingstoke Road",
+        "amenity": "pharmacy",
+        "dispensing": "yes",
+        "fhrs:id": "280208",
+        "healthcare": "pharmacy",
+        "name": "Basingstoke Road Pharmacy",
+        "operator": "Ahmed Chem Ltd",
+        "shop": "chemist"
+      }
+    },
+    {
+      "type": "node",
+      "id": 6166607637,
+      "lat": 51.4041924,
+      "lon": -0.9487412,
+      "tags": {
+        "amenity": "pharmacy",
+        "name": "Shinfield Pharmacy"
+      }
+    },
+    {
+      "type": "node",
+      "id": 6535205919,
+      "lat": 51.442771,
+      "lon": -0.9556349,
+      "tags": {
+        "addr:city": "Reading",
+        "addr:housenumber": "68",
+        "addr:postcode": "RG2 7AZ",
+        "addr:street": "Christchurch Road",
+        "amenity": "pharmacy",
+        "fhrs:id": "280252",
+        "healthcare": "pharmacy",
+        "name": "Christchurch Road Pharmacy",
+        "opening_hours": "Mo-Fr 09:00-18:00; Sa 09:00-17:00",
+        "operator": "Enimed Group"
+      }
+    },
+    {
+      "type": "node",
+      "id": 7510581779,
+      "lat": 51.4246678,
+      "lon": -0.9317431,
+      "tags": {
+        "amenity": "pharmacy",
+        "brand": "Asda",
+        "brand:wikidata": "Q297410",
+        "check_date": "2024-08-18",
+        "contact:phone": "+44 118 987 0310",
+        "contact:website": "https://storelocator.asda.com/south-east/reading/chalfont-way-lower-earley/pharmacy",
+        "fixme": "Location not accurate",
+        "healthcare": "pharmacy",
+        "name": "Asda",
+        "operator": "Asda Stores Ltd"
+      }
+    },
+    {
+      "type": "node",
+      "id": 11803394488,
+      "lat": 51.4599311,
+      "lon": -1.0375585,
+      "tags": {
+        "addr:city": "Tilehurst",
+        "addr:housenumber": "7",
+        "addr:postcode": "RG31 5AR",
+        "addr:street": "School Road",
+        "amenity": "pharmacy",
+        "dispensing": "yes",
+        "drive_through": "no",
+        "fhrs:id": "280248",
+        "healthcare": "pharmacy",
+        "name": "Tilehurst Pharmacy"
+      }
+    },
+    {
+      "type": "node",
+      "id": 11839344314,
+      "lat": 51.4377865,
+      "lon": -0.9742092,
+      "tags": {
+        "addr:city": "Reading",
+        "addr:housenumber": "45",
+        "addr:postcode": "RG2 0NH",
+        "addr:street": "Boulton Road",
+        "amenity": "pharmacy",
+        "drive_through": "no",
+        "healthcare": "pharmacy",
+        "name": "Healthxchange Pharmacy"
+      }
+    },
+    {
+      "type": "node",
+      "id": 11839344315,
+      "lat": 51.4437043,
+      "lon": -0.9677105,
+      "tags": {
+        "amenity": "pharmacy",
+        "healthcare": "pharmacy",
+        "name": "Milman Road Pharmacy"
+      }
+    },
+    {
+      "type": "way",
+      "id": 70037948,
+      "center": {
+        "lat": 51.4366833,
+        "lon": -0.9260425
+      },
+      "tags": {
+        "addr:city": "Reading",
+        "addr:housenumber": "5",
+        "addr:postcode": "RG6 7NZ",
+        "addr:street": "The Parade",
+        "amenity": "pharmacy",
+        "brand": "Boots",
+        "brand:wikidata": "Q6123139",
+        "building": "yes",
+        "building:levels": "3",
+        "fhrs:id": "282678",
+        "healthcare": "pharmacy",
+        "name": "Boots",
+        "ref:GB:uprn": "10000088407;14016600;14016612",
+        "source:building": "OS_OpenData_StreetView",
+        "website": "https://www.boots.com/stores/6055-reading-lwr-earley-rg6-7nz"
+      }
+    },
+    {
+      "type": "way",
+      "id": 70463482,
+      "center": {
+        "lat": 51.4582664,
+        "lon": -1.0412938
+      },
+      "tags": {
+        "addr:city": "Reading",
+        "addr:housenumber": "90",
+        "addr:postcode": "RG31 5AW",
+        "addr:street": "School Road",
+        "amenity": "pharmacy",
+        "building": "yes",
+        "fhrs:id": "867832",
+        "healthcare": "pharmacy",
+        "name": "Triangle Pharmacy",
+        "ref:GB:uprn": "310011930;310047536",
+        "source:building": "OS_OpenData_StreetView"
+      }
+    },
+    {
+      "type": "way",
+      "id": 70517067,
+      "center": {
+        "lat": 51.4698384,
+        "lon": -1.0442835
+      },
+      "tags": {
+        "addr:city": "Reading",
+        "amenity": "pharmacy",
+        "building": "yes",
+        "healthcare": "pharmacy",
+        "name": "Overdown Pharmacy",
+        "source:building": "OS_OpenData_StreetView"
+      }
+    },
+    {
+      "type": "way",
+      "id": 79797043,
+      "center": {
+        "lat": 51.4526228,
+        "lon": -0.9059395
+      },
+      "tags": {
+        "addr:city": "Reading",
+        "addr:housenumber": "89-91",
+        "addr:postcode": "RG5 3JP",
+        "addr:street": "Crockhamwell Road",
+        "amenity": "pharmacy",
+        "brand": "Boots",
+        "brand:wikidata": "Q6123139",
+        "building": "yes",
+        "fhrs:id": "282271",
+        "healthcare": "pharmacy",
+        "name": "Boots",
+        "opening_hours": "Mo-Fr 09:00-18:30; Sa 09:00-17:00; Su 10:00-16:00",
+        "ref:GB:uprn": "10094223278",
+        "source:building": "OS_OpenData_StreetView",
+        "url": "http://www.boots-uk.com/",
+        "website": "https://www.boots.com/stores/483-reading-woodley-rg5-3jp"
+      }
+    },
+    {
+      "type": "way",
+      "id": 169929782,
+      "center": {
+        "lat": 51.3988112,
+        "lon": -1.0563373
+      },
+      "tags": {
+        "addr:city": "Burghfield Common",
+        "addr:postcode": "RG7 3YJ",
+        "addr:street": "Reading Road",
+        "amenity": "pharmacy",
+        "building": "yes",
+        "dispensing": "no",
+        "drive_through": "no",
+        "healthcare": "pharmacy",
+        "name": "Burghfield Pharmacy",
+        "operator": "Pillboc Chemists",
+        "source:building": "OS_OpenData_StreetView"
+      }
+    },
+    {
+      "type": "way",
+      "id": 222053333,
+      "center": {
+        "lat": 51.4483563,
+        "lon": -0.9363957
+      },
+      "tags": {
+        "addr:city": "Reading",
+        "addr:country": "GB",
+        "addr:housenumber": "105",
+        "addr:postcode": "RG6 1LH",
+        "addr:street": "Wokingham Road",
+        "amenity": "pharmacy",
+        "building": "house",
+        "house": "terraced",
+        "name": "The Reading Pharmacy",
+        "opening_hours": "Mo-Fr 09:00-18:00; Sa 09:00-13:00; Su off"
+      }
+    },
+    {
+      "type": "way",
+      "id": 579638140,
+      "center": {
+        "lat": 51.4531328,
+        "lon": -0.94931
+      },
+      "tags": {
+        "addr:city": "Reading",
+        "addr:housenumber": "195",
+        "addr:postcode": "RG1 3NX",
+        "addr:street": "London Road",
+        "amenity": "pharmacy",
+        "building": "yes",
+        "dispensing": "yes",
+        "healthcare": "pharmacy",
+        "opening_hours": "Mo-Fr 09:00-13:00,14:00-18:00",
+        "operator": "Fourways Pharmacy",
+        "phone": "+44 118 966 0541",
+        "source:building": "OS_OpenData_StreetView"
+      }
+    },
+    {
+      "type": "way",
+      "id": 688218075,
+      "center": {
+        "lat": 51.4535753,
+        "lon": -0.9472465
+      },
+      "tags": {
+        "addr:city": "Reading",
+        "addr:country": "GB",
+        "addr:housenumber": "237",
+        "addr:postcode": "RG1 3NY",
+        "addr:street": "London Road",
+        "amenity": "pharmacy",
+        "building": "house",
+        "delivery": "only",
+        "house": "terraced",
+        "name": "Orange Pharmacy",
+        "phone": "+44 118 901 7536",
+        "ref:GB:uprn": "310014286;310075173",
+        "source:building": "OS_OpenData_StreetView",
+        "website": "https://www.orangepharmacy.co.uk/"
+      }
+    },
+    {
+      "type": "way",
+      "id": 914486962,
+      "center": {
+        "lat": 51.4490578,
+        "lon": -0.9470346
+      },
+      "tags": {
+        "addr:city": "Reading",
+        "addr:country": "GB",
+        "addr:housenumber": "85-87",
+        "addr:postcode": "RG1 5NN",
+        "addr:street": "Erleigh Road",
+        "amenity": "pharmacy",
+        "building": "commercial",
+        "dispensing": "yes",
+        "drive_through": "no",
+        "fhrs:id": "867838",
+        "healthcare": "pharmacy",
+        "name": "Erleigh Road Pharmacy",
+        "opening_hours": "Mo-Fr 09:00-18:00; Sa 09:00-17:00",
+        "operator": "Erleigh Road Pharmacy",
+        "phone": "+44 118 966 3718"
+      }
+    }
+  ]
+}
