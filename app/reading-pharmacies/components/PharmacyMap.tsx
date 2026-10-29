@@ -44,7 +44,7 @@ export default function PharmacyMap({ pharmacies, selectedId, onSelect, resetKey
     markers.current.forEach(marker => marker.remove());
     markers.current.clear();
     const icon = L.divIcon({
-      className: styles.marker,
+      className: `${styles.marker} grid place-items-center rounded-full border-[0.1875rem]`,
       html: '<span aria-hidden="true">+</span>',
       iconSize: [32, 32], iconAnchor: [16, 16],
     });
