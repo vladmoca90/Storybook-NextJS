@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import PharmacyFinder from "./PharmacyFinder";
+import PharmacyFinder from "./components/PharmacyFinder";
 import snapshot from "./pharmacies.json";
 
 export const metadata: Metadata = {
