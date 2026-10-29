@@ -1,5 +1,5 @@
 import styles from "../people.module.css";
-import type { Person } from "../data";
+import type { Person } from "../../data/people";
 
 type PersonRowProps = { person: Person; colorIndex: number };
 

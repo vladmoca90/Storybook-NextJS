@@ -1,5 +1,5 @@
 import styles from "../people.module.css";
-import type { Person } from "../data";
+import type { Person } from "../../data/people";
 import PersonRow from "./PersonRow";
 
 type PeopleTableProps = { people: Person[]; page: number; pageCount: number };

@@ -1,6 +1,6 @@
 "use client";
 import { useState } from "react";
-import { people } from "./data";
+import { people } from "../data/people";
 import styles from "./people.module.css";
 import DirectoryHeader from "./components/DirectoryHeader";
 import PeopleIntro from "./components/PeopleIntro";

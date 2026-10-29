@@ -1,8 +1,7 @@
-export interface Person {
-  id: number;
-  name: string;
+export type Person = {
+  id: string;
+  firstName: string;
+  lastName: string;
   age: number;
-  job: string;
   nationality: string;
-  maritalStatus: 'single' | 'married' | 'divorced' | 'widowed';
-}
+};
