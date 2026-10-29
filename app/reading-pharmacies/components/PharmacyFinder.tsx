@@ -1,5 +1,4 @@
 "use client";
-
 import { useMemo, useState } from "react";
 import type { Pharmacy } from "../types";
 import styles from "../pharmacies.module.css";
