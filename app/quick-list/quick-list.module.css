@@ -10,9 +10,9 @@
 }
 
 .page::before {
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.08'/%3E%3C/svg%3E");
   content: "";
   opacity: 0.32;
-  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.08'/%3E%3C/svg%3E");
 }
 
 .glow {
@@ -21,12 +21,12 @@
 }
 
 .app {
-  border-color: rgba(71, 61, 47, 0.12);
+  backdrop-filter: blur(0.75rem);
   background: rgba(255, 253, 249, 0.94);
+  border-color: rgba(71, 61, 47, 0.12);
   box-shadow:
     0 1.875rem 4.375rem rgba(77, 59, 39, 0.12),
     0 0.125rem 0.5rem rgba(77, 59, 39, 0.05);
-  backdrop-filter: blur(0.75rem);
 }
 
 .brand {
@@ -75,8 +75,8 @@
 }
 
 .form {
-  border-color: #ded8cf;
   background: white;
+  border-color: #ded8cf;
   box-shadow: 0 0.4375rem 1.5rem rgba(76, 59, 40, 0.06);
   transition:
     border-color 160ms ease,
@@ -116,8 +116,8 @@
 }
 
 .form button:disabled {
-  opacity: 0.48;
   box-shadow: none;
+  opacity: 0.48;
 }
 
 .form button svg {
@@ -128,8 +128,8 @@
 }
 
 .empty {
-  border-color: #ddd5ca;
   background: #fbf9f5;
+  border-color: #ddd5ca;
 }
 
 .emptyIcon {
@@ -172,9 +172,9 @@
 }
 
 .list li {
-  border-color: #e5dfd6;
-  background: #fff;
   animation: itemIn 220ms ease-out both;
+  background: #fff;
+  border-color: #e5dfd6;
   transition:
     border-color 150ms ease,
     background 150ms ease;
@@ -190,8 +190,8 @@
 }
 
 .check {
-  border-color: #cec7bd;
   background: #fff;
+  border-color: #cec7bd;
   color: transparent;
   transition: all 150ms ease;
 }
@@ -209,8 +209,8 @@
 }
 
 .completed .check {
-  border-color: var(--orange);
   background: var(--orange);
+  border-color: var(--orange);
   color: white;
 }
 
@@ -252,8 +252,8 @@
 }
 
 .app kbd {
-  border-color: #dad4ca;
   background: white;
+  border-color: #dad4ca;
   color: #777168;
   font-family: inherit;
   font-size: 0.7rem;

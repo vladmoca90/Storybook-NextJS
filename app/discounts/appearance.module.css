@@ -151,8 +151,8 @@
 }
 
 @property --tw-leading {
-  syntax: "*";
   inherits: false;
+  syntax: "*";
 }
 
 .leading95 {
@@ -292,8 +292,8 @@
 }
 
 .beforeBorderWhite60::before {
-  content: var(--tw-content);
   border-color: color-mix(in oklab, #fff 60%, transparent);
+  content: var(--tw-content);
 }
 
 @media (width >= 64rem) {

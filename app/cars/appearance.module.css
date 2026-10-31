@@ -6,8 +6,8 @@
 }
 
 @property --tw-leading {
-  syntax: "*";
   inherits: false;
+  syntax: "*";
 }
 
 .leading12 {

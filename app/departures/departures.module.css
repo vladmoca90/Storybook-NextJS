@@ -3,9 +3,9 @@
 }
 
 .brand small {
+    border-left-color: #ddd;
     font-size: 0.625rem;
     letter-spacing: 0.0625rem;
-    border-left-color: #ddd;
 }
 
 .breadcrumb span {
@@ -13,16 +13,16 @@
 }
 
 .hero h1 {
-    font-size: 3.625rem;
-    line-height: 1.2;
-    letter-spacing: -0.15625rem;
     color: #39214e;
+    font-size: 3.625rem;
     font-weight: 500;
+    letter-spacing: -0.15625rem;
+    line-height: 1.2;
 }
 
 .hero h1 span {
-    font-size: 3rem;
     color: #a491b6;
+    font-size: 3rem;
 }
 
 .hero p {
@@ -31,25 +31,25 @@
 }
 
 .airportCard > span {
+    color: #7e718a;
     font-size: 0.5625rem;
     letter-spacing: 0.1125rem;
-    color: #7e718a;
 }
 
 .airportCard strong {
+    color: #4e3267;
     font-size: 2.125rem;
     font-weight: 500;
-    color: #4e3267;
 }
 
 .airportCard small {
-    font-size: 0.625rem;
     color: #8d8295;
+    font-size: 0.625rem;
 }
 
 .overview > span:first-child {
-    font-weight: 700;
     color: #43245e;
+    font-weight: 700;
 }
 
 .overview i {
@@ -57,14 +57,14 @@
 }
 
 .overview b {
-    font-weight: 400;
     color: #b2a9bc;
+    font-weight: 400;
 }
 
 .search input {
     background: transparent;
-    font-size: 0.75rem;
     color: #39214e;
+    font-size: 0.75rem;
 }
 
 .search button {
@@ -79,8 +79,8 @@
 
 .select select {
     background: white;
-    font-size: 0.75rem;
     color: #54465e;
+    font-size: 0.75rem;
 }
 
 .tableTop strong {
@@ -90,11 +90,11 @@
 
 .board th {
     background: #f8f6fa;
+    border-bottom-color: #eeeaf2;
+    border-top-color: #eeeaf2;
     color: #8a7e95;
     font-size: 0.625rem;
     font-weight: 500;
-    border-top-color: #eeeaf2;
-    border-bottom-color: #eeeaf2;
 }
 
 .board th button {
@@ -120,9 +120,9 @@
 
 .board .time {
     font-size: 1.1875rem;
+    font-variant-numeric: tabular-nums;
     font-weight: 500;
     letter-spacing: -0.01875rem;
-    font-variant-numeric: tabular-nums;
 }
 
 .board .delayedTime {
@@ -174,8 +174,8 @@
 }
 
 .footer > span:first-child span {
-    font-size: 0.625rem;
     color: #92859c;
+    font-size: 0.625rem;
 }
 
 .empty h2 {
@@ -188,11 +188,11 @@
 }
 
 .srOnly {
-    position: absolute;
-    width: 0.0625rem;
+    clip: rect(0, 0, 0, 0);
     height: 0.0625rem;
     overflow: hidden;
-    clip: rect(0, 0, 0, 0);
+    position: absolute;
+    width: 0.0625rem;
 }
 
 .page button:focus-visible,

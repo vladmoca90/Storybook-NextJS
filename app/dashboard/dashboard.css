@@ -4,14 +4,14 @@
 }
 
 .dashboard-title {
+  color: #1a1a1a;
   font-size: 2rem;
   font-weight: 700;
-  color: #1a1a1a;
 }
 
 .dashboard-description {
-  font-size: 0.95rem;
   color: #666;
+  font-size: 0.95rem;
 }
 
 .filter-section {
@@ -20,22 +20,22 @@
 }
 
 .filter-title {
+  color: #1a1a1a;
   font-size: 1.1rem;
   font-weight: 600;
-  color: #1a1a1a;
 }
 
 .filter-label {
+  color: #333;
   font-size: 0.85rem;
   font-weight: 500;
-  color: #333;
 }
 
 .filter-input,
 .filter-select {
   border-color: #ddd;
-  font-size: 0.9rem;
   font-family: inherit;
+  font-size: 0.9rem;
   transition: border-color 0.2s;
 }
 
@@ -47,8 +47,8 @@
 
 .clear-filters-btn {
   background: #e9ecef;
-  color: #333;
   border-color: #dee2e6;
+  color: #333;
   font-size: 0.85rem;
   transition: background 0.2s;
 }
@@ -58,13 +58,13 @@
 }
 
 .results-info {
-  font-size: 0.9rem;
   color: #666;
+  font-size: 0.9rem;
 }
 
 .results-count {
-  font-weight: 600;
   color: #1a1a1a;
+  font-weight: 600;
 }
 
 .person-card {
@@ -91,9 +91,9 @@
 }
 
 .person-name {
+  color: #1a1a1a;
   font-size: 1.2rem;
   font-weight: 600;
-  color: #1a1a1a;
 }
 
 .person-detail {
@@ -101,8 +101,8 @@
 }
 
 .detail-label {
-  font-weight: 500;
   color: #555;
+  font-weight: 500;
 }
 
 .detail-value {
@@ -146,8 +146,8 @@
 }
 
 .empty-state-text {
-  font-size: 1rem;
   color: #666;
+  font-size: 1rem;
 }
 
 @media (max-width: 48rem) {

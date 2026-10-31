@@ -41,9 +41,9 @@
 }
 
 .search {
+  background: white;
   border-color: #dce3de;
   color: #77817b;
-  background: white;
 }
 
 .search:focus-within {
@@ -137,8 +137,8 @@
 .marker {
   background: #087c4f;
   border-color: white;
-  color: white;
   box-shadow: 0 0.125rem 0.375rem #17452d30;
+  color: white;
   font:
     700 1.5rem/1 Arial,
     sans-serif;
@@ -153,8 +153,8 @@
 .mapCaption {
   background: white;
   border-color: #e2e8e2;
-  color: #145334;
   box-shadow: 0 0.125rem 0.75rem #1a38231c;
+  color: #145334;
   font-size: 0.8125rem;
   font-weight: 550;
 }

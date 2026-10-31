@@ -15,15 +15,15 @@
 
 .intro h1 {
   font-size: 3.125rem;
-  line-height: 1.2;
   font-weight: 650;
   letter-spacing: -0.125rem;
+  line-height: 1.2;
 }
 
 .intro p {
+  color: #667085;
   font-size: 1.1875rem;
   line-height: 1.6;
-  color: #667085;
 }
 
 .count {
@@ -42,8 +42,8 @@
 .tableWrapper th {
   background: #f6f7f8;
   color: #5d687b;
-  font-weight: 550;
   font-size: 0.875rem;
+  font-weight: 550;
 }
 
 .tableWrapper td {
@@ -55,16 +55,16 @@
 }
 
 .tableWrapper code {
-  font-family: var(--font-geist-mono), monospace;
   color: #778297;
+  font-family: var(--font-geist-mono), monospace;
   font-size: 0.875rem;
 }
 
 .avatar {
-  font-size: 0.8125rem;
-  font-weight: 500;
   background: #ffe6eb;
   color: #9d243c;
+  font-size: 0.8125rem;
+  font-weight: 500;
 }
 
 .avatar[data-color="1"] {
@@ -93,13 +93,13 @@
 }
 
 .footer p {
-  font-size: 0.9375rem;
   color: #667085;
+  font-size: 0.9375rem;
 }
 
 .pagination button {
-  border-color: #dfe3e9;
   background: white;
+  border-color: #dfe3e9;
   color: #111827;
   font-size: 0.9375rem;
 }
@@ -115,8 +115,8 @@
 }
 
 .pagination button:disabled {
-  color: #8a93a3;
   background: #fafbfc;
+  color: #8a93a3;
 }
 
 .directory :focus-visible {
