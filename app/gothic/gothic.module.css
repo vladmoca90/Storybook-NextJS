@@ -6,7 +6,7 @@
   background: var(--ink);
   color: var(--ivory);
   min-height: 100vh;
-  font-family: Georgia, "Times New Roman", serif;
+  font-family: var(--font-creepster), "Creepster", fantasy;
 }
 .shop button,
 .shop a {
@@ -81,7 +81,7 @@
   top: -4px;
   background: var(--red);
   border-radius: 50%;
-  font: 10px Arial;
+  font: 10px var(--font-creepster), "Creepster", fantasy;
   padding: 3px 5px;
 }
 .hero {
@@ -342,8 +342,7 @@
 }
 .footer > span {
   font:
-    10px Arial,
-    sans-serif;
+    10px var(--font-creepster), "Creepster", fantasy;
   color: #a19c91;
   letter-spacing: 1px;
 }
@@ -397,7 +396,7 @@
   border: 1px solid #49433a;
   background: #141413;
   color: var(--ivory);
-  font-family: Georgia, serif;
+  font-family: var(--font-creepster), "Creepster", fantasy;
 }
 .modal::backdrop {
   background: #000b;
@@ -477,8 +476,7 @@
   display: block;
   margin-top: 15px;
   font:
-    10px Arial,
-    sans-serif;
+    10px var(--font-creepster), "Creepster", fantasy;
   color: #999389;
 }
 .bag {
@@ -533,8 +531,7 @@
 }
 .demoNote {
   font:
-    13px/1.6 Arial,
-    sans-serif;
+    13px/1.6 var(--font-creepster), "Creepster", fantasy;
   color: #bdb4a4;
   margin: 0 0 23px;
 }
