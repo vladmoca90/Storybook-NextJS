@@ -27,6 +27,6 @@ Project-wide TypeScript check reports existing errors in dashboard and people fi
 
 ## Generated asset record
 
-Built-in Image Gen used, not CLI. Workspace assets: `public/gothic/hero.png`, `public/gothic/products.png`; concept: `design/nocturne/concept.png`.
+Built-in Image Gen used, not CLI. Workspace assets: `public/gothic/hero.png`, `public/gothic/products.png`; concept: `public/gothic/design/nocturne/concept.png`.
 
 Prompt briefs: a complete NOCTURNE gothic boutique design with black/ivory/crimson palette, abbey fashion carousel and four-product collection; a standalone text-free cinematic photograph of a woman in a black Victorian lace gown at the right of a ruined abbey with shadowed negative space at left; a text-free four-panel studio product sheet featuring a black corset dress, burgundy vampire coat, ornate witch hat and black platform boots.
