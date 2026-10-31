@@ -23,7 +23,7 @@ export default function PharmacyListItem({
         className={`${styles.medicalIcon} grid size-11 shrink-0 place-items-center rounded-full`}
         aria-hidden="true"
       >
-        +
+        <span className={styles.medicalCross}>+</span>
       </span>
       <span className="min-w-0 flex-1">
         <span className={`${styles.pharmacyName} block`}>{pharmacy.name}</span>

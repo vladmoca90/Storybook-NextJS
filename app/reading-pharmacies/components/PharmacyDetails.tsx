@@ -23,10 +23,10 @@ export default function PharmacyDetails({
       </button>
       <div className="mb-4 flex items-start gap-3 pr-5">
         <span
-          className={`${styles.medicalIcon} grid size-10 shrink-0 place-items-center rounded-full`}
+          className={`${styles.medicalIcon} grid size-11 shrink-0 place-items-center rounded-full`}
           aria-hidden="true"
         >
-          +
+          <span className={styles.medicalCross}>+</span>
         </span>
         <div>
           <h2 className={styles.detailTitle}>{pharmacy.name}</h2>
