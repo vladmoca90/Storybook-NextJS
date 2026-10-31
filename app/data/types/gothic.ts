@@ -1,7 +1,7 @@
-import type { ReactNode } from 'react';
+import type { ReactNode } from "react";
 
-export type ProductCategory = 'Clothing' | 'Costumes' | 'Accessories';
-export type GothicCategory = 'All' | ProductCategory;
+export type ProductCategory = "Clothing" | "Costumes" | "Accessories";
+export type GothicCategory = "All" | ProductCategory;
 
 export type Product = {
   id: number;
