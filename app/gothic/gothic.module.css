@@ -34,6 +34,9 @@
   line-height: 1;
   white-space: nowrap;
 }
+.header {
+  border-bottom-color: var(--line);
+}
 .header nav button {
   background: none;
   color: var(--ivory);
@@ -45,7 +48,6 @@
 .headerActions button,
 .close {
   color: inherit;
-  border: 0;
   background: none;
 }
 .count {
@@ -110,6 +112,7 @@
 }
 .dots button {
   background: transparent;
+  border-color: var(--ivory);
 }
 .dots button:before {
   content: "";
@@ -138,6 +141,7 @@
   margin-left: 4px;
 }
 .manifesto {
+  border-color: var(--line);
   font-size: 10px;
   letter-spacing: 2.6px;
 }
@@ -149,7 +153,6 @@
   font-size: 38px;
   font-weight: 400;
   letter-spacing: -1px;
-  margin: 0;
 }
 .filters button {
   font-size: 14px;
@@ -208,6 +211,9 @@
   font-size: 25px;
   letter-spacing: 5px;
 }
+.footer {
+  border-top-color: var(--line);
+}
 .footer p {
   font-size: 13px;
   letter-spacing: 1px;
@@ -219,17 +225,16 @@
   letter-spacing: 1px;
 }
 .search input {
-  min-width: 0;
-  flex: 1;
   background: none;
-  border: 0;
   color: var(--ivory);
   outline: none;
   font-size: 17px;
 }
+.search {
+  border-bottom-color: var(--line);
+}
 .search button {
   background: none;
-  border: 0;
   color: inherit;
   font-size: 14px;
 }
@@ -298,7 +303,6 @@
   width: 100%;
 }
 .detailCopy small {
-  display: block;
   font:
     10px var(--font-creepster), "Creepster", fantasy;
   color: #999389;
@@ -306,6 +310,9 @@
 .bag h2 span {
   font-size: 20px;
   color: #a49c8e;
+}
+.bagItem {
+  border-bottom-color: var(--line);
 }
 .bagItem > .productImage {
   width: 85px;
@@ -452,10 +459,7 @@
     font-size: 23px;
   }
   .footer p {
-    order: 3;
-    width: 100%;
     font-size: 12px;
-    margin: 0;
   }
   .footer svg {
     width: 21px;

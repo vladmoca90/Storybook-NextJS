@@ -106,7 +106,7 @@ export default function GothicShop() {
         For the beautifully strange.
       </div>
       <header
-        className={`${styles.header} flex h-[81px] items-center justify-between gap-[25px] border-b border-[var(--line)] px-[3.1%] max-[700px]:h-auto max-[700px]:min-h-[104px] max-[700px]:flex-wrap max-[700px]:gap-4 max-[700px]:px-[5%] max-[700px]:pt-[19px]`}
+        className={`${styles.header} flex h-[81px] items-center justify-between gap-[25px] border-b px-[3.1%] max-[700px]:h-auto max-[700px]:min-h-[104px] max-[700px]:flex-wrap max-[700px]:gap-4 max-[700px]:px-[5%] max-[700px]:pt-[19px]`}
       >
         <a className={styles.logo} href="#">
           NOCTURNE
@@ -122,7 +122,7 @@ export default function GothicShop() {
         </nav>
         <div className={`${styles.headerActions} flex gap-6 max-[1000px]:gap-[15px] max-[700px]:gap-4`}>
           <button
-            className="relative p-[5px]"
+            className="relative border-0 p-[5px]"
             aria-label="Search collection"
             aria-expanded={searchOpen}
             onClick={() => {
@@ -132,7 +132,7 @@ export default function GothicShop() {
             <Search size={21} />
           </button>
           <button
-            className="relative p-[5px]"
+            className="relative border-0 p-[5px]"
             aria-label={`Shopping bag, ${count} items`}
             onClick={openBag}
           >
@@ -147,7 +147,7 @@ export default function GothicShop() {
       </header>
       {searchOpen && (
         <form
-          className={`${styles.search} flex items-center gap-5 border-b border-[var(--line)] px-[4%] py-[18px] max-[700px]:gap-3`}
+          className={`${styles.search} flex items-center gap-5 border-b px-[4%] py-[18px] max-[700px]:gap-3`}
           onSubmit={(e) => {
             e.preventDefault();
             document
@@ -157,6 +157,7 @@ export default function GothicShop() {
         >
           <Search size={18} />
           <input
+            className="min-w-0 flex-1 border-0"
             autoFocus
             aria-label="Search products"
             placeholder="Find your next obsession…"
@@ -166,11 +167,11 @@ export default function GothicShop() {
               setCategory("All");
             }}
           />
-          <button className="flex items-center gap-3" type="submit">
+          <button className="flex items-center gap-3 border-0" type="submit">
             Search <ArrowRight size={16} />
           </button>
           <button
-            className="flex items-center gap-3"
+            className="flex items-center gap-3 border-0"
             type="button"
             aria-label="Close search"
             onClick={() => {
@@ -205,7 +206,7 @@ export default function GothicShop() {
             <h1 className="mb-5 max-w-[680px] max-[700px]:max-w-[330px]">{current.title}</h1>
             <p className="mb-[23px]">{current.description}</p>
             <button
-              className={`${styles.primary} inline-flex items-center justify-center gap-6 border border-[var(--red)] px-[25px] py-[15px] max-[700px]:gap-5 max-[700px]:px-5 max-[700px]:py-[14px]`}
+              className={`${styles.primary} inline-flex items-center justify-center gap-6 border px-[25px] py-[15px] max-[700px]:gap-5 max-[700px]:px-5 max-[700px]:py-[14px]`}
               onClick={() => browse(current.filter)}
             >
               {current.cta}
@@ -219,7 +220,7 @@ export default function GothicShop() {
                   key={i}
                   aria-label={`Go to slide ${i + 1}`}
                   aria-current={slide === i ? "true" : undefined}
-                  className={`${slide === i ? styles.activeDot : ""} relative h-[11px] w-[11px] rounded-full border border-[var(--ivory)] p-0`}
+                  className={`${slide === i ? styles.activeDot : ""} relative h-[11px] w-[11px] rounded-full border p-0`}
                   onClick={() => setSlide(i)}
                 />
               ))}
@@ -233,7 +234,7 @@ export default function GothicShop() {
                 <ArrowLeft size={18} />
               </button>
               <span>
-                0{slide + 1} <i>/ 03</i>
+                0{slide + 1} <i className="ml-1">/ 03</i>
               </span>
               <button
                 className="grid h-[39px] w-[39px] place-items-center rounded-full border"
@@ -245,7 +246,7 @@ export default function GothicShop() {
             </div>
           </div>
         </section>
-        <div className={`${styles.manifesto} flex h-[44px] items-center justify-center gap-11 border-y border-[var(--line)] max-[1000px]:gap-[25px] max-[700px]:h-[42px] max-[700px]:gap-4`}>
+        <div className={`${styles.manifesto} flex h-[44px] items-center justify-center gap-11 border-y max-[1000px]:gap-[25px] max-[700px]:h-[42px] max-[700px]:gap-4`}>
           <span>GOTHIC BY NATURE.</span>
           <i>/</i>
           <span>NOT JUST FOR HALLOWEEN.</span>
@@ -257,7 +258,7 @@ export default function GothicShop() {
           className={`${styles.collection} scroll-mt-5 px-[3.1%] pt-8 pb-[42px] max-[700px]:px-[5%] max-[700px]:pt-[31px] max-[700px]:pb-8 min-[1500px]:pt-10`}
         >
           <div className={`${styles.collectionHeading} mb-[22px] flex items-center justify-between gap-5 max-[700px]:mb-5 max-[700px]:block`}>
-            <h2>Objects of obsession</h2>
+            <h2 className="m-0">Objects of obsession</h2>
             <div className={`${styles.filters} flex gap-[26px] max-[1000px]:gap-[18px] max-[700px]:mt-3 max-[700px]:gap-[25px]`} aria-label="Product categories">
               {categories.map((item) => (
                 <button
@@ -298,7 +299,7 @@ export default function GothicShop() {
             <div className={`${styles.empty} py-[60px]`}>
               No matches in the shadows.
               <button
-                className="mt-[18px] flex gap-3"
+                className="mt-[18px] flex gap-3 border-0"
                 onClick={() => {
                   setQuery("");
                   setCategory("All");
@@ -311,12 +312,14 @@ export default function GothicShop() {
         </section>
       </main>
       <footer
-        className={`${styles.footer} flex items-center justify-between gap-6 border-t border-[var(--line)] px-[3.1%] py-[30px] max-[700px]:flex-wrap max-[700px]:gap-[18px] max-[700px]:px-[5%] max-[700px]:py-[25px]`}
+        className={`${styles.footer} flex items-center justify-between gap-6 border-t px-[3.1%] py-[30px] max-[700px]:flex-wrap max-[700px]:gap-[18px] max-[700px]:px-[5%] max-[700px]:py-[25px]`}
       >
         <a className={styles.logo} href="#">
           NOCTURNE
         </a>
-        <p>Wear your own kind of strange.</p>
+        <p className="max-[700px]:order-3 max-[700px]:w-full max-[700px]:m-0">
+          Wear your own kind of strange.
+        </p>
         <Moon size={23} strokeWidth={1} />
         <span>© {new Date().getFullYear()} Nocturne</span>
       </footer>
@@ -334,7 +337,7 @@ export default function GothicShop() {
         }}
       >
         <button
-          className={`${styles.close} absolute top-3 right-3 z-[2] p-[5px]`}
+          className={`${styles.close} absolute top-3 right-3 z-[2] border-0 p-[5px]`}
           aria-label="Close dialog"
           onClick={() => dialog.current?.close()}
         >
@@ -367,12 +370,14 @@ export default function GothicShop() {
                 </div>
               </fieldset>
               <button
-                className={`${styles.primary} inline-flex items-center justify-center gap-6 border border-[var(--red)] px-[25px] py-[15px]`}
+                className={`${styles.primary} inline-flex items-center justify-center gap-6 border px-[25px] py-[15px]`}
                 onClick={addToBag}
               >
                 Add to bag <ShoppingBag size={18} />
               </button>
-              <small className="mt-[15px]">Concept collection · illustrative products</small>
+              <small className="mt-[15px] block">
+                Concept collection · illustrative products
+              </small>
             </div>
           </div>
         )}
@@ -386,7 +391,7 @@ export default function GothicShop() {
                 <div className={styles.bagItems}>
                   {bag.map((item, i) => (
                     <div
-                      className={`${styles.bagItem} flex items-center gap-5 border-b border-[var(--line)] py-[18px]`}
+                      className={`${styles.bagItem} flex items-center gap-5 border-b py-[18px]`}
                       key={`${item.product.id}-${item.size}`}
                     >
                       <ProductImage product={item.product} />
@@ -399,7 +404,7 @@ export default function GothicShop() {
                         </p>
                         <div className={`${styles.quantity} mt-3 flex items-center gap-[15px]`}>
                           <button
-                            className="border border-[var(--line)] p-[6px]"
+                            className="border p-[6px]"
                             aria-label={`Remove one ${item.product.name}`}
                             onClick={() => changeQuantity(i, -1)}
                           >
@@ -407,7 +412,7 @@ export default function GothicShop() {
                           </button>
                           <span>{item.quantity}</span>
                           <button
-                            className="border border-[var(--line)] p-[6px]"
+                            className="border p-[6px]"
                             aria-label={`Add one ${item.product.name}`}
                             onClick={() => changeQuantity(i, 1)}
                           >
@@ -441,7 +446,7 @@ export default function GothicShop() {
               </p>
             )}
             <button
-              className={`${styles.primary} inline-flex items-center justify-center gap-6 border border-[var(--red)] px-[25px] py-[15px]`}
+              className={`${styles.primary} inline-flex items-center justify-center gap-6 border px-[25px] py-[15px]`}
               onClick={() => {
                 dialog.current?.close();
                 browse("All");
