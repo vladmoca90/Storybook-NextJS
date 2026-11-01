@@ -47,6 +47,7 @@ export const slides: GothicSlide[] = [
         darker side.
       </>
     ),
+    image: "/gothic/hero.png",
     description: (
       <>
         Gothic souls. Midnight muses.
@@ -66,6 +67,7 @@ export const slides: GothicSlide[] = [
         be someone else.
       </>
     ),
+    image: "/gothic/hero-halloween.png",
     description: (
       <>
         Velvet capes. Wicked intentions.
@@ -85,6 +87,7 @@ export const slides: GothicSlide[] = [
         in the details.
       </>
     ),
+    image: "/gothic/hero-details.png",
     description: (
       <>
         From midnight lace to statement boots.

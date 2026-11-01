@@ -194,10 +194,15 @@ export default function GothicShop() {
           onTouchEnd={(e) => {
             const delta = touchStart.current - e.changedTouches[0].clientX;
             if (Math.abs(delta) > 50)
-              setSlide((s) => (s + (delta > 0 ? 1 : 2)) % 3);
+              setSlide((s) =>
+                (s + (delta > 0 ? 1 : slides.length - 1)) % slides.length,
+              );
           }}
         >
-          <div className={styles.heroPhoto} />
+          <div
+            className={styles.heroPhoto}
+            style={{ backgroundImage: `url("${current.image}")` }}
+          />
           <div
             className={`${styles.heroContent} px-[6.3%] pt-[76px] pb-[70px] max-[1000px]:pt-20 max-[700px]:px-[7%] max-[700px]:pt-[91px] max-[700px]:pb-20 min-[1500px]:pt-[95px]`}
             key={slide}
@@ -229,7 +234,7 @@ export default function GothicShop() {
               <button
                 className="grid h-[39px] w-[39px] place-items-center rounded-full border"
                 aria-label="Previous slide"
-                onClick={() => setSlide((s) => (s + 2) % 3)}
+                onClick={() => setSlide((s) => (s + slides.length - 1) % slides.length)}
               >
                 <ArrowLeft size={18} />
               </button>
@@ -239,7 +244,7 @@ export default function GothicShop() {
               <button
                 className="grid h-[39px] w-[39px] place-items-center rounded-full border"
                 aria-label="Next slide"
-                onClick={() => setSlide((s) => (s + 1) % 3)}
+                onClick={() => setSlide((s) => (s + 1) % slides.length)}
               >
                 <ArrowRight size={18} />
               </button>

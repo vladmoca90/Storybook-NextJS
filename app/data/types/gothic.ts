@@ -15,6 +15,7 @@ export type Product = {
 export type GothicSlide = {
   title: ReactNode;
   description: ReactNode;
+  image: string;
   cta: string;
   filter: GothicCategory;
   className: string;
