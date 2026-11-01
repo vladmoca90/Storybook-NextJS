@@ -5,7 +5,7 @@
   --red: #8d252e;
   background: var(--ink);
   color: var(--ivory);
-  font-family: var(--font-creepster), "Creepster", fantasy;
+  font-family: Georgia, "Times New Roman", serif;
 }
 .shop button,
 .shop a {
@@ -52,7 +52,7 @@
 }
 .count {
   background: var(--red);
-  font: 10px var(--font-creepster), "Creepster", fantasy;
+  font: 10px Georgia, "Times New Roman", serif;
 }
 .hero {
   position: relative;
@@ -220,7 +220,7 @@
 }
 .footer > span {
   font:
-    10px var(--font-creepster), "Creepster", fantasy;
+    10px Georgia, "Times New Roman", serif;
   color: #a19c91;
   letter-spacing: 1px;
 }
@@ -249,7 +249,7 @@
 .modal {
   background: #141413;
   color: var(--ivory);
-  font-family: var(--font-creepster), "Creepster", fantasy;
+  font-family: Georgia, "Times New Roman", serif;
   border-color: #49433a;
 }
 .modal::backdrop {
@@ -304,7 +304,7 @@
 }
 .detailCopy small {
   font:
-    10px var(--font-creepster), "Creepster", fantasy;
+    10px Georgia, "Times New Roman", serif;
   color: #999389;
 }
 .bag h2 span {
@@ -339,7 +339,7 @@
 }
 .demoNote {
   font:
-    13px/1.6 var(--font-creepster), "Creepster", fantasy;
+    13px/1.6 Georgia, "Times New Roman", serif;
   color: #bdb4a4;
 }
 .srOnly,
