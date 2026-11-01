@@ -204,11 +204,11 @@ export default function GothicShop() {
             style={{ backgroundImage: `url("${current.image}")` }}
           />
           <div
-            className={`${styles.heroContent} px-[6.3%] pt-[76px] pb-[70px] max-[1000px]:pt-20 max-[700px]:px-[7%] max-[700px]:pt-[91px] max-[700px]:pb-20 min-[1500px]:pt-[95px]`}
+            className={`${styles.heroContent} px-[6.3%] pt-[76px] pb-[70px] max-[1000px]:pt-20 max-[700px]:px-[7%] max-[700px]:pt-[130px] max-[700px]:pb-20 max-[700px]:text-center min-[1500px]:pt-[95px]`}
             key={slide}
             aria-live="polite"
           >
-            <h1 className="mb-5 max-w-[680px] max-[700px]:max-w-[330px]">{current.title}</h1>
+            <h1 className="mb-5 max-w-[680px] max-[700px]:mx-auto max-[700px]:max-w-[330px]">{current.title}</h1>
             <p className="mb-[23px]">{current.description}</p>
             <button
               className={`${styles.primary} inline-flex items-center justify-center gap-6 border px-[25px] py-[10px] max-[700px]:gap-5 max-[700px]:px-5 max-[700px]:py-[14px]`}
