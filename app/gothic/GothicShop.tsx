@@ -106,7 +106,7 @@ export default function GothicShop() {
         For the beautifully strange.
       </div>
       <header
-        className={`${styles.header} flex h-[81px] items-center justify-between gap-[25px] border-b px-[3.1%] max-[700px]:h-auto max-[700px]:min-h-[104px] max-[700px]:flex-wrap max-[700px]:gap-4 max-[700px]:px-[5%] max-[700px]:pt-[19px]`}
+        className={`${styles.header} flex h-[81px] items-center justify-between gap-[25px] border-b px-[3.1%] max-[700px]:h-auto max-[700px]:min-h-[104px] max-[700px]:flex-wrap max-[700px]:gap-4 max-[700px]:px-[4%] max-[700px]:pt-[19px]`}
       >
         <a className={styles.logo} href="#">
           NOCTURNE
@@ -260,7 +260,7 @@ export default function GothicShop() {
         </div>
         <section
           id="collection"
-          className={`${styles.collection} scroll-mt-5 px-[3.1%] pt-8 pb-[42px] max-[700px]:px-[5%] max-[700px]:pt-[31px] max-[700px]:pb-8 min-[1500px]:pt-10`}
+          className={`${styles.collection} scroll-mt-5 px-[3.1%] pt-8 pb-[42px] max-[700px]:px-[4%] max-[700px]:pt-[31px] max-[700px]:pb-8 min-[1500px]:pt-10`}
         >
           <div className={`${styles.collectionHeading} mb-[22px] flex items-center justify-between gap-5 max-[700px]:mb-5 max-[700px]:block`}>
             <h2 className="m-0">Objects of obsession</h2>
@@ -317,7 +317,7 @@ export default function GothicShop() {
         </section>
       </main>
       <footer
-        className={`${styles.footer} flex items-center justify-between gap-6 border-t px-[3.1%] py-[30px] max-[700px]:flex-wrap max-[700px]:gap-[18px] max-[700px]:px-[5%] max-[700px]:py-[25px]`}
+        className={`${styles.footer} flex items-center justify-between gap-6 border-t px-[3.1%] py-[30px] max-[700px]:flex-wrap max-[700px]:gap-[18px] max-[700px]:px-[4%] max-[700px]:py-[25px]`}
       >
         <a className={styles.logo} href="#">
           NOCTURNE
