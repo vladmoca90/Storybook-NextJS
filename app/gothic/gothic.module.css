@@ -101,7 +101,7 @@
   background: var(--red);
   border-color: var(--red);
   color: #fff5e8;
-  font-size: 15px;
+  font-size: 18px;
   transition: background 0.2s;
 }
 .primary:hover {

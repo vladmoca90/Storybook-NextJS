@@ -211,7 +211,7 @@ export default function GothicShop() {
             <h1 className="mb-5 max-w-[680px] max-[700px]:max-w-[330px]">{current.title}</h1>
             <p className="mb-[23px]">{current.description}</p>
             <button
-              className={`${styles.primary} inline-flex items-center justify-center gap-6 border px-[25px] py-[15px] max-[700px]:gap-5 max-[700px]:px-5 max-[700px]:py-[14px]`}
+              className={`${styles.primary} inline-flex items-center justify-center gap-6 border px-[25px] py-[10px] max-[700px]:gap-5 max-[700px]:px-5 max-[700px]:py-[14px]`}
               onClick={() => browse(current.filter)}
             >
               {current.cta}
@@ -375,7 +375,7 @@ export default function GothicShop() {
                 </div>
               </fieldset>
               <button
-                className={`${styles.primary} inline-flex items-center justify-center gap-6 border px-[25px] py-[15px]`}
+                className={`${styles.primary} inline-flex items-center justify-center gap-6 border px-[25px] py-[10px]`}
                 onClick={addToBag}
               >
                 Add to bag <ShoppingBag size={18} />
@@ -451,7 +451,7 @@ export default function GothicShop() {
               </p>
             )}
             <button
-              className={`${styles.primary} inline-flex items-center justify-center gap-6 border px-[25px] py-[15px]`}
+              className={`${styles.primary} inline-flex items-center justify-center gap-6 border px-[25px] py-[10px]`}
               onClick={() => {
                 dialog.current?.close();
                 browse("All");
