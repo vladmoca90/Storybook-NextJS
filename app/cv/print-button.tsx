@@ -3,12 +3,12 @@
 export function PrintButton() {
   return (
     <button
-      className="cv-print inline-flex items-center gap-[10px] rounded-[5px] border px-[17px] py-[7px] max-[701px]:px-3 max-[701px]:py-[5px]"
+      className="cv-print inline-flex items-center gap-[0.625rem] rounded-[0.3125rem] border-[0.0625rem] px-[1.0625rem] py-[0.4375rem] max-[43.8125rem]:px-3 max-[43.8125rem]:py-[0.3125rem]"
       onClick={() => window.print()}
     >
       <svg
-        width="17"
-        height="17"
+        width="1.0625rem"
+        height="1.0625rem"
         viewBox="0 0 24 24"
         fill="none"
         stroke="currentColor"

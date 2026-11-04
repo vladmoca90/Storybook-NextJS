@@ -12,8 +12,8 @@ export const metadata: Metadata = {
 function Arrow() {
   return (
     <svg
-      width="18"
-      height="18"
+      width="1.125rem"
+      height="1.125rem"
       viewBox="0 0 24 24"
       fill="none"
       stroke="currentColor"
@@ -29,12 +29,12 @@ export default function CVPage() {
   return (
     <div className="cv-shell min-h-screen [&_h1]:m-0 [&_h2]:m-0 [&_h3]:m-0 [&_p]:m-0">
       <a
-        className="cv-skip fixed -top-[100px] left-5 z-10 p-3 focus:top-[10px] print:hidden"
+        className="cv-skip fixed -top-[6.25rem] left-5 z-10 p-3 focus:top-[0.625rem] print:hidden"
         href="#overview"
       >
         Skip to content
       </a>
-      <aside className="cv-sidebar fixed inset-y-0 flex w-[245px] flex-col border-r px-[35px] py-8 max-[1101px]:w-[205px] max-[1101px]:px-6 max-[1101px]:py-7 max-[701px]:static max-[701px]:grid max-[701px]:w-auto max-[701px]:grid-cols-[1fr_auto] max-[701px]:items-center max-[701px]:border-r-0 max-[701px]:border-b max-[701px]:py-[22px] print:hidden">
+      <aside className="cv-sidebar fixed inset-y-0 flex w-[15.3125rem] flex-col border-r-[0.0625rem] px-[2.1875rem] py-8 max-[68.8125rem]:w-[12.8125rem] max-[68.8125rem]:px-6 max-[68.8125rem]:py-7 max-[43.8125rem]:static max-[43.8125rem]:grid max-[43.8125rem]:w-auto max-[43.8125rem]:grid-cols-[1fr_auto] max-[43.8125rem]:items-center max-[43.8125rem]:border-r-0 max-[43.8125rem]:border-b-[0.0625rem] max-[43.8125rem]:py-[1.375rem] print:hidden">
         <a
           href="#overview"
           className="cv-monogram"
@@ -42,15 +42,15 @@ export default function CVPage() {
         >
           VM<span>.</span>
         </a>
-        <p className="cv-role mt-3! max-[701px]:m-0!">Frontend Engineer</p>
+        <p className="cv-role mt-3! max-[43.8125rem]:m-0!">Frontend Engineer</p>
         <nav
-          className="mt-[62px] flex flex-col gap-[17px] max-[701px]:col-span-full max-[701px]:mt-6 max-[701px]:flex-row max-[701px]:flex-wrap max-[701px]:gap-x-[18px] max-[701px]:gap-y-3 max-[701px]:pb-[5px]"
+          className="mt-[3.875rem] flex flex-col gap-[1.0625rem] max-[43.8125rem]:col-span-full max-[43.8125rem]:mt-6 max-[43.8125rem]:flex-row max-[43.8125rem]:flex-wrap max-[43.8125rem]:gap-x-[1.125rem] max-[43.8125rem]:gap-y-3 max-[43.8125rem]:pb-[0.3125rem]"
           aria-label="CV sections"
         >
           {["Overview", "Contact", "Education", "Skills", "Experience"].map(
             (label) => (
               <a
-                className="border-l-[3px] pl-4 max-[701px]:border-0 max-[701px]:p-0 max-[701px]:whitespace-nowrap"
+                className="border-l-[0.1875rem] pl-4 max-[43.8125rem]:border-0 max-[43.8125rem]:p-0 max-[43.8125rem]:whitespace-nowrap"
                 key={label}
                 href={`#${label.toLowerCase()}`}
               >
@@ -59,7 +59,7 @@ export default function CVPage() {
             ),
           )}
         </nav>
-        <div className="cv-social mt-auto grid gap-[10px] [&_a]:flex [&_a]:items-center [&_a]:gap-2 max-[701px]:hidden">
+        <div className="cv-social mt-auto grid gap-[0.625rem] [&_a]:flex [&_a]:items-center [&_a]:gap-2 max-[43.8125rem]:hidden">
           <a
             href="https://www.linkedin.com/in/vlad-mocanu-0a280a3a/"
             target="_blank"
@@ -77,43 +77,43 @@ export default function CVPage() {
         </div>
       </aside>
       <main
-        className="cv-main ml-[245px] max-w-[1500px] px-14 pt-[26px] pb-12 min-[1600px]:mr-auto min-[1600px]:px-[70px] max-[1101px]:ml-[205px] max-[1101px]:px-[35px] max-[1101px]:py-[26px] max-[701px]:m-0 max-[701px]:px-6 max-[701px]:pt-5 max-[701px]:pb-10 print:m-0! print:max-w-none print:p-0!"
+        className="cv-main ml-[15.3125rem] max-w-[93.75rem] px-14 pt-[1.625rem] pb-12 min-[100rem]:mr-auto min-[100rem]:px-[4.375rem] max-[68.8125rem]:ml-[12.8125rem] max-[68.8125rem]:px-[2.1875rem] max-[68.8125rem]:py-[1.625rem] max-[43.8125rem]:m-0 max-[43.8125rem]:px-6 max-[43.8125rem]:pt-5 max-[43.8125rem]:pb-10 print:m-0! print:max-w-none print:p-0!"
         id="overview"
       >
-        <div className="cv-toolbar flex justify-end max-[701px]:mb-[22px] print:hidden">
+        <div className="cv-toolbar flex justify-end max-[43.8125rem]:mb-[1.375rem] print:hidden">
           <PrintButton />
         </div>
-        <header className="cv-hero pb-[38px] print:pb-[14px]">
+        <header className="cv-hero pb-[2.375rem] print:pb-[0.875rem]">
           <h1>
             Vlad Mocanu<span>.</span>
           </h1>
-          <p className="cv-tagline mt-[6px]! max-[701px]:mt-[14px]! max-[701px]:max-w-[330px]">
+          <p className="cv-tagline mt-[0.375rem]! max-[43.8125rem]:mt-[0.875rem]! max-[43.8125rem]:max-w-[20.625rem]">
             Thoughtful interfaces. Reliable code.
           </p>
-          <p className="cv-intro mt-[19px]! max-w-[910px] max-[701px]:mt-5! print:mt-[10px]!">
+          <p className="cv-intro mt-[1.1875rem]! max-w-[56.875rem] max-[43.8125rem]:mt-5! print:mt-[0.625rem]!">
             Frontend engineer building accessible, responsive web experiences
             with Next.js, React and TypeScript.
           </p>
-          <div className="cv-actions mt-[25px] flex items-center gap-10 max-[701px]:gap-[25px] print:hidden">
+          <div className="cv-actions mt-[1.5625rem] flex items-center gap-10 max-[43.8125rem]:gap-[1.5625rem] print:hidden">
             <a
-              className="cv-primary inline-flex items-center gap-[15px] rounded-[5px] px-[21px] py-2"
+              className="cv-primary inline-flex items-center gap-[0.9375rem] rounded-[0.3125rem] px-[1.3125rem] py-2"
               href="mailto:vladmoca90@gmail.com"
             >
               Email me <Arrow />
             </a>
-            <a className="cv-text-link border-b" href="#experience">
+            <a className="cv-text-link border-b-[0.0625rem]" href="#experience">
               View experience
             </a>
           </div>
         </header>
         <section
-          className="cv-section scroll-mt-7 border-t py-8 print:py-4 cv-contact grid grid-cols-1 gap-[25px] min-[1101px]:grid-cols-[220px_1fr] min-[1101px]:gap-[35px] print:grid-cols-[120px_1fr] print:gap-[18px] max-[701px]:gap-[22px] print:gap-[18px]!"
+          className="cv-section scroll-mt-7 border-t-[0.0625rem] py-8 print:py-4 cv-contact grid grid-cols-1 gap-[1.5625rem] min-[68.8125rem]:grid-cols-[13.75rem_1fr] min-[68.8125rem]:gap-[2.1875rem] print:grid-cols-[7.5rem_1fr] print:gap-[1.125rem] max-[43.8125rem]:gap-[1.375rem] print:gap-[1.125rem]!"
           id="contact"
           aria-labelledby="contact-title"
         >
           <h2 id="contact-title">Contact details</h2>
           <div>
-            <a className="cv-email border-b" href="mailto:vladmoca90@gmail.com">
+            <a className="cv-email border-b-[0.0625rem]" href="mailto:vladmoca90@gmail.com">
               vladmoca90@gmail.com
             </a>
             <a
@@ -124,7 +124,7 @@ export default function CVPage() {
             </a>
             <p>British citizen · Right to work in the UK</p>
             <p>Living continuously in the UK since 2016</p>
-            <div className="cv-contact-social mt-[14px]">
+            <div className="cv-contact-social mt-[0.875rem]">
               <a
                 href="https://www.linkedin.com/in/vlad-mocanu-0a280a3a/"
                 target="_blank"
@@ -144,14 +144,14 @@ export default function CVPage() {
           </div>
         </section>
         <section
-          className="cv-section scroll-mt-7 border-t py-8 print:py-4 cv-education grid grid-cols-1 gap-[25px] min-[1101px]:grid-cols-[220px_1fr] min-[1101px]:gap-[35px] print:grid-cols-[120px_1fr] print:gap-[18px] [&_article]:print:break-inside-avoid [&_article+article]:mt-5 [&_article+article]:border-t [&_article+article]:pt-5"
+          className="cv-section scroll-mt-7 border-t-[0.0625rem] py-8 print:py-4 cv-education grid grid-cols-1 gap-[1.5625rem] min-[68.8125rem]:grid-cols-[13.75rem_1fr] min-[68.8125rem]:gap-[2.1875rem] print:grid-cols-[7.5rem_1fr] print:gap-[1.125rem] [&_article]:print:break-inside-avoid [&_article+article]:mt-5 [&_article+article]:border-t-[0.0625rem] [&_article+article]:pt-5"
           id="education"
           aria-labelledby="education-title"
         >
           <h2 id="education-title">Education</h2>
           <div>
             <article>
-              <div className="cv-job-heading flex flex-wrap items-baseline justify-between gap-4 max-[701px]:gap-[5px]">
+              <div className="cv-job-heading flex flex-wrap items-baseline justify-between gap-4 max-[43.8125rem]:gap-[0.3125rem]">
                 <h3>Avantaj Consulting</h3>
                 <p>2015</p>
               </div>
@@ -159,7 +159,7 @@ export default function CVPage() {
               <p>HTML, CSS, JavaScript, jQuery · Average mark: 92.5%</p>
             </article>
             <article>
-              <div className="cv-job-heading flex flex-wrap items-baseline justify-between gap-4 max-[701px]:gap-[5px]">
+              <div className="cv-job-heading flex flex-wrap items-baseline justify-between gap-4 max-[43.8125rem]:gap-[0.3125rem]">
                 <h3>The University of Birmingham</h3>
                 <p>2010 — 2013</p>
               </div>
@@ -168,12 +168,12 @@ export default function CVPage() {
           </div>
         </section>
         <section
-          className="cv-section scroll-mt-7 border-t py-8 print:py-4"
+          className="cv-section scroll-mt-7 border-t-[0.0625rem] py-8 print:py-4"
           id="skills"
           aria-labelledby="skills-title"
         >
           <h2 id="skills-title">Skills & tools</h2>
-          <div className="cv-skills mt-7 grid grid-cols-2 gap-x-12 gap-y-[26px] [&_p]:mt-[6px]! max-[701px]:grid-cols-1 max-[701px]:gap-[22px] print:grid-cols-2! print:gap-x-[25px]! print:gap-y-3! [&>div]:print:break-inside-avoid">
+          <div className="cv-skills mt-7 grid grid-cols-2 gap-x-12 gap-y-[1.625rem] [&_p]:mt-[0.375rem]! max-[43.8125rem]:grid-cols-1 max-[43.8125rem]:gap-[1.375rem] print:grid-cols-2! print:gap-x-[1.5625rem]! print:gap-y-3! [&>div]:print:break-inside-avoid">
             {skills.map((skill) => (
               <div key={skill.label}>
                 <h3>{skill.label}</h3>
@@ -183,30 +183,30 @@ export default function CVPage() {
           </div>
         </section>
         <section
-          className="cv-experience grid grid-cols-1 gap-[25px] min-[1101px]:grid-cols-[220px_1fr] min-[1101px]:gap-[35px] print:grid-cols-[120px_1fr] print:gap-[18px] cv-section scroll-mt-7 border-t py-8 print:py-4"
+          className="cv-experience grid grid-cols-1 gap-[1.5625rem] min-[68.8125rem]:grid-cols-[13.75rem_1fr] min-[68.8125rem]:gap-[2.1875rem] print:grid-cols-[7.5rem_1fr] print:gap-[1.125rem] cv-section scroll-mt-7 border-t-[0.0625rem] py-8 print:py-4"
           id="experience"
           aria-labelledby="experience-title"
         >
-          <div className="cv-section-title max-[1101px]:flex max-[1101px]:items-center max-[1101px]:justify-between [&_p]:mt-2!">
+          <div className="cv-section-title max-[68.8125rem]:flex max-[68.8125rem]:items-center max-[68.8125rem]:justify-between [&_p]:mt-2!">
             <h2 id="experience-title">Work experience</h2>
             <p>2016 — 2026</p>
           </div>
-          <div className="cv-timeline ml-[5px] border-l pl-[35px] max-[701px]:pl-6 print:pl-[18px]!">
+          <div className="cv-timeline ml-[0.3125rem] border-l-[0.0625rem] pl-[2.1875rem] max-[43.8125rem]:pl-6 print:pl-[1.125rem]!">
             {experience.map((job) => (
               <article
-                className="cv-job relative pb-8 last:pb-0 before:absolute before:top-[11px] before:-left-10 before:size-[9px] before:rounded-full before:content-[''] max-[701px]:before:-left-[29px] print:break-inside-avoid print:pb-4 print:before:top-[7px] print:before:-left-[23px]!"
+                className="cv-job relative pb-8 last:pb-0 before:absolute before:top-[0.6875rem] before:-left-10 before:size-[0.5625rem] before:rounded-full before:content-[''] max-[43.8125rem]:before:-left-[1.8125rem] print:break-inside-avoid print:pb-4 print:before:top-[0.4375rem] print:before:-left-[1.4375rem]!"
                 key={job.company}
               >
-                <div className="cv-job-heading flex flex-wrap items-baseline justify-between gap-4 max-[701px]:gap-[5px]">
+                <div className="cv-job-heading flex flex-wrap items-baseline justify-between gap-4 max-[43.8125rem]:gap-[0.3125rem]">
                   <h3>{job.company}</h3>
                   <p>{job.dates}</p>
                 </div>
                 <p className="cv-job-role">{job.role}</p>
-                <p className="cv-job-type mt-[5px]! mb-[10px]!">{job.type}</p>
-                <ul className="m-0 list-disc pl-[18px]">
+                <p className="cv-job-type mt-[0.3125rem]! mb-[0.625rem]!">{job.type}</p>
+                <ul className="m-0 list-disc pl-[1.125rem]">
                   {job.bullets.map((bullet) => (
                     <li
-                      className="mb-[6px] pl-[3px] print:mb-[3px]"
+                      className="mb-[0.375rem] pl-[0.1875rem] print:mb-[0.1875rem]"
                       key={bullet}
                     >
                       {bullet}
