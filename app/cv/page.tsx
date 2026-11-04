@@ -176,7 +176,7 @@ export default function CVPage() {
           <div className="cv-skills mt-7 grid grid-cols-2 gap-x-12 gap-y-[1.625rem] [&_p]:mt-[0.375rem]! max-[43.8125rem]:grid-cols-1 max-[43.8125rem]:gap-[1.375rem] print:grid-cols-2! print:gap-x-[1.5625rem]! print:gap-y-3! [&>div]:print:break-inside-avoid">
             {skills.map((skill) => (
               <div key={skill.label}>
-                <h3>{skill.label}</h3>
+                <h3 className="cv-subtitle">{skill.label}</h3>
                 <p>{skill.value}</p>
               </div>
             ))}
@@ -198,7 +198,7 @@ export default function CVPage() {
                 key={job.company}
               >
                 <div className="cv-job-heading flex flex-wrap items-baseline justify-between gap-4 max-[43.8125rem]:gap-[0.3125rem]">
-                  <h3>{job.company}</h3>
+                  <h3 className="mb-4!">{job.company}</h3>
                   <p>{job.dates}</p>
                 </div>
                 <p className="cv-job-role">{job.role}</p>
