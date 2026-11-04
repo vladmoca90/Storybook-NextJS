@@ -198,7 +198,7 @@ export default function CVPage() {
                 key={job.company}
               >
                 <div className="cv-job-heading flex flex-wrap items-baseline justify-between gap-4 max-[43.8125rem]:gap-[0.3125rem]">
-                  <h3 className="mb-4!">{job.company}</h3>
+                  <h3>{job.company}</h3>
                   <p>{job.dates}</p>
                 </div>
                 <p className="cv-job-role">{job.role}</p>
