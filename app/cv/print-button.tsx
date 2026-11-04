@@ -2,7 +2,10 @@
 
 export function PrintButton() {
   return (
-    <button className="cv-print" onClick={() => window.print()}>
+    <button
+      className="cv-print inline-flex items-center gap-[10px] rounded-[5px] border px-[17px] py-[7px] max-[701px]:px-3 max-[701px]:py-[5px]"
+      onClick={() => window.print()}
+    >
       <svg
         width="17"
         height="17"
