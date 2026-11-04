@@ -176,7 +176,7 @@ export default function CVPage() {
           <div className="cv-skills mt-7 grid grid-cols-2 gap-x-12 gap-y-[1.625rem] [&_p]:mt-[0.375rem]! max-[43.8125rem]:grid-cols-1 max-[43.8125rem]:gap-[1.375rem] print:grid-cols-2! print:gap-x-[1.5625rem]! print:gap-y-3! [&>div]:print:break-inside-avoid">
             {skills.map((skill) => (
               <div key={skill.label}>
-                <h3 className="cv-subtitle">{skill.label}</h3>
+                <p className="cv-subtitle">{skill.label}</p>
                 <p>{skill.value}</p>
               </div>
             ))}
