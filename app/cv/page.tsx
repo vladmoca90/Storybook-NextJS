@@ -9,22 +9,6 @@ export const metadata: Metadata = {
     "Vlad Mocanu — frontend engineer specialising in Next.js, React, TypeScript and accessible web experiences. Experience, skills, education and contact details.",
 };
 
-function Arrow() {
-  return (
-    <svg
-      width="1.125rem"
-      height="1.125rem"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="1.5"
-      aria-hidden="true"
-    >
-      <path d="M5 12h14m-6-6 6 6-6 6" />
-    </svg>
-  );
-}
-
 export default function CVPage() {
   return (
     <div className="cv-shell min-h-screen [&_h1]:m-0 [&_h2]:m-0 [&_h3]:m-0 [&_p]:m-0">
@@ -34,50 +18,8 @@ export default function CVPage() {
       >
         Skip to content
       </a>
-      <aside className="cv-sidebar fixed inset-y-0 flex w-[15.3125rem] flex-col border-r-[0.0625rem] px-[2.1875rem] py-8 max-[68.8125rem]:w-[12.8125rem] max-[68.8125rem]:px-6 max-[68.8125rem]:py-7 max-[43.8125rem]:static max-[43.8125rem]:grid max-[43.8125rem]:w-auto max-[43.8125rem]:grid-cols-[1fr_auto] max-[43.8125rem]:items-center max-[43.8125rem]:border-r-0 max-[43.8125rem]:border-b-[0.0625rem] max-[43.8125rem]:py-[1.375rem] print:hidden">
-        <a
-          href="#overview"
-          className="cv-monogram"
-          aria-label="Vlad Mocanu, overview"
-        >
-          VM<span>.</span>
-        </a>
-        <p className="cv-role mt-3! max-[43.8125rem]:m-0!">Frontend Engineer</p>
-        <nav
-          className="mt-[3.875rem] flex flex-col gap-[1.0625rem] max-[43.8125rem]:col-span-full max-[43.8125rem]:mt-6 max-[43.8125rem]:flex-row max-[43.8125rem]:flex-wrap max-[43.8125rem]:gap-x-[1.125rem] max-[43.8125rem]:gap-y-3 max-[43.8125rem]:pb-[0.3125rem]"
-          aria-label="CV sections"
-        >
-          {["Overview", "Contact", "Education", "Skills", "Experience"].map(
-            (label) => (
-              <a
-                className="border-l-[0.1875rem] pl-4 max-[43.8125rem]:border-0 max-[43.8125rem]:p-0 max-[43.8125rem]:whitespace-nowrap"
-                key={label}
-                href={`#${label.toLowerCase()}`}
-              >
-                {label}
-              </a>
-            ),
-          )}
-        </nav>
-        <div className="cv-social mt-auto grid gap-[0.625rem] [&_a]:flex [&_a]:items-center [&_a]:gap-2 max-[43.8125rem]:hidden">
-          <a
-            href="https://www.linkedin.com/in/vlad-mocanu-0a280a3a/"
-            target="_blank"
-            rel="noreferrer"
-          >
-            LinkedIn <Arrow />
-          </a>
-          <a
-            href="https://github.com/vladmoca90"
-            target="_blank"
-            rel="noreferrer"
-          >
-            GitHub <Arrow />
-          </a>
-        </div>
-      </aside>
       <main
-        className="cv-main ml-[15.3125rem] max-w-[93.75rem] px-14 pt-[1.625rem] pb-12 min-[100rem]:mr-auto min-[100rem]:px-[4.375rem] max-[68.8125rem]:ml-[12.8125rem] max-[68.8125rem]:px-[2.1875rem] max-[68.8125rem]:py-[1.625rem] max-[43.8125rem]:m-0 max-[43.8125rem]:px-6 max-[43.8125rem]:pt-5 max-[43.8125rem]:pb-10 print:m-0! print:max-w-none print:p-0!"
+        className="cv-main mx-auto w-full max-w-[93.75rem] px-14 pt-[1.625rem] pb-12 min-[100rem]:px-[4.375rem] max-[68.8125rem]:px-[2.1875rem] max-[68.8125rem]:py-[1.625rem] max-[43.8125rem]:px-6 max-[43.8125rem]:pt-5 max-[43.8125rem]:pb-10 print:m-0! print:max-w-none print:p-0!"
         id="overview"
       >
         <div className="cv-toolbar flex justify-end max-[43.8125rem]:mb-[1.375rem] print:hidden">
