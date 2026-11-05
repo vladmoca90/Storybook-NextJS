@@ -94,10 +94,6 @@
 .cv-job:before {
   background: var(--cv-olive);
 }
-.cv-job-heading h3 {
-  font-weight: 700;
-  line-height: 1.25;
-}
 .cv-job-heading > p {
   white-space: nowrap;
 }
@@ -119,6 +115,7 @@
 }
 .cv-subtitle {
   font-size: 1rem;
+  font-weight: 700;
 }
 .cv-skills p {
   line-height: 1.65;

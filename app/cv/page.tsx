@@ -152,7 +152,7 @@ export default function CVPage() {
           <div>
             <article>
               <div className="cv-job-heading flex flex-wrap items-baseline justify-between gap-4 max-[43.8125rem]:gap-[0.3125rem]">
-                <h3>Avantaj Consulting</h3>
+                <p className="cv-subtitle">Avantaj Consulting</p>
                 <p>2015</p>
               </div>
               <p className="cv-job-role">IT Development School</p>
@@ -160,7 +160,7 @@ export default function CVPage() {
             </article>
             <article>
               <div className="cv-job-heading flex flex-wrap items-baseline justify-between gap-4 max-[43.8125rem]:gap-[0.3125rem]">
-                <h3>The University of Birmingham</h3>
+                <p className="cv-subtitle">The University of Birmingham</p>
                 <p>2010 — 2013</p>
               </div>
               <p className="cv-job-role">BSc Environmental Science</p>
@@ -198,7 +198,7 @@ export default function CVPage() {
                 key={job.company}
               >
                 <div className="cv-job-heading flex flex-wrap items-baseline justify-between gap-4 max-[43.8125rem]:gap-[0.3125rem]">
-                  <h3 className="mb-4!">{job.company}</h3>
+                  <p className="cv-subtitle mb-4!">{job.company}</p>
                   <p>{job.dates}</p>
                 </div>
                 <p className="cv-job-role">{job.role}</p>
