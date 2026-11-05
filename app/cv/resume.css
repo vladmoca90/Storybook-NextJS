@@ -67,16 +67,6 @@
 .cv-intro {
   line-height: 1.55;
 }
-.cv-primary {
-  background: var(--cv-ink);
-  color: var(--cv-paper) !important;
-}
-.cv-primary:hover {
-  background: #414c38;
-}
-.cv-text-link {
-  border-bottom-color: var(--cv-olive);
-}
 .cv-section {
   border-top-color: var(--cv-olive);
 }
@@ -172,7 +162,7 @@
 .cv-shell h2,
 .cv-shell h3,
 .cv-hero h1 span {
-  color: #0462b3;
+  color: #006699;
 }
 
 /* Consistent type scale on desktop, mobile, and printed CVs. */
@@ -196,8 +186,6 @@
 .cv-shell nav a,
 .cv-email,
 .cv-phone,
-.cv-primary,
-.cv-text-link,
 .cv-contact-social,
 .cv-print-social {
   font-size: 1rem;

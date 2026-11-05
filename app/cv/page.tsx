@@ -84,9 +84,7 @@ export default function CVPage() {
           <PrintButton />
         </div>
         <header className="cv-hero pb-[2.375rem] print:pb-[0.875rem]">
-          <h1>
-            Vlad Mocanu<span>.</span>
-          </h1>
+          <h1>Vlad Mocanu</h1>
           <p className="cv-tagline mt-[0.375rem]! max-[43.8125rem]:mt-[0.875rem]! max-[43.8125rem]:max-w-[20.625rem]">
             Thoughtful interfaces. Reliable code.
           </p>
@@ -94,17 +92,6 @@ export default function CVPage() {
             Frontend engineer building accessible, responsive web experiences
             with Next.js, React and TypeScript.
           </p>
-          <div className="cv-actions mt-[1.5625rem] flex items-center gap-10 max-[43.8125rem]:gap-[1.5625rem] print:hidden">
-            <a
-              className="cv-primary inline-flex items-center gap-[0.9375rem] rounded-[0.3125rem] px-[1.3125rem] py-2"
-              href="mailto:vladmoca90@gmail.com"
-            >
-              Email me <Arrow />
-            </a>
-            <a className="cv-text-link border-b-[0.0625rem]" href="#experience">
-              View experience
-            </a>
-          </div>
         </header>
         <section
           className="cv-section scroll-mt-7 border-t-[0.0625rem] py-8 print:py-4 cv-contact grid grid-cols-1 gap-[1.5625rem] min-[68.8125rem]:grid-cols-[13.75rem_1fr] min-[68.8125rem]:gap-[2.1875rem] print:grid-cols-[7.5rem_1fr] print:gap-[1.125rem] max-[43.8125rem]:gap-[1.375rem] print:gap-[1.125rem]!"
