@@ -113,7 +113,7 @@ export default function CVPage() {
           </div>
         </section>
         <section
-          className="cv-experience grid grid-cols-1 gap-[1.5625rem] min-[68.8125rem]:grid-cols-[13.75rem_1fr] min-[68.8125rem]:gap-[2.1875rem] print:grid-cols-[7.5rem_1fr] print:gap-[1.125rem] cv-section scroll-mt-7 border-t-[0.0625rem] py-8 print:py-4"
+          className="cv-experience grid grid-cols-1 gap-[1.5625rem] min-[68.8125rem]:grid-cols-[11rem_1fr] min-[68.8125rem]:gap-4 print:grid-cols-[7.5rem_1fr] print:gap-[1.125rem] cv-section scroll-mt-7 border-t-[0.0625rem] py-8 print:py-4"
           id="experience"
           aria-labelledby="experience-title"
         >
