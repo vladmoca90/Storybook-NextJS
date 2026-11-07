@@ -58,7 +58,7 @@ describe("gothic project", () => {
       screen.queryByRole("heading", { name: "Ravenlace Corset Dress" }),
     ).not.toBeInTheDocument();
     expect(
-      screen.getByRole("button", { name: "Costumes", exact: true }),
+      screen.getByRole("button", { name: "Costumes" }),
     ).toHaveAttribute("aria-pressed", "true");
 
     fireEvent.click(screen.getByRole("button", { name: "Go to slide 1" }));
@@ -85,7 +85,7 @@ describe("gothic project", () => {
       screen.getByRole("heading", { name: "Eclipse Platform Boots" }),
     ).toBeInTheDocument();
 
-    fireEvent.click(filters.getByRole("button", { name: "All", exact: true }));
+    fireEvent.click(filters.getByRole("button", { name: "All" }));
     expect(screen.getAllByRole("heading", { level: 3 })).toHaveLength(4);
   });
 
@@ -117,7 +117,7 @@ describe("gothic project", () => {
     const preview = within(
       screen.getByRole("dialog", { name: "The Vampire Coat" }),
     );
-    fireEvent.click(preview.getByRole("button", { name: "M", exact: true }));
+    fireEvent.click(preview.getByRole("button", { name: "M" }));
     fireEvent.click(preview.getByRole("button", { name: "Add to bag" }));
 
     const bag = within(screen.getByRole("dialog", { name: "Shopping bag" }));
