@@ -38,18 +38,18 @@ export default function CVPage() {
           aria-labelledby="contact-title"
         >
           <h2 id="contact-title">Contact details</h2>
-          <div>
+          <div className="flex flex-col items-start gap-3">
             <a className="cv-email border-b-[0.0625rem]" href="mailto:vladmoca90@gmail.com">
               vladmoca90@gmail.com
             </a>
             <a
-              className="cv-phone my-4 block print:my-2"
+              className="cv-phone block"
               href="tel:+447455404221"
             >
               07455 404221
             </a>
             <p>Right to work: British citizen</p>
-            <div className="cv-contact-social mt-[0.875rem]">
+            <div className="cv-contact-social">
               LinkedIn:{" "}
               <a
                 href="https://www.linkedin.com/in/vlad-mocanu-0a280a3a/"
@@ -58,7 +58,8 @@ export default function CVPage() {
               >
                 linkedin.com/in/vlad-mocanu-0a280a3a/
               </a>
-              <br />
+            </div>
+            <div className="cv-contact-social">
               GitHub:{" "}
               <a
                 href="https://github.com/vladmoca90"
