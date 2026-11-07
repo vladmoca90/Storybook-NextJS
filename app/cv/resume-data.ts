@@ -5,6 +5,7 @@ export type Experience = {
   type: string;
   bullets: string[];
 };
+
 export const experience: Experience[] = [
   {
     company: "rEvolution World",
@@ -22,6 +23,7 @@ export const experience: Experience[] = [
       "Built workflows in Azure Logic Apps and Power Apps for the HR department to automate employee onboarding, offboarding, email reminders and data transfer.",
     ],
   },
+
   {
     company: "Prophet Ltd",
     role: "Frontend Engineer",
@@ -34,6 +36,7 @@ export const experience: Experience[] = [
       "Monitored the website after deployment and until the end of the event.",
     ],
   },
+
   {
     company: "Motors.co.uk",
     role: "Frontend Engineer",
@@ -49,6 +52,7 @@ export const experience: Experience[] = [
       "Participated in code reviews and used Jest, Playwright and BrowserStack for testing and project quality.",
     ],
   },
+
   {
     company: "Ezekia Group",
     role: "Frontend Developer",
@@ -60,6 +64,7 @@ export const experience: Experience[] = [
       "Created JasmineJS tests and verified across multiple devices and browsers.",
     ],
   },
+
   {
     company: "Waitrose & Partners",
     role: "E-commerce Frontend Developer",
@@ -73,6 +78,7 @@ export const experience: Experience[] = [
       "Adjusted cross-browser compatibility, layout and interaction issues to ensure a consistent customer experience.",
     ],
   },
+
   {
     company: "Bio-Techne",
     role: "Frontend Developer",
@@ -92,44 +98,54 @@ export const skills: { label: string; value: string }[] = [
     value:
       "Next.js, React 18+, TypeScript 5+ (4 years); Redux / Redux Toolkit, Zustand (1+ year); JavaScript, jQuery (9+ years); REST API integration, Storybook.",
   },
+
   {
     label: "Styling & layout",
     value:
       "HTML, CSS3, SCSS / LESS, responsive CSS, Tailwind CSS, Ant Design, Bootstrap.",
   },
+
   {
     label: "UI, UX & data visualisation",
     value: "Figma, Photoshop, CanvasJS, D3.js.",
   },
+
   {
     label: "Testing & quality",
     value:
       "React Testing Library, Playwright, Jest, JasmineJS, BrowserStack, Bruno, Postman.",
   },
+
   {
     label: "Performance & accessibility",
     value:
       "Performance optimisation and profiling, React DevTools Profiler, WCAG accessibility, WAVE evaluation tool.",
   },
+
   {
     label: "Build & deployment",
     value: "Node.js (npm), Yarn, Gulp, Babel, Vercel, Webpack, Vite.",
   },
+
   {
     label: "CMS & cloud platforms",
     value:
       "WordPress (custom themes, basic PHP), Azure Logic Apps, Power Apps, Cvent, Monetate (A/B testing).",
   },
+
   { label: "Analytics", value: "Google Analytics, Google Tag Manager." },
+
   {
     label: "Version control & delivery",
     value: "Git, GitHub, Bitbucket, GitKraken, Jira, Monday.com, Salesforce.",
   },
+
   {
     label: "Ways of working",
     value:
       "Agile (Scrum, Kanban), project ownership, stakeholder collaboration, code reviews, technical documentation.",
   },
+
   {
     label: "AI-assisted development",
     value: "GitHub Copilot, Cursor, Codex, ChatGPT, Claude, Gemini.",
