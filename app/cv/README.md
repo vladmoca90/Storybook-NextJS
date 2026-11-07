@@ -3,7 +3,7 @@
 Next.js App Router + TypeScript CV, available at `/cv`.
 
 Run `npm run dev` from `miniprojects`, then open http://localhost:3000/cv.
-Edit career history and skills in `resume-data.ts`, profile and education in `page.tsx`, and the scoped design in `resume.css`.
+Edit career history and skills in `resume-data.ts`, the introduction in `components/HeaderComponent.tsx`, and the scoped design in `resume.css`. Section markup lives in `components/HeaderComponent.tsx`, `components/ContactDetailsComponents.tsx`, `components/EducationComponent.tsx`, `components/SkillsComponent.tsx`, and `components/WorkExperienceComponent.tsx`. Skills and work experience import their data directly from `resume-data.ts`.
 
 Print CV opens the browser print dialog; select Save as PDF to export. Print styles include the full career history, contact details and social profile URLs. No external services or credentials are required.
 

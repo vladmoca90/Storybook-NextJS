@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
-import { PrintButton } from "./print-button";
-import { experience, skills } from "./resume-data";
+import HeaderComponent from "./components/HeaderComponent";
+import ContactDetailsComponents from "./components/ContactDetailsComponents";
+import EducationComponent from "./components/EducationComponent";
+import SkillsComponent from "./components/SkillsComponent";
+import WorkExperienceComponent from "./components/WorkExperienceComponent";
 import "./resume.css";
 
 export const metadata: Metadata = {
@@ -21,129 +24,11 @@ export default function CVPage() {
         className="cv-main mx-auto w-full max-w-[93.75rem] px-14 pt-[1.625rem] pb-12 min-[100rem]:px-[4.375rem] max-[68.8125rem]:px-[2.1875rem] max-[68.8125rem]:py-[1.625rem] max-[43.8125rem]:px-6 max-[43.8125rem]:pt-5 max-[43.8125rem]:pb-10 print:m-0! print:max-w-none print:p-0!"
         id="overview"
       >
-        <div className="cv-toolbar flex justify-end max-[43.8125rem]:mb-[1.375rem] print:hidden">
-          <PrintButton />
-        </div>
-        <header className="cv-hero pb-[2.375rem] print:pb-[0.875rem]">
-          <h1>Vlad Mocanu</h1>
-          <p className="cv-intro mt-[1.1875rem]! max-w-[56.875rem] max-[43.8125rem]:mt-5! print:mt-[0.625rem]!">
-            Frontend engineer building accessible, responsive web experiences
-            with Next.js, React and TypeScript.
-          </p>
-        </header>
-        <section
-          className="cv-section scroll-mt-7 border-t-[0.0625rem] py-8 print:py-4 cv-contact grid grid-cols-1 gap-[1.5625rem] min-[68.8125rem]:grid-cols-[13.75rem_1fr] min-[68.8125rem]:gap-[2.1875rem] print:grid-cols-[7.5rem_1fr] print:gap-[1.125rem] max-[43.8125rem]:gap-[1.375rem] print:gap-[1.125rem]!"
-          id="contact"
-          aria-labelledby="contact-title"
-        >
-          <h2 id="contact-title">Contact details</h2>
-          <div className="flex flex-col items-start gap-3">
-            <a className="cv-email border-b-[0.0625rem]" href="mailto:vladmoca90@gmail.com">
-              vladmoca90@gmail.com
-            </a>
-            <a
-              className="cv-phone block"
-              href="tel:+447455404221"
-            >
-              07455 404221
-            </a>
-            <p>Right to work: British citizen</p>
-            <div className="cv-contact-social">
-              LinkedIn:{" "}
-              <a
-                href="https://www.linkedin.com/in/vlad-mocanu-0a280a3a/"
-                target="_blank"
-                rel="noreferrer"
-              >
-                linkedin.com/in/vlad-mocanu-0a280a3a/
-              </a>
-            </div>
-            <div className="cv-contact-social">
-              GitHub:{" "}
-              <a
-                href="https://github.com/vladmoca90"
-                target="_blank"
-                rel="noreferrer"
-              >
-                github.com/vladmoca90
-              </a>
-            </div>
-          </div>
-        </section>
-        <section
-          className="cv-section scroll-mt-7 border-t-[0.0625rem] py-8 print:py-4 cv-education grid grid-cols-1 gap-[1.5625rem] min-[68.8125rem]:grid-cols-[13.75rem_1fr] min-[68.8125rem]:gap-[2.1875rem] print:grid-cols-[7.5rem_1fr] print:gap-[1.125rem] [&_article]:print:break-inside-avoid [&_article+article]:mt-5 [&_article+article]:border-t-[0.0625rem] [&_article+article]:pt-5"
-          id="education"
-          aria-labelledby="education-title"
-        >
-          <h2 id="education-title">Education</h2>
-          <div>
-            <article>
-              <div className="cv-job-heading flex flex-wrap items-baseline justify-between gap-4 max-[43.8125rem]:gap-[0.3125rem]">
-                <p className="cv-subtitle">Avantaj Consulting</p>
-                <p>2015</p>
-              </div>
-              <p className="cv-job-role">IT Development School</p>
-              <p>HTML, CSS, JavaScript, jQuery · Average mark: 92.5%</p>
-            </article>
-            <article>
-              <div className="cv-job-heading flex flex-wrap items-baseline justify-between gap-4 max-[43.8125rem]:gap-[0.3125rem]">
-                <p className="cv-subtitle">The University of Birmingham</p>
-                <p>2010 — 2013</p>
-              </div>
-              <p className="cv-job-role">BSc Environmental Science</p>
-            </article>
-          </div>
-        </section>
-        <section
-          className="cv-section scroll-mt-7 border-t-[0.0625rem] py-8 print:py-4"
-          id="skills"
-          aria-labelledby="skills-title"
-        >
-          <h2 id="skills-title">Skills & tools</h2>
-          <div className="cv-skills mt-7 grid grid-cols-2 gap-x-12 gap-y-[1.625rem] [&_p]:mt-[0.375rem]! max-[43.8125rem]:grid-cols-1 max-[43.8125rem]:gap-[1.375rem] print:grid-cols-2! print:gap-x-[1.5625rem]! print:gap-y-3! [&>div]:print:break-inside-avoid">
-            {skills.map((skill) => (
-              <div key={skill.label}>
-                <p className="cv-subtitle">{skill.label}</p>
-                <p>{skill.value}</p>
-              </div>
-            ))}
-          </div>
-        </section>
-        <section
-          className="cv-experience grid grid-cols-1 gap-[1.5625rem] min-[68.8125rem]:grid-cols-[11rem_1fr] min-[68.8125rem]:gap-4 print:grid-cols-[7.5rem_1fr] print:gap-[1.125rem] cv-section scroll-mt-7 border-t-[0.0625rem] py-8 print:py-4"
-          id="experience"
-          aria-labelledby="experience-title"
-        >
-          <div className="cv-section-title max-[68.8125rem]:flex max-[68.8125rem]:items-center max-[68.8125rem]:justify-between [&_p]:mt-2!">
-            <h2 id="experience-title">Work experience</h2>
-            <p>2016 — 2026</p>
-          </div>
-          <div className="cv-timeline ml-[0.3125rem] border-l-[0.0625rem] pl-[2.1875rem] max-[43.8125rem]:pl-6 print:pl-[1.125rem]!">
-            {experience.map((job) => (
-              <article
-                className="cv-job relative pb-8 last:pb-0 before:absolute before:top-[0.6875rem] before:-left-10 before:size-[0.5625rem] before:rounded-full before:content-[''] max-[43.8125rem]:before:-left-[1.8125rem] print:break-inside-avoid print:pb-4 print:before:top-[0.4375rem] print:before:-left-[1.4375rem]!"
-                key={job.company}
-              >
-                <div className="cv-job-heading flex flex-wrap items-baseline justify-between gap-4 max-[43.8125rem]:gap-[0.3125rem]">
-                  <p className="cv-subtitle mb-4!">{job.company}</p>
-                  <p>{job.dates}</p>
-                </div>
-                <p className="cv-job-role">{job.role}</p>
-                <p className="cv-job-type mt-[0.3125rem]! mb-[0.625rem]!">{job.type}</p>
-                <ul className="m-0 list-disc pl-[1.125rem]">
-                  {job.bullets.map((bullet) => (
-                    <li
-                      className="mb-[0.375rem] pl-[0.1875rem] print:mb-[0.1875rem]"
-                      key={bullet}
-                    >
-                      {bullet}
-                    </li>
-                  ))}
-                </ul>
-              </article>
-            ))}
-          </div>
-        </section>
+        <HeaderComponent />
+        <ContactDetailsComponents />
+        <EducationComponent />
+        <SkillsComponent />
+        <WorkExperienceComponent />
       </main>
     </div>
   );
