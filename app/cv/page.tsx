@@ -51,23 +51,24 @@ export default function CVPage() {
             >
               07455 404221
             </a>
-            <p>British citizen · Right to work in the UK</p>
-            <p>Living continuously in the UK since 2016</p>
+            <p>Right to work: British citizen</p>
             <div className="cv-contact-social mt-[0.875rem]">
+              LinkedIn:{" "}
               <a
                 href="https://www.linkedin.com/in/vlad-mocanu-0a280a3a/"
                 target="_blank"
                 rel="noreferrer"
               >
-                LinkedIn: linkedin.com/in/vlad-mocanu-0a280a3a/
+                linkedin.com/in/vlad-mocanu-0a280a3a/
               </a>
               <br />
+              GitHub:{" "}
               <a
                 href="https://github.com/vladmoca90"
                 target="_blank"
                 rel="noreferrer"
               >
-                GitHub: github.com/vladmoca90
+                github.com/vladmoca90
               </a>
             </div>
           </div>
