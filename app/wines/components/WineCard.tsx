@@ -4,13 +4,12 @@ import { useState } from "react";
 import type { Wine } from "../../data/types/wine";
 import styles from "../wines.module.css";
 
-export default function WineCard({ wine, hasImage, onAdd }: {
+export default function WineCard({ wine, onAdd }: {
   wine: Wine;
-  hasImage: boolean;
   onAdd: () => void;
 }) {
   const [failed, setFailed] = useState(false);
-  const illustrative = !hasImage || failed;
+  const illustrative = failed;
 
   return (
     <article className={`${styles.card} flex flex-col items-center rounded-xl px-4 pb-5 pt-3 text-center`}>

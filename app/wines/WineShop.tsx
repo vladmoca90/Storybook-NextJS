@@ -6,7 +6,7 @@ import type { WineBag } from "../data/types/wine";
 import WineCard from "./components/WineCard";
 import styles from "./wines.module.css";
 
-export default function WineShop({ availableImages = [] }: { availableImages?: string[] }) {
+export default function WineShop() {
   const [category, setCategory] = useState<WineCategory | "All wines">("All wines");
   const [query, setQuery] = useState("");
   const [bag, setBag] = useState<WineBag>({});
@@ -51,7 +51,7 @@ export default function WineShop({ availableImages = [] }: { availableImages?: s
         </div>
         <p className="sr-only" role="status">{visible.length} wines found</p>
         <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
-          {visible.map((wine) => <WineCard key={wine.img} wine={wine} hasImage={availableImages.includes(wine.img)} onAdd={() => {
+          {visible.map((wine) => <WineCard key={wine.img} wine={wine} onAdd={() => {
             changeQuantity(wine.img, 1);
             setAnnouncement(`${wine.name} added to bag.`);
           }} />)}
@@ -62,7 +62,6 @@ export default function WineShop({ availableImages = [] }: { availableImages?: s
           <button type="button" className={`${styles.button} cursor-pointer rounded-lg border px-5 py-3`} onClick={() => { setQuery(""); setCategory("All wines"); }}>Clear filters</button>
         </div>}
         <div className={`${styles.note} mt-5 flex flex-col justify-between gap-2 sm:flex-row`}>
-          <p>Illustrative bottles shown where product photos are unavailable.</p>
           <p role="status" aria-live="polite">{announcement}</p>
         </div>
       </section>
