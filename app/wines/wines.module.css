@@ -1,0 +1,25 @@
+.shop {
+  background: #fffdfb;
+  color: #590e22;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+}
+.shop *, .bag * { border-color: #c9afb4; }
+.logo, .heading, .productName, .footer { font-family: Georgia, "Times New Roman", serif; }
+.logo { font-size: clamp(22px, 3vw, 32px); font-weight: 700; }
+.heading { font-size: clamp(42px, 6vw, 68px); line-height: 1.1; letter-spacing: -0.035em; }
+.intro { font-size: clamp(16px, 2vw, 20px); }
+.card { background: #f2f0eb; }
+.category { font-size: 11px; text-transform: uppercase; letter-spacing: 0.18em; }
+.productName { font-size: 23px; line-height: 1.25; font-weight: 600; }
+.button { background: transparent; color: #590e22; font-size: 15px; }
+.button:hover { background: #eadfe0; }
+.selected, .selected:hover { background: #590e22; color: #fffdfb; }
+.search, .search input { background: transparent; color: #590e22; }
+.search input { font-size: 15px; }
+.search input::placeholder { color: #776367; }
+.shop :is(button, a, input):focus-visible { outline: 2px solid #590e22; outline-offset: 4px; }
+.note { color: #79686b; font-size: 12px; line-height: 1.6; }
+.footer { font-size: clamp(21px, 3vw, 28px); font-style: italic; }
+.bag { background: #fffdfb; color: #590e22; font-family: Arial, Helvetica, sans-serif; font-size: 16px; }
+.bag::backdrop { background: #24081080; }
