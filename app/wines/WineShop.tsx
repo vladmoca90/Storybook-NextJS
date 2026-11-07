@@ -1,5 +1,4 @@
 "use client";
-
 import { useRef, useState } from "react";
 import { Minus, Plus, Search, ShoppingBag, X } from "lucide-react";
 import { allWines, WineCategory } from "../data/wines";

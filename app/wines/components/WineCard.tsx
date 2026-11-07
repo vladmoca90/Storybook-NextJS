@@ -1,5 +1,4 @@
 "use client";
-
 import Image from "next/image";
 import { useState } from "react";
 import type { Wine } from "../../data/types/wine";
@@ -12,6 +11,7 @@ export default function WineCard({ wine, hasImage, onAdd }: {
 }) {
   const [failed, setFailed] = useState(false);
   const illustrative = !hasImage || failed;
+
   return (
     <article className={`${styles.card} flex flex-col items-center rounded-xl px-4 pb-5 pt-3 text-center`}>
       <div className="relative h-52 w-full sm:h-56">
