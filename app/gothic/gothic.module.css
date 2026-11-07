@@ -7,49 +7,55 @@
   color: var(--ivory);
   font-family: Georgia, "Times New Roman", serif;
 }
+
 .shop button,
 .shop a {
   -webkit-tap-highlight-color: transparent;
 }
+
 .shop button {
   cursor: pointer;
 }
+
 .shop button:focus-visible,
 .shop a:focus-visible,
 .shop input:focus-visible {
   outline: 2px solid #ce8b83;
   outline-offset: 5px;
 }
-.shop a {
-  color: inherit;
-  text-decoration: none;
-}
+
 .announcement {
   font-size: 12px;
   letter-spacing: 2.4px;
 }
+
 .logo {
   font-size: 33px;
   letter-spacing: 8px;
   line-height: 1;
   white-space: nowrap;
 }
+
 .header {
   border-bottom-color: var(--line);
 }
+
 .header nav button {
   background: none;
   color: var(--ivory);
   font-size: 14px;
 }
+
 .header nav button:hover {
   color: #cf8c85;
 }
+
 .headerActions button,
 .close {
   color: inherit;
   background: none;
 }
+
 .count {
   background: var(--red);
   font:
@@ -57,41 +63,49 @@
     "Times New Roman",
     serif;
 }
+
 .hero {
   background: #101211;
 }
+
 .heroPhoto {
   background: url("/gothic/hero.png") center 45% / cover no-repeat;
   transition:
     transform 0.8s,
     background-position 0.8s;
 }
+
 .hero:after {
-  content: "";
   background: linear-gradient(90deg, rgba(7, 9, 8, 0.65), transparent 62%);
 }
+
 .halloween .heroPhoto {
   transform: scale(1.14);
   background-position: center 65%;
 }
+
 .details .heroPhoto {
   transform: scale(1.26);
   background-position: center 75%;
 }
+
 .heroContent {
   animation: appear 0.55s ease-out;
 }
+
 .hero h1 {
   font-weight: 400;
   font-size: clamp(58px, 6.1vw, 90px);
   line-height: 0.98;
   letter-spacing: -3px;
 }
+
 .hero p {
   font-size: 21px;
   line-height: 1.4;
   color: var(--ivory);
 }
+
 .primary {
   background: var(--red);
   border-color: var(--red);
@@ -99,112 +113,135 @@
   font-size: 18px;
   transition: background 0.2s;
 }
+
 .primary:hover {
   background: #a0333e;
 }
+
 .dots button {
   background: transparent;
   border-color: var(--ivory);
 }
-.dots button:before {
-  content: "";
-}
+
 .dots .activeDot {
   background: #bd3d4b;
   border-color: #bd3d4b;
 }
+
 .arrows button {
   color: var(--ivory);
   background: rgba(16, 16, 15, 0.25);
   border-color: #c2baaa;
 }
+
 .arrows button:hover {
   background: var(--red);
 }
+
 .arrows span {
   font-size: 12px;
   letter-spacing: 1px;
 }
+
 .arrows i {
   font-style: normal;
   color: #aaa598;
 }
+
 .manifesto {
   border-color: var(--line);
   font-size: 10px;
   letter-spacing: 2.6px;
 }
+
 .manifesto i {
   color: #9c978b;
   font-style: normal;
 }
+
 .collection h2 {
   font-size: 38px;
   font-weight: 400;
   letter-spacing: -1px;
 }
+
 .filters button {
   font-size: 14px;
   background: none;
   border-bottom-color: transparent;
   color: var(--ivory);
 }
+
 .filters .selectedFilter {
   color: #da6671;
   border-bottom-color: #da6671;
 }
+
 .product {
   background: none;
   color: inherit;
 }
+
 .imageWrap {
   background: #1b1b1a;
 }
+
 .productImage {
   background-image: url("/gothic/products.png");
   background-size: 400% 100%;
   background-repeat: no-repeat;
   transition: transform 0.5s;
 }
+
 .product:hover .productImage {
   transform: scale(1.035);
 }
+
 .quickView {
   background: #141413e8;
   font-size: 13px;
   transform: translateY(100%);
   transition: transform 0.25s;
 }
+
 .product:hover .quickView,
 .product:focus-visible .quickView {
   transform: translateY(0);
 }
+
 .productInfo svg {
   opacity: 0;
   transition: opacity 0.2s;
 }
+
 .product:hover .productInfo svg {
   opacity: 1;
 }
+
 .product h3 {
   font-size: 16px;
   font-weight: 400;
 }
+
 .product p {
   font-size: 14px;
   color: #c5bfb4;
 }
+
 .footer .logo {
   font-size: 25px;
   letter-spacing: 5px;
 }
+
 .footer {
   border-top-color: var(--line);
 }
+
 .footer p {
   font-size: 13px;
   letter-spacing: 1px;
 }
+
 .footer > span {
   font:
     10px Georgia,
@@ -213,75 +250,91 @@
   color: #a19c91;
   letter-spacing: 1px;
 }
+
 .search input {
   background: none;
   color: var(--ivory);
   outline: none;
   font-size: 17px;
 }
+
 .search {
   border-bottom-color: var(--line);
 }
+
 .search button {
   background: none;
   color: inherit;
   font-size: 14px;
 }
+
 .empty {
   font-size: 22px;
 }
+
 .empty button {
   background: none;
   color: #da6671;
   font-size: 15px;
 }
+
 .modal {
   background: #141413;
   color: var(--ivory);
   font-family: Georgia, "Times New Roman", serif;
   border-color: #49433a;
 }
+
 .modal::backdrop {
   background: #000b;
   backdrop-filter: blur(5px);
 }
+
 .close {
   background: #141413c9;
 }
+
 .detailCategory {
   font-size: 11px;
   letter-spacing: 2px;
   text-transform: uppercase;
   color: #b9aa98;
 }
+
 .modal h2 {
   font-size: 34px;
   line-height: 1.15;
   font-weight: 400;
 }
+
 .detailCopy > p {
   font-size: 15px;
   line-height: 1.7;
   color: #c8c1b4;
 }
+
 .detailCopy .price {
   font-size: 22px;
   color: var(--ivory);
 }
+
 .detailCopy legend {
   font-size: 13px;
 }
+
 .sizes button {
   background: transparent;
   border-color: #555047;
   color: inherit;
   font-size: 13px;
 }
+
 .sizes button[aria-pressed="true"] {
   border-color: var(--ivory);
   background: #eee8dc;
   color: #141413;
 }
+
 .detailCopy small {
   font:
     10px Georgia,
@@ -289,32 +342,40 @@
     serif;
   color: #999389;
 }
+
 .bag h2 span {
   font-size: 20px;
   color: #a49c8e;
 }
+
 .bagItem {
   border-bottom-color: var(--line);
 }
+
 .bagItem h3 {
   font-size: 18px;
   font-weight: 400;
 }
+
 .bagItem p {
   font-size: 13px;
   color: #c8c1b4;
 }
+
 .quantity {
   font-size: 13px;
 }
+
 .quantity button {
   background: none;
   color: inherit;
   border-color: var(--line);
 }
+
 .total {
   font-size: 22px;
 }
+
 .demoNote {
   font:
     13px/1.6 Georgia,
@@ -322,104 +383,131 @@
     serif;
   color: #bdb4a4;
 }
+
 .skip:focus {
   background: var(--red);
 }
+
 .shop ::selection {
   background: #8d252e;
   color: white;
 }
+
 @keyframes appear {
   from {
     opacity: 0;
     transform: translateY(8px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
   }
 }
+
 @media (max-width: 1000px) {
   .logo {
     font-size: 26px;
     letter-spacing: 5px;
   }
+
   .hero h1 {
     font-size: 72px;
   }
+
   .manifesto {
     font-size: 9px;
     letter-spacing: 1.5px;
   }
+
   .collection h2 {
     font-size: 31px;
   }
+
   .product h3 {
     font-size: 14px;
   }
 }
+
 @media (max-width: 700px) {
   .announcement {
     font-size: 10px;
     letter-spacing: 1.7px;
   }
+
   .logo {
     font-size: 25px;
     letter-spacing: 5px;
   }
+
   .header nav button {
     font-size: 16px;
   }
+
   .heroPhoto {
     background-position: 61% center;
   }
+
   .hero:after {
     background: linear-gradient(90deg, #080a08c9, transparent 95%);
   }
+
   .hero h1 {
     font-size: 59px;
     letter-spacing: -2px;
   }
+
   .hero p {
     font-size: 18px;
     line-height: 1.45;
   }
+
   .primary {
     font-size: 14px;
   }
+
   .manifesto {
     font-size: 8px;
     letter-spacing: 1px;
   }
+
   .collection h2 {
     font-size: 32px;
   }
+
   .filters button {
     font-size: 13px;
   }
+
   .product h3 {
-    font-size: 14px;
     line-height: 1.4;
   }
+
   .product p {
     font-size: 13px;
   }
+
   .footer .logo {
     font-size: 23px;
   }
+
   .footer p {
     font-size: 12px;
   }
+
   .modal h2 {
     font-size: 28px;
   }
+
   .search input {
     font-size: 14px;
   }
+
   .search button {
     font-size: 12px;
   }
 }
+
 @media (prefers-reduced-motion: reduce) {
   .shop * {
     animation: none !important;

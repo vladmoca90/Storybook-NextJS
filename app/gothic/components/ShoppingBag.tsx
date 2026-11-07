@@ -19,7 +19,7 @@ export default function ShoppingBag({
       </h2>
       {bag.length ? (
         <>
-          <div className={styles.bagItems}>
+          <div>
             {bag.map((item, i) => (
               <div
                 className={`${styles.bagItem} flex items-center gap-5 border-b py-[18px]`}

@@ -17,7 +17,7 @@ export default function ProductCollection({
       className={`${styles.collection} scroll-mt-5 px-[3.1%] pt-8 pb-[42px] max-[700px]:px-[4%] max-[700px]:pt-[31px] max-[700px]:pb-8 min-[1500px]:pt-10`}
     >
       <div
-        className={`${styles.collectionHeading} mb-[22px] flex items-center justify-between gap-5 max-[700px]:mb-5 max-[700px]:block`}
+        className={`mb-[22px] flex items-center justify-between gap-5 max-[700px]:mb-5 max-[700px]:block`}
       >
         <h2 className="m-0">Objects of obsession</h2>
         <div
@@ -39,7 +39,7 @@ export default function ProductCollection({
         </div>
       </div>
       <div
-        className={`${styles.products} grid grid-cols-4 gap-4 max-[700px]:grid-cols-2 max-[700px]:gap-x-3 max-[700px]:gap-y-[25px]`}
+        className={`grid grid-cols-4 gap-4 max-[700px]:grid-cols-2 max-[700px]:gap-x-3 max-[700px]:gap-y-[25px]`}
       >
         {visible.map((product) => (
           <ProductCard
