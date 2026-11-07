@@ -16,7 +16,7 @@ export default function ProductCard({
       <div className={`${styles.imageWrap} relative overflow-hidden`}>
         <ProductImage product={product} />
         <span
-          className={`${styles.quickView} absolute right-0 bottom-0 left-0 flex justify-between px-[17px] py-[15px]`}
+          className={`${styles.quickView} max-[700px]:hidden absolute right-0 bottom-0 left-0 flex justify-between px-[17px] py-[15px]`}
         >
           Take a closer look <Plus size={17} />
         </span>
@@ -25,7 +25,7 @@ export default function ProductCard({
         className={`${styles.productInfo} mt-[14px] flex items-center justify-between gap-2 max-[700px]:mt-[10px]`}
       >
         <h3>{product.name}</h3>
-        <ArrowUpRight size={16} />
+        <ArrowUpRight className="max-[700px]:hidden" size={16} />
       </div>
       <p>{money(product.price)}</p>
     </button>

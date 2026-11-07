@@ -12,8 +12,10 @@ export default function ShopFooter() {
       <p className="max-[700px]:order-3 max-[700px]:w-full max-[700px]:m-0">
         Wear your own kind of strange.
       </p>
-      <Moon size={23} strokeWidth={1} />
-      <span>© {new Date().getFullYear()} Nocturne</span>
+      <Moon className="max-[700px]:w-[21px]" size={23} strokeWidth={1} />
+      <span className="max-[1000px]:hidden">
+        © {new Date().getFullYear()} Nocturne
+      </span>
     </footer>
   );
 }

@@ -11,10 +11,11 @@ export default function ProductDetails({
   addToBag,
 }: ProductDetailsProps) {
   return (
-    <div
-      className={`${styles.detail} grid grid-cols-2 max-[700px]:grid-cols-1`}
-    >
-      <ProductImage product={selected} className="max-[700px]:mx-auto" />
+    <div className={`grid grid-cols-2 max-[700px]:grid-cols-1`}>
+      <ProductImage
+        product={selected}
+        className="h-full min-h-[510px] w-full max-[700px]:mx-auto max-[700px]:min-h-0 max-[700px]:max-h-[350px] max-[700px]:w-[260px]"
+      />
       <div
         className={`${styles.detailCopy} px-8 pt-[55px] pb-[30px] max-[700px]:p-[25px]`}
       >
@@ -28,7 +29,7 @@ export default function ProductDetails({
             {selected.sizes.map((s) => (
               <button
                 key={s}
-                className="min-h-[38px] min-w-[38px] border px-[9px] py-0"
+                className="h-[38px] min-w-[38px] border px-[9px] py-0"
                 aria-pressed={s === size}
                 onClick={() => setSize(s)}
               >
@@ -38,7 +39,7 @@ export default function ProductDetails({
           </div>
         </fieldset>
         <button
-          className={`${styles.primary} inline-flex items-center justify-center gap-6 border px-[25px] py-[10px]`}
+          className={`${styles.primary} inline-flex w-full items-center justify-center gap-6 border px-[25px] py-[10px]`}
           onClick={addToBag}
         >
           Add to bag <ShoppingBag size={18} />

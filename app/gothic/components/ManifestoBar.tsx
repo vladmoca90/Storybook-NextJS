@@ -8,8 +8,8 @@ export default function ManifestoBar() {
       <span>GOTHIC BY NATURE.</span>
       <i>/</i>
       <span>NOT JUST FOR HALLOWEEN.</span>
-      <i>/</i>
-      <span>MADE TO BE DIFFERENT.</span>
+      <i className="max-[700px]:hidden">/</i>
+      <span className="max-[700px]:hidden">MADE TO BE DIFFERENT.</span>
     </div>
   );
 }

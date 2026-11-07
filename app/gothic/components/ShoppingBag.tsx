@@ -25,7 +25,10 @@ export default function ShoppingBag({
                 className={`${styles.bagItem} flex items-center gap-5 border-b py-[18px]`}
                 key={`${item.product.id}-${item.size}`}
               >
-                <ProductImage product={item.product} />
+                <ProductImage
+                  product={item.product}
+                  className="w-[85px] shrink-0"
+                />
                 <div>
                   <h3 className="mb-[9px]">{item.product.name}</h3>
                   <p>

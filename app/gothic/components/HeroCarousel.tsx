@@ -10,7 +10,7 @@ export default function HeroCarousel({ browse }: HeroCarouselProps) {
   const current = slides[slide];
   return (
     <section
-      className={`${styles.hero} ${styles[current.className]} relative h-[550px] overflow-hidden max-[1000px]:h-[510px] max-[700px]:h-[535px] min-[1500px]:h-[620px]`}
+      className={`${styles.hero} ${styles[current.className]} relative isolate after:absolute after:inset-0 after:-z-[1] h-[550px] overflow-hidden max-[1000px]:h-[510px] max-[700px]:h-[535px] min-[1500px]:h-[620px]`}
       aria-roledescription="carousel"
       aria-label="Featured collections"
       onTouchStart={(e) => {
@@ -25,7 +25,7 @@ export default function HeroCarousel({ browse }: HeroCarouselProps) {
       }}
     >
       <div
-        className={styles.heroPhoto}
+        className={`${styles.heroPhoto} absolute inset-0 -z-[2]`}
         style={{ backgroundImage: `url("${current.image}")` }}
       />
       <div
@@ -46,7 +46,7 @@ export default function HeroCarousel({ browse }: HeroCarouselProps) {
         </button>
       </div>
       <div
-        className={`${styles.carouselBottom} absolute right-[3.1%] bottom-6 left-[3.1%] flex items-center justify-between max-[700px]:right-[6%] max-[700px]:bottom-[23px] max-[700px]:left-[7%]`}
+        className={`absolute right-[3.1%] bottom-6 left-[3.1%] flex items-center justify-between max-[700px]:right-[6%] max-[700px]:bottom-[23px] max-[700px]:left-[7%]`}
       >
         <div className={`${styles.dots} flex items-center gap-3`}>
           {slides.map((_, i) => (
@@ -54,7 +54,7 @@ export default function HeroCarousel({ browse }: HeroCarouselProps) {
               key={i}
               aria-label={`Go to slide ${i + 1}`}
               aria-current={slide === i ? "true" : undefined}
-              className={`${slide === i ? styles.activeDot : ""} relative h-[11px] w-[11px] rounded-full border p-0`}
+              className={`${slide === i ? styles.activeDot : ""} relative before:absolute before:-inset-[9px] h-[11px] w-[11px] rounded-full border p-0`}
               onClick={() => setSlide(i)}
             />
           ))}

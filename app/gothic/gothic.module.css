@@ -52,17 +52,15 @@
 }
 .count {
   background: var(--red);
-  font: 10px Georgia, "Times New Roman", serif;
+  font:
+    10px Georgia,
+    "Times New Roman",
+    serif;
 }
 .hero {
-  position: relative;
   background: #101211;
-  isolation: isolate;
 }
 .heroPhoto {
-  position: absolute;
-  inset: 0;
-  z-index: -2;
   background: url("/gothic/hero.png") center 45% / cover no-repeat;
   transition:
     transform 0.8s,
@@ -70,9 +68,6 @@
 }
 .hero:after {
   content: "";
-  position: absolute;
-  inset: 0;
-  z-index: -1;
   background: linear-gradient(90deg, rgba(7, 9, 8, 0.65), transparent 62%);
 }
 .halloween .heroPhoto {
@@ -107,17 +102,12 @@
 .primary:hover {
   background: #a0333e;
 }
-.carouselBottom {
-  position: absolute;
-}
 .dots button {
   background: transparent;
   border-color: var(--ivory);
 }
 .dots button:before {
   content: "";
-  position: absolute;
-  inset: -9px;
 }
 .dots .activeDot {
   background: #bd3d4b;
@@ -138,7 +128,6 @@
 .arrows i {
   font-style: normal;
   color: #aaa598;
-  margin-left: 4px;
 }
 .manifesto {
   border-color: var(--line);
@@ -172,8 +161,6 @@
   background: #1b1b1a;
 }
 .productImage {
-  width: 100%;
-  aspect-ratio: 3/4;
   background-image: url("/gothic/products.png");
   background-size: 400% 100%;
   background-repeat: no-repeat;
@@ -220,7 +207,9 @@
 }
 .footer > span {
   font:
-    10px Georgia, "Times New Roman", serif;
+    10px Georgia,
+    "Times New Roman",
+    serif;
   color: #a19c91;
   letter-spacing: 1px;
 }
@@ -259,10 +248,6 @@
 .close {
   background: #141413c9;
 }
-.detail > .productImage {
-  height: 100%;
-  min-height: 510px;
-}
 .detailCategory {
   font-size: 11px;
   letter-spacing: 2px;
@@ -290,8 +275,6 @@
   background: transparent;
   border-color: #555047;
   color: inherit;
-  min-width: 38px;
-  height: 38px;
   font-size: 13px;
 }
 .sizes button[aria-pressed="true"] {
@@ -299,12 +282,11 @@
   background: #eee8dc;
   color: #141413;
 }
-.detailCopy .primary {
-  width: 100%;
-}
 .detailCopy small {
   font:
-    10px Georgia, "Times New Roman", serif;
+    10px Georgia,
+    "Times New Roman",
+    serif;
   color: #999389;
 }
 .bag h2 span {
@@ -313,10 +295,6 @@
 }
 .bagItem {
   border-bottom-color: var(--line);
-}
-.bagItem > .productImage {
-  width: 85px;
-  flex-shrink: 0;
 }
 .bagItem h3 {
   font-size: 18px;
@@ -339,27 +317,13 @@
 }
 .demoNote {
   font:
-    13px/1.6 Georgia, "Times New Roman", serif;
+    13px/1.6 Georgia,
+    "Times New Roman",
+    serif;
   color: #bdb4a4;
 }
-.srOnly,
-.skip:not(:focus) {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  white-space: nowrap;
-}
 .skip:focus {
-  position: fixed;
-  top: 8px;
-  left: 8px;
-  z-index: 10;
   background: var(--red);
-  padding: 15px;
 }
 .shop ::selection {
   background: #8d252e;
@@ -373,11 +337,6 @@
   to {
     opacity: 1;
     transform: translateY(0);
-  }
-}
-@media (min-width: 1500px) {
-  .productImage {
-    aspect-ratio: 4/5;
   }
 }
 @media (max-width: 1000px) {
@@ -397,9 +356,6 @@
   }
   .product h3 {
     font-size: 14px;
-  }
-  .footer > span {
-    display: none;
   }
 }
 @media (max-width: 700px) {
@@ -435,10 +391,6 @@
     font-size: 8px;
     letter-spacing: 1px;
   }
-  .manifesto span:last-child,
-  .manifesto i:last-of-type {
-    display: none;
-  }
   .collection h2 {
     font-size: 32px;
   }
@@ -452,23 +404,11 @@
   .product p {
     font-size: 13px;
   }
-  .productInfo svg {
-    display: none;
-  }
   .footer .logo {
     font-size: 23px;
   }
   .footer p {
     font-size: 12px;
-  }
-  .footer svg {
-    width: 21px;
-  }
-  .detail > .productImage {
-    min-height: 0;
-    max-height: 350px;
-    aspect-ratio: 3/4;
-    width: 260px;
   }
   .modal h2 {
     font-size: 28px;
@@ -478,9 +418,6 @@
   }
   .search button {
     font-size: 12px;
-  }
-  .quickView {
-    display: none;
   }
 }
 @media (prefers-reduced-motion: reduce) {

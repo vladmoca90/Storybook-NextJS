@@ -77,7 +77,10 @@ export default function GothicShop() {
 
   return (
     <div className={`${styles.shop} min-h-screen`}>
-      <a className={styles.skip} href="#collection">
+      <a
+        className={`${styles.skip} sr-only focus:not-sr-only focus:fixed focus:top-2 focus:left-2 focus:z-10 focus:p-[15px]`}
+        href="#collection"
+      >
         Skip to collection
       </a>
       <AnnouncementBar />
@@ -116,7 +119,7 @@ export default function GothicShop() {
         />
       </main>
       <ShopFooter />
-      <p className={styles.srOnly} role="status">
+      <p className="sr-only" role="status">
         {notice}
       </p>
       <ShopDialog
