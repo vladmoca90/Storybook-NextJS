@@ -1,5 +1,4 @@
 "use client";
-
 import { useRef, useState } from "react";
 import { products } from "@/app/data/gothic";
 import type { BagItem, GothicCategory, Product } from "@/app/data/types/gothic";
@@ -26,11 +25,13 @@ export default function GothicShop() {
   const [notice, setNotice] = useState("");
   const dialog = useRef<HTMLDialogElement>(null);
   const count = bag.reduce((total, item) => total + item.quantity, 0);
+
   const visible = products.filter(
     (p) =>
       (category === "All" || p.category === category) &&
       p.name.toLowerCase().includes(query.toLowerCase()),
   );
+
   function browse(filter: GothicCategory) {
     setCategory(filter);
     setQuery("");
@@ -38,17 +39,20 @@ export default function GothicShop() {
       .getElementById("collection")
       ?.scrollIntoView({ behavior: "smooth" });
   }
+
   function openProduct(product: Product) {
     setSelected(product);
     setSize(product.sizes[0]);
     setBagOpen(false);
     dialog.current?.showModal();
   }
+
   function openBag() {
     setBagOpen(true);
     setSelected(null);
     dialog.current?.showModal();
   }
+
   function addToBag() {
     if (!selected) return;
     setBag((items) => {
@@ -65,6 +69,7 @@ export default function GothicShop() {
     setBagOpen(true);
     setSelected(null);
   }
+
   function changeQuantity(index: number, amount: number) {
     setBag((items) =>
       items

@@ -6,6 +6,7 @@ export const metadata: Metadata = {
   description:
     "Gothic clothing, Halloween costumes and accessories for the beautifully strange.",
 };
+
 export default function GothicPage() {
   return <GothicShop />;
 }
