@@ -22,7 +22,9 @@ export default function WorkExperienceComponent() {
               <p>{job.dates}</p>
             </div>
             <p className="cv-job-role">{job.role}</p>
-            <p className="cv-job-type mt-[0.3125rem]! mb-[0.625rem]!">{job.type}</p>
+            <p className="cv-job-type mt-[0.3125rem]! mb-[0.625rem]!">
+              {job.type}
+            </p>
             <ul className="m-0 list-disc pl-[1.125rem]">
               {job.bullets.map((bullet) => (
                 <li
@@ -39,4 +41,3 @@ export default function WorkExperienceComponent() {
     </section>
   );
 }
-

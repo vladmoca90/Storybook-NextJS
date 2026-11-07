@@ -7,13 +7,13 @@ export default function ContactDetailsComponents() {
     >
       <h2 id="contact-title">Contact details</h2>
       <div className="flex flex-col items-start gap-3">
-        <a className="cv-email border-b-[0.0625rem]" href="mailto:vladmoca90@gmail.com">
+        <a
+          className="cv-email border-b-[0.0625rem]"
+          href="mailto:vladmoca90@gmail.com"
+        >
           vladmoca90@gmail.com
         </a>
-        <a
-          className="cv-phone block"
-          href="tel:+447455404221"
-        >
+        <a className="cv-phone block" href="tel:+447455404221">
           07455 404221
         </a>
         <p>Right to work: British citizen</p>
@@ -41,4 +41,3 @@ export default function ContactDetailsComponents() {
     </section>
   );
 }
-
