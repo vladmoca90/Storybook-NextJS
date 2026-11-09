@@ -78,7 +78,7 @@
 }
 
 .select select {
-    background: white;
+    background: #ffffff;
     color: #54465e;
     font-size: 0.75rem;
 }
@@ -184,7 +184,7 @@
 
 .empty button {
     background: #603c7f;
-    color: white;
+    color: #ffffff;
 }
 
 .srOnly {

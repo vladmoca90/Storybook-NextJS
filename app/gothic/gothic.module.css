@@ -390,7 +390,7 @@
 
 .shop ::selection {
   background: #8d252e;
-  color: white;
+  color: #ffffff;
 }
 
 @keyframes appear {

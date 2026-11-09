@@ -98,7 +98,7 @@
 }
 
 .pagination button {
-  background: white;
+  background: #ffffff;
   border-color: #dfe3e9;
   color: #111827;
   font-size: 0.9375rem;
@@ -111,7 +111,7 @@
 .pagination button[aria-current="page"] {
   background: #159f70;
   border-color: #159f70;
-  color: white;
+  color: #ffffff;
 }
 
 .pagination button:disabled {

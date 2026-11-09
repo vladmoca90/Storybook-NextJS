@@ -68,7 +68,7 @@
 }
 
 .person-card {
-  background: white;
+  background: #ffffff;
   border-color: #e9ecef;
   box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.05);
   transition: box-shadow 0.2s, transform 0.2s;
@@ -85,7 +85,7 @@
 
 .person-avatar {
   background: linear-gradient(135deg, #0070f3 0%, #00d4ff 100%);
-  color: white;
+  color: #ffffff;
   font-size: 1.2rem;
   font-weight: 700;
 }

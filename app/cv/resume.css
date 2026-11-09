@@ -155,7 +155,7 @@
 
 .cv-skip {
   background: var(--cv-ink);
-  color: white !important;
+  color: #ffffff !important;
 }
 
 @media (prefers-reduced-motion: reduce) {

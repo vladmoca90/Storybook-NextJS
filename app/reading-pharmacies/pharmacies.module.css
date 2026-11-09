@@ -41,7 +41,7 @@
 }
 
 .search {
-  background: white;
+  background: #ffffff;
   border-color: #dce3de;
   color: #77817b;
 }
@@ -144,9 +144,9 @@
 
 .marker {
   background: #087c4f;
-  border-color: white;
+  border-color: #ffffff;
   box-shadow: 0 0.125rem 0.375rem #17452d30;
-  color: white;
+  color: #ffffff;
   font:
     700 1.5rem/1 Arial,
     sans-serif;
@@ -159,7 +159,7 @@
 
 .showAll,
 .mapCaption {
-  background: white;
+  background: #ffffff;
   border-color: #e2e8e2;
   box-shadow: 0 0.125rem 0.75rem #1a38231c;
   color: #145334;
@@ -172,7 +172,7 @@
 }
 
 .details {
-  background: white;
+  background: #ffffff;
   border-color: #e2e8e2;
   box-shadow: 0 0.5rem 2rem #173c2a26;
 }
@@ -197,7 +197,7 @@
 
 .directions {
   background: #087c4f;
-  color: white;
+  color: #ffffff;
   font-size: 0.8125rem;
   font-weight: 600;
 }

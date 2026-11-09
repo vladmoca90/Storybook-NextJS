@@ -40,7 +40,7 @@
 .logo {
   background: var(--orange);
   box-shadow: 0 0.3125rem 0.75rem rgba(232, 98, 43, 0.25);
-  color: white;
+  color: #ffffff;
   transform: rotate(-3deg);
 }
 
@@ -75,7 +75,7 @@
 }
 
 .form {
-  background: white;
+  background: #ffffff;
   border-color: #ded8cf;
   box-shadow: 0 0.4375rem 1.5rem rgba(76, 59, 40, 0.06);
   transition:
@@ -101,7 +101,7 @@
 .form button {
   background: var(--orange);
   box-shadow: 0 0.3125rem 0.8125rem rgba(232, 98, 43, 0.23);
-  color: white;
+  color: #ffffff;
   font-size: 0.9rem;
   font-weight: 700;
   transition:
@@ -211,7 +211,7 @@
 .completed .check {
   background: var(--orange);
   border-color: var(--orange);
-  color: white;
+  color: #ffffff;
 }
 
 .completed .itemLabel {
@@ -252,7 +252,7 @@
 }
 
 .app kbd {
-  background: white;
+  background: #ffffff;
   border-color: #dad4ca;
   color: #777168;
   font-family: inherit;
