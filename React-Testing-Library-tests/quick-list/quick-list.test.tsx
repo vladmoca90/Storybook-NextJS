@@ -14,7 +14,9 @@ describe("quick-list project", () => {
 
     // Mark the new task complete, then clear completed tasks from the list.
     expect(screen.getByText("Write tests")).toBeInTheDocument();
-    fireEvent.click(screen.getByRole("button", { name: "Mark Write tests as completed" }));
+    fireEvent.click(
+      screen.getByRole("button", { name: "Mark Write tests as completed" }),
+    );
     fireEvent.click(screen.getByRole("button", { name: "Clear completed" }));
 
     // Verify the completed task is gone and the empty-list message is restored.

@@ -7,9 +7,14 @@ describe("countries project", () => {
     render(<CountriesExplorer />);
 
     // Enter a capital city in the accessible search field to filter the directory.
-    fireEvent.change(screen.getByRole("searchbox", { name: "Search by country or capital" }), {
-      target: { value: "Bern" },
-    });
+    fireEvent.change(
+      screen.getByRole("searchbox", {
+        name: "Search by country or capital",
+      }),
+      {
+        target: { value: "Bern" },
+      },
+    );
 
     // Switzerland matches Bern; an unrelated country such as Germany is excluded.
     expect(screen.getByRole("row", { name: /Switzerland/ })).toBeInTheDocument();

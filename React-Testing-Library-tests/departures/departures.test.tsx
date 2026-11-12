@@ -7,9 +7,12 @@ describe("departures project", () => {
     render(<DeparturesBoard />);
 
     // Searching for Paris narrows the board to the matching flight.
-    fireEvent.change(screen.getByRole("textbox", { name: "Search flights" }), {
-      target: { value: "Paris" },
-    });
+    fireEvent.change(
+      screen.getByRole("textbox", { name: "Search flights" }),
+      {
+        target: { value: "Paris" },
+      },
+    );
     expect(screen.getByText("Showing 1 of 10 flights")).toBeInTheDocument();
 
     // Clear search restores the full flight list and count.

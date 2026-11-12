@@ -12,8 +12,12 @@ describe("dashboard project", () => {
     });
 
     // Confirm only the matching person is shown and the result count is updated.
-    expect(screen.getByRole("heading", { name: "Emma Johnson" })).toBeInTheDocument();
-    expect(screen.queryByRole("heading", { name: "Liam O'Brien" })).not.toBeInTheDocument();
+    expect(
+      screen.getByRole("heading", { name: "Emma Johnson" }),
+    ).toBeInTheDocument();
+    expect(
+      screen.queryByRole("heading", { name: "Liam O'Brien" }),
+    ).not.toBeInTheDocument();
     expect(screen.getByText(/Showing/)).toHaveTextContent("Showing 1 of 5 people");
   });
 });

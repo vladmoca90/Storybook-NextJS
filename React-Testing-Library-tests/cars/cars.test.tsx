@@ -12,7 +12,11 @@ describe("cars project", () => {
     });
 
     // The matching BMW remains visible while the non-matching Audi is removed.
-    expect(screen.getByRole("heading", { name: "BMW 3 Series" })).toBeInTheDocument();
-    expect(screen.queryByRole("heading", { name: "Audi A3 Sportback" })).not.toBeInTheDocument();
+    expect(
+      screen.getByRole("heading", { name: "BMW 3 Series" }),
+    ).toBeInTheDocument();
+    expect(
+      screen.queryByRole("heading", { name: "Audi A3 Sportback" }),
+    ).not.toBeInTheDocument();
   });
 });

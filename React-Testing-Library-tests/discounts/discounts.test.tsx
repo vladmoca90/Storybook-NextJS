@@ -10,8 +10,14 @@ describe("discounts project", () => {
     fireEvent.click(screen.getByRole("button", { name: "Audio" }));
 
     // Audio products remain visible, while a product from another category is hidden.
-    expect(screen.getByRole("heading", { name: "Cloud Headphones" })).toBeInTheDocument();
-    expect(screen.getByRole("heading", { name: "Pebble Speaker" })).toBeInTheDocument();
-    expect(screen.queryByRole("heading", { name: "Halo Table Lamp" })).not.toBeInTheDocument();
+    expect(
+      screen.getByRole("heading", { name: "Cloud Headphones" }),
+    ).toBeInTheDocument();
+    expect(
+      screen.getByRole("heading", { name: "Pebble Speaker" }),
+    ).toBeInTheDocument();
+    expect(
+      screen.queryByRole("heading", { name: "Halo Table Lamp" }),
+    ).not.toBeInTheDocument();
   });
 });
