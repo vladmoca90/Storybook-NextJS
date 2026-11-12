@@ -18,6 +18,8 @@ describe("dashboard project", () => {
     expect(
       screen.queryByRole("heading", { name: "Liam O'Brien" }),
     ).not.toBeInTheDocument();
-    expect(screen.getByText(/Showing/)).toHaveTextContent("Showing 1 of 5 people");
+    expect(screen.getByText(/Showing/)).toHaveTextContent(
+      "Showing 1 of 5 people",
+    );
   });
 });

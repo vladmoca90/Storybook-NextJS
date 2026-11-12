@@ -67,7 +67,10 @@ describe("wines project", () => {
     fireEvent.change(screen.getByRole("searchbox", { name: "Search wines" }), {
       target: { value: "  CHILEAN  " },
     });
-    expect(screen.getByText("1 wines found")).toHaveAttribute("role", "status");
+    expect(screen.getByText("1 wines found")).toHaveAttribute(
+      "role",
+      "status",
+    );
     expect(
       screen.getByRole("heading", { name: "Chilean Dry White" }),
     ).toBeInTheDocument();

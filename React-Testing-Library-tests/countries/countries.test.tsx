@@ -17,7 +17,11 @@ describe("countries project", () => {
     );
 
     // Switzerland matches Bern; an unrelated country such as Germany is excluded.
-    expect(screen.getByRole("row", { name: /Switzerland/ })).toBeInTheDocument();
-    expect(screen.queryByRole("row", { name: /Germany/ })).not.toBeInTheDocument();
+    expect(
+      screen.getByRole("row", { name: /Switzerland/ }),
+    ).toBeInTheDocument();
+    expect(
+      screen.queryByRole("row", { name: /Germany/ }),
+    ).not.toBeInTheDocument();
   });
 });

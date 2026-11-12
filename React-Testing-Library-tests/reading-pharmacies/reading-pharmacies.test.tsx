@@ -101,14 +101,22 @@ describe("reading pharmacies project", () => {
     expect(
       details.getByRole("link", { name: "0118 123 4567" }),
     ).toHaveAttribute("href", "tel:01181234567");
-    expect(details.getByText("Listed hours: Mo-Fr 09:00-18:00")).toBeInTheDocument();
-    expect(details.getByRole("link", { name: "Get directions" })).toHaveAttribute(
+    expect(
+      details.getByText("Listed hours: Mo-Fr 09:00-18:00"),
+    ).toBeInTheDocument();
+    expect(
+      details.getByRole("link", { name: "Get directions" }),
+    ).toHaveAttribute(
       "href",
       "https://www.google.com/maps/dir/?api=1&destination=51.455,-0.971",
     );
 
-    fireEvent.click(details.getByRole("button", { name: "Close pharmacy details" }));
-    expect(screen.queryByRole("region", { name: "Selected pharmacy" })).not.toBeInTheDocument();
+    fireEvent.click(
+      details.getByRole("button", { name: "Close pharmacy details" }),
+    );
+    expect(
+      screen.queryByRole("region", { name: "Selected pharmacy" }),
+    ).not.toBeInTheDocument();
     expect(pharmacy).toHaveAttribute("aria-pressed", "false");
   });
 
@@ -119,13 +127,17 @@ describe("reading pharmacies project", () => {
     fireEvent.click(screen.getByRole("button", { name: /Central Pharmacy/ }));
     const search = screen.getByRole("textbox", { name: "Search pharmacies" });
     fireEvent.change(search, { target: { value: "Riverside" } });
-    expect(screen.queryByRole("region", { name: "Selected pharmacy" })).not.toBeInTheDocument();
+    expect(
+      screen.queryByRole("region", { name: "Selected pharmacy" }),
+    ).not.toBeInTheDocument();
 
     fireEvent.click(screen.getByRole("button", { name: /Riverside Pharmacy/ }));
     fireEvent.click(screen.getByRole("button", { name: "Show all" }));
     expect(search).toHaveValue("");
     expect(screen.getByRole("status")).toHaveTextContent("2 of 2");
-    expect(screen.queryByRole("region", { name: "Selected pharmacy" })).not.toBeInTheDocument();
+    expect(
+      screen.queryByRole("region", { name: "Selected pharmacy" }),
+    ).not.toBeInTheDocument();
     expect(
       screen.getByRole("button", { name: /Riverside Pharmacy/ }),
     ).toHaveAttribute("aria-pressed", "false");
