@@ -10,6 +10,7 @@
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
     "test": "jest",
+    "test:cv": "jest --runInBand --runTestsByPath React-Testing-Library-tests/cv/cv.test.tsx",
     "test:watch": "jest --watch"
   },
   "dependencies": {

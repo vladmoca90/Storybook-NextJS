@@ -10,3 +10,9 @@ Print CV opens the browser print dialog; select Save as PDF to export. Print sty
 The page is rendered on the server; only the print button needs client-side JavaScript. All six positions are preserved from the supplied CV. The generated concept is a visual reference only; original CV facts take precedence over its sample copy.
 
 Layout, responsive breakpoints, borders, radius and spacing use Tailwind utilities in the TSX files. Backgrounds, colours, typography and interaction appearance stay in resume.css. The print page size and physical page margin remain in CSS because they use the @page rule.
+
+## Tests
+
+Run `npm run test:cv` from `miniprojects` to run the nine CV React Testing Library tests with the existing Jest configuration. The suite lives in `React-Testing-Library-tests/cv/cv.test.tsx` and renders the actual CV components and data.
+
+Coverage includes section reading order, contact destinations and plain-text social labels, education, current skills and career history, removed UI elements, and the print button. The print API is mocked and restored after each test. Responsive appearance and printed PDF pagination require browser checks; jsdom does not render layouts.
