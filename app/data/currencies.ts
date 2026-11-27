@@ -1,8 +1,20 @@
 import { Currency } from "./types/currencies";
 
 export const Currencies: Currency[] = [
-  { symbol: "USD", name: "US Dollar", countryOfOrigin: "United States of America", marketShare: 89.1, valueInUSD: 1.0 },
-  { symbol: "EUR", name: "Euro", countryOfOrigin: "European Union", marketShare: 28.5, valueInUSD: 1.094361 },
+  {
+    symbol: "USD",
+    name: "US Dollar",
+    countryOfOrigin: "United States of America",
+    marketShare: 89.1,
+    valueInUSD: 1.0,
+  },
+  {
+    symbol: "EUR",
+    name: "Euro",
+    countryOfOrigin: "European Union",
+    marketShare: 28.5,
+    valueInUSD: 1.094361,
+  },
   {
     symbol: "JPY",
     name: "Japanese Yen",
@@ -48,7 +60,8 @@ export const Currencies: Currency[] = [
   {
     symbol: "HKD",
     name: "Hong Kong Dollar",
-    countryOfOrigin: "Hong Kong Special Administrative Region of the People's Republic of China",
+    countryOfOrigin:
+      "Hong Kong Special Administrative Region of the People's Republic of China",
     marketShare: 3.9,
     valueInUSD: 0.127693,
   },

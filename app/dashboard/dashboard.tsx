@@ -1,6 +1,7 @@
 "use client";
 import { useMemo, useState } from "react";
-import { peopleData } from "@/app/data/people";
+import { apiBaseUrl } from '@/lib/api';
+import { useApiData, withApiData } from '@/lib/api-client';
 import { filterPeople } from "@/app/utils/validation";
 import { DashboardHeader } from "./dashboard-components/DashboardHeader";
 import { EmptyState } from "./dashboard-components/EmptyState";
@@ -10,7 +11,10 @@ import { ResultsInfo } from "./dashboard-components/ResultsInfo";
 import type { FilterState } from "@/app/data/types/dashboard";
 import "./dashboard.css";
 
-export default function Dashboard() {
+const dashboardUrl = `${apiBaseUrl}/api/dashboard`;
+
+function Dashboard() {
+  const peopleData = useApiData('dashboard');
   const [filters, setFilters] = useState<FilterState>({
     searchName: "",
     jobFilter: "",
@@ -21,17 +25,17 @@ export default function Dashboard() {
 
   const uniqueJobs = useMemo(
     () => [...new Set(peopleData.map((person) => person.job))],
-    [],
+    [peopleData],
   );
 
   const uniqueNationalities = useMemo(
     () => [...new Set(peopleData.map((person) => person.nationality))],
-    [],
+    [peopleData],
   );
 
   const uniqueStatuses = useMemo(
     () => [...new Set(peopleData.map((person) => person.maritalStatus))],
-    [],
+    [peopleData],
   );
 
   const filteredPeople = useMemo(() => {
@@ -42,7 +46,7 @@ export default function Dashboard() {
       maritalStatusFilter: filters.maritalStatusFilter || undefined,
       ageRange: filters.ageRange,
     });
-  }, [filters]);
+  }, [peopleData, filters]);
 
   return (
     <div className={`dashboard-container max-w-[75rem] [margin:0_auto] p-[2rem] [@media(max-width:48rem)]:p-[1rem]`}>
@@ -69,3 +73,5 @@ export default function Dashboard() {
     </div>
   );
 }
+
+export default withApiData(Dashboard, 'dashboard', dashboardUrl);

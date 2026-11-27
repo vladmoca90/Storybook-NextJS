@@ -2,10 +2,10 @@
 import { apiBaseUrl } from '@/lib/api';
 import { useApiData, withApiData } from '@/lib/api-client';
 
-const medalsUrl = `${apiBaseUrl}/api/medals`;
-
 import MedalLegend from "./MedalLegend";
 import MedalPlot from "./MedalPlot";
+
+const medalsUrl = `${apiBaseUrl}/api/medals`;
 
 function MedalChart() {
   const { colors, data } = useApiData('medals');

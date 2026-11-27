@@ -2,13 +2,14 @@
 import { apiBaseUrl } from '@/lib/api';
 import { useApiData, withApiData } from '@/lib/api-client';
 
-const quickListUrl = `${apiBaseUrl}/api/quick-list`;
 import { useId, useState } from "react";
 import type { SubmitEvent } from "react";
 import type { ListItem } from "@/app/data/types/quick-list";
 import QuickListContent from "./components/QuickListContentComponent";
 import QuickListForm from "./components/QuickListFormComponent";
 import styles from "./quick-list.module.css";
+
+const quickListUrl = `${apiBaseUrl}/api/quick-list`;
 
 function QuickList() {
   const initialItems = useApiData('quick-list');

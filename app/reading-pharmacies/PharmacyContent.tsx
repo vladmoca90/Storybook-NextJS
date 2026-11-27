@@ -1,11 +1,9 @@
 'use client';
 import { apiBaseUrl } from '@/lib/api';
 import { useApiData, withApiData } from '@/lib/api-client';
-const pharmaciesUrl = `${apiBaseUrl}/api/reading-pharmacies`;
 import PharmacyFinder from "./components/PharmacyFinder";
 
-
-
+const pharmaciesUrl = `${apiBaseUrl}/api/reading-pharmacies`;
 
 function PharmacyContent() {
   const snapshot = useApiData('reading-pharmacies');

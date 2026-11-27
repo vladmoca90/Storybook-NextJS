@@ -104,7 +104,7 @@ export default function MedalPlot({ data, colors }: MedalPlotProps) {
     const resizeObserver = new ResizeObserver(draw);
     resizeObserver.observe(container);
     return () => resizeObserver.disconnect();
-  }, [data, colors]);
+  }, [data, colors, medalTypes]);
 
   return (
     <div ref={containerRef} className={`relative w-[100%] min-h-[26.875rem] [&_svg]:block [&_svg]:w-[100%] [&_svg]:h-[auto] [&_svg]:overflow-[visible]`}>

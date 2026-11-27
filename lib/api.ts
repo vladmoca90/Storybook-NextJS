@@ -5,6 +5,7 @@ import type { Currency } from '@/app/data/types/currencies';
 import type { Product as GothicProduct, GothicSlide, GothicCategory } from '@/app/data/types/gothic';
 import type { CountryMedals, MedalType } from '@/app/data/types/medals';
 import type { Person } from '@/app/data/types/people';
+import type { Person as DashboardPerson } from '@/app/data/types/dashboard-person';
 import type { Product } from '@/app/data/types/products';
 import type { Wine } from '@/app/data/types/wine';
 import type { ListItem } from '@/app/data/types/quick-list';
@@ -17,6 +18,7 @@ export interface ApiData {
   countries: Country[];
   currencies: Currency[];
   people: Person[];
+  dashboard: DashboardPerson[];
   products: Product[];
   wines: Wine[];
   gothic: { products: GothicProduct[]; slides: GothicSlide[]; categories: GothicCategory[] };
@@ -58,6 +60,7 @@ export const validators: Record<keyof ApiData, Check> = {
   countries: array(object({ ...strings('name code flag capital'), population: number })),
   currencies: array(object({ ...strings('symbol name countryOfOrigin'), ...numbers('marketShare valueInUSD') })),
   people: array(object({ ...strings('id firstName lastName nationality'), age: number })),
+  dashboard: array(object({ ...strings('name job nationality'), ...numbers('id age'), maritalStatus: oneOf('single', 'married', 'divorced', 'widowed') })),
   products: array(object({ ...strings('name accent'), ...numbers('id price discount'), category: oneOf('Audio', 'Home', 'Kitchen', 'Lifestyle', 'Travel'), image: oneOf('headphones', 'lamp', 'camera', 'sneakers', 'watch', 'kettle', 'backpack', 'speaker', 'chair', 'bottle') })),
   wines: array(object({ ...strings('name img'), category: oneOf('Red', 'White', 'Green') })),
   gothic: object({ products: array(object({ ...strings('name description'), ...numbers('id price'), category: oneOf('Clothing', 'Costumes', 'Accessories'), sizes: array(string) })), slides: value => Array.isArray(value) && value.length > 0 && array(object({ ...strings('title description image cta className'), filter: category }))(value), categories: array(category) }),

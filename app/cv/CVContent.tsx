@@ -1,7 +1,6 @@
 'use client';
 import { apiBaseUrl } from '@/lib/api';
 import { withApiData } from '@/lib/api-client';
-const cvUrl = `${apiBaseUrl}/api/cv`;
 import HeaderComponent from "./components/HeaderComponent";
 import ContactDetailsComponents from "./components/ContactDetailsComponents";
 import EducationComponent from "./components/EducationComponent";
@@ -9,7 +8,7 @@ import SkillsComponent from "./components/SkillsComponent";
 import WorkExperienceComponent from "./components/WorkExperienceComponent";
 import "./resume.css";
 
-
+const cvUrl = `${apiBaseUrl}/api/cv`;
 
 function CVContent() {
   return (

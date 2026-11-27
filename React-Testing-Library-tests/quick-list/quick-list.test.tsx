@@ -1,10 +1,11 @@
-import { fireEvent, render, screen } from "@testing-library/react";
+import { waitFor, fireEvent, render, screen } from "@testing-library/react";
 import QuickList from "@/app/quick-list/QuickList";
 
 describe("quick-list project", () => {
-  it("adds an item and clears it after marking it complete", () => {
+  it("adds an item and clears it after marking it complete", async () => {
     // Render the empty list and its item-entry form.
     render(<QuickList />);
+    await waitFor(() => expect(screen.queryByText(/^Loading .*…$/)).not.toBeInTheDocument());
 
     // Enter a task and submit the form to add it to the list.
     fireEvent.change(screen.getByRole("textbox", { name: "New list item" }), {

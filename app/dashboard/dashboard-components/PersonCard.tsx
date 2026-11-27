@@ -1,4 +1,4 @@
-import type { Person } from "@/app/data/types/people";
+import type { Person } from "@/app/data/types/dashboard-person";
 
 type PersonCardProps = {
   person: Person;

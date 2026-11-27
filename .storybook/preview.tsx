@@ -1,4 +1,16 @@
 import type { Preview } from '@storybook/nextjs-vite'
+import { apiFixtures, fixtureFetch } from '../test-support/api-fixtures';
+
+// Stories exercise the same asynchronous loading and validation as the app,
+// with local API fixtures so a separate Next server is not required.
+const originalFetch = globalThis.fetch;
+globalThis.fetch = (input, init) => {
+  const url = new URL(typeof input === 'string' ? input : input instanceof URL ? input.href : input.url, window.location.origin);
+  const key = url.pathname.replace('/api/', '');
+  return url.pathname.startsWith('/api/') && Object.hasOwn(apiFixtures, key)
+    ? fixtureFetch(input, init)
+    : originalFetch(input, init);
+};
 
 const preview: Preview = {
   parameters: {

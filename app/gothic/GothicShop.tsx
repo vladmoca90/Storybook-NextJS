@@ -2,7 +2,6 @@
 import { apiBaseUrl } from '@/lib/api';
 import { useApiData, withApiData } from '@/lib/api-client';
 
-const gothicUrl = `${apiBaseUrl}/api/gothic`;
 import { useRef, useState } from "react";
 import type { BagItem, GothicCategory, Product } from "@/app/data/types/gothic";
 import AnnouncementBar from "./components/AnnouncementBar";
@@ -16,6 +15,8 @@ import ShopDialog from "./components/ShopDialog";
 import ProductDetails from "./components/ProductDetails";
 import ShoppingBag from "./components/ShoppingBag";
 import styles from "./gothic.module.css";
+
+const gothicUrl = `${apiBaseUrl}/api/gothic`;
 
 function GothicShop() {
   const { products } = useApiData('gothic');

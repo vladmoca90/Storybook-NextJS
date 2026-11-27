@@ -3,12 +3,13 @@ import { apiBaseUrl } from '@/lib/api';
 import { useApiData, withApiData } from '@/lib/api-client';
 import { WineCategory } from '@/app/data/types/wineCategory';
 
-const winesUrl = `${apiBaseUrl}/api/wines`;
 import { useRef, useState } from "react";
 import { Minus, Plus, Search, ShoppingBag, X } from "lucide-react";
 import type { WineBag } from "../data/types/wine";
 import WineCard from "./components/WineCard";
 import styles from "./wines.module.css";
+
+const winesUrl = `${apiBaseUrl}/api/wines`;
 
 function WineShop() {
   const allWines = useApiData('wines');

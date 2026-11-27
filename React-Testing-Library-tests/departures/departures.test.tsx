@@ -1,10 +1,11 @@
-import { fireEvent, render, screen } from "@testing-library/react";
+import { waitFor, fireEvent, render, screen } from "@testing-library/react";
 import DeparturesBoard from "@/app/departures/DeparturesBoard";
 
 describe("departures project", () => {
-  it("filters flights by destination and clears the search", () => {
+  it("filters flights by destination and clears the search", async () => {
     // Render the departures board with its initial list of flights.
     render(<DeparturesBoard />);
+    await waitFor(() => expect(screen.queryByText(/^Loading .*…$/)).not.toBeInTheDocument());
 
     // Searching for Paris narrows the board to the matching flight.
     fireEvent.change(

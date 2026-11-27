@@ -1,10 +1,11 @@
-import { fireEvent, render, screen } from "@testing-library/react";
+import { waitFor, fireEvent, render, screen } from "@testing-library/react";
 import Dashboard from "@/app/dashboard/dashboard";
 
 describe("dashboard project", () => {
-  it("filters people by name", () => {
+  it("filters people by name", async () => {
     // Render the dashboard and its people data with the default filters.
     render(<Dashboard />);
+    await waitFor(() => expect(screen.queryByText(/^Loading .*…$/)).not.toBeInTheDocument());
 
     // Enter a name fragment in the name filter to narrow the people list.
     fireEvent.change(screen.getByRole("textbox", { name: "Search by Name" }), {

@@ -1,4 +1,4 @@
-import { fireEvent, render, screen, within } from "@testing-library/react";
+import { waitFor, fireEvent, render, screen, within } from "@testing-library/react";
 import WineShop from "@/app/wines/WineShop";
 
 describe("wines project", () => {
@@ -38,8 +38,9 @@ describe("wines project", () => {
     }
   });
 
-  it("filters wines by category and restores the full collection", () => {
+  it("filters wines by category and restores the full collection", async () => {
     render(<WineShop />);
+    await waitFor(() => expect(screen.queryByText(/^Loading .*…$/)).not.toBeInTheDocument());
     expect(screen.getAllByRole("article")).toHaveLength(7);
 
     fireEvent.click(screen.getByRole("button", { name: "Red" }));
@@ -62,8 +63,9 @@ describe("wines project", () => {
     expect(screen.getAllByRole("article")).toHaveLength(7);
   });
 
-  it("searches wine names without case or surrounding whitespace sensitivity", () => {
+  it("searches wine names without case or surrounding whitespace sensitivity", async () => {
     render(<WineShop />);
+    await waitFor(() => expect(screen.queryByText(/^Loading .*…$/)).not.toBeInTheDocument());
     fireEvent.change(screen.getByRole("searchbox", { name: "Search wines" }), {
       target: { value: "  CHILEAN  " },
     });
@@ -77,8 +79,9 @@ describe("wines project", () => {
     expect(screen.getAllByRole("article")).toHaveLength(1);
   });
 
-  it("combines search with category and clears both filters from empty results", () => {
+  it("combines search with category and clears both filters from empty results", async () => {
     render(<WineShop />);
+    await waitFor(() => expect(screen.queryByText(/^Loading .*…$/)).not.toBeInTheDocument());
     fireEvent.click(screen.getByRole("button", { name: "Red" }));
     const search = screen.getByRole("searchbox", { name: "Search wines" });
     fireEvent.change(search, { target: { value: "Chilean" } });
@@ -96,8 +99,9 @@ describe("wines project", () => {
     expect(screen.getAllByRole("article")).toHaveLength(7);
   });
 
-  it("adds wine to the bag, changes quantity and removes the selection", () => {
+  it("adds wine to the bag, changes quantity and removes the selection", async () => {
     render(<WineShop />);
+    await waitFor(() => expect(screen.queryByText(/^Loading .*…$/)).not.toBeInTheDocument());
     fireEvent.click(
       screen.getByRole("button", { name: "Add Italian Red Wine to bag" }),
     );
@@ -136,8 +140,9 @@ describe("wines project", () => {
     expect(screen.getByRole("button", { name: "Bag (0)" })).toBeInTheDocument();
   });
 
-  it("removes a wine when its quantity reaches zero", () => {
+  it("removes a wine when its quantity reaches zero", async () => {
     render(<WineShop />);
+    await waitFor(() => expect(screen.queryByText(/^Loading .*…$/)).not.toBeInTheDocument());
     fireEvent.click(
       screen.getByRole("button", { name: "Add Italian Red Wine to bag" }),
     );
@@ -158,8 +163,9 @@ describe("wines project", () => {
 
   it.each(["Close bag", "Continue exploring"])(
     "closes the bag with %s",
-    (button) => {
+    async (button) => {
       render(<WineShop />);
+    await waitFor(() => expect(screen.queryByText(/^Loading .*…$/)).not.toBeInTheDocument());
       fireEvent.click(screen.getByRole("button", { name: "Bag (0)" }));
       expect(
         screen.getByRole("dialog", { name: "Your bag (0)" }),

@@ -2,7 +2,6 @@
 import { apiBaseUrl } from '@/lib/api';
 import { useApiData, withApiData } from '@/lib/api-client';
 
-const peopleUrl = `${apiBaseUrl}/api/people`;
 import { useState } from "react";
 import styles from "./people.module.css";
 import DirectoryHeader from "./components/DirectoryHeader";
@@ -10,8 +9,9 @@ import PeopleIntro from "./components/PeopleIntro";
 import PeopleTable from "./components/PeopleTable";
 import PeoplePagination from "./components/PeoplePagination";
 
-const PAGE_SIZE = 10;
+const peopleUrl = `${apiBaseUrl}/api/people`;
 
+const PAGE_SIZE = 10;
 
 function PeopleDirectory() {
   const people = useApiData('people');

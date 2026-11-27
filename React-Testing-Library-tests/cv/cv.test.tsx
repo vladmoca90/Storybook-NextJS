@@ -1,18 +1,19 @@
-import { fireEvent, render, screen, within } from "@testing-library/react";
+import { waitFor, fireEvent, render, screen, within } from "@testing-library/react";
 import CVPage from "@/app/cv/page";
 
 // Exercise the assembled CV with real section components and resume data.
 // jsdom cannot verify responsive CSS, printed pagination, or native dialogs.
 describe("CV", () => {
-  beforeEach(() => {
+  beforeEach(async () => {
     render(<CVPage />);
+    await waitFor(() => expect(screen.queryByText(/^Loading .*…$/)).not.toBeInTheDocument());
   });
 
   afterEach(() => {
     jest.restoreAllMocks();
   });
 
-  it("presents the name and sections in the requested reading order", () => {
+  it("presents the name and sections in the requested reading order", async () => {
     const main = screen.getByRole("main");
     expect(
       within(main)
@@ -30,7 +31,7 @@ describe("CV", () => {
     ).toHaveAttribute("href", `#${main.id}`);
   });
 
-  it("provides working email and telephone destinations and the current right to work text", () => {
+  it("provides working email and telephone destinations and the current right to work text", async () => {
     const contact = within(
       screen.getByRole("region", { name: "Contact details" }),
     );
@@ -66,7 +67,7 @@ describe("CV", () => {
     expect(link).not.toHaveTextContent(`${label}:`);
   });
 
-  it("shows both qualifications with their dates and result", () => {
+  it("shows both qualifications with their dates and result", async () => {
     const education = within(screen.getByRole("region", { name: "Education" }));
     const qualifications = education.getAllByRole("article");
     expect(qualifications).toHaveLength(2);
@@ -79,7 +80,7 @@ describe("CV", () => {
     expect(qualifications[1]).toHaveTextContent("BSc Environmental Science");
   });
 
-  it("includes the latest eight skill categories", () => {
+  it("includes the latest eight skill categories", async () => {
     const skills = within(
       screen.getByRole("region", { name: "Skills & tools" }),
     );
@@ -105,7 +106,7 @@ describe("CV", () => {
     ).toBeInTheDocument();
   });
 
-  it("shows all six roles in order with the latest experience bullets", () => {
+  it("shows all six roles in order with the latest experience bullets", async () => {
     const experience = within(
       screen.getByRole("region", { name: "Work experience" }),
     );
@@ -131,7 +132,7 @@ describe("CV", () => {
     expect(jobs[5]).toHaveTextContent("mobile and tablet product catalogue");
   });
 
-  it("does not restore the removed sidebar, tagline, or introduction links", () => {
+  it("does not restore the removed sidebar, tagline, or introduction links", async () => {
     expect(screen.queryByRole("navigation")).not.toBeInTheDocument();
     expect(
       screen.queryByText("Thoughtful interfaces. Reliable code."),
@@ -144,7 +145,7 @@ describe("CV", () => {
     ).not.toBeInTheDocument();
   });
 
-  it("requests browser printing only after Print CV is clicked", () => {
+  it("requests browser printing only after Print CV is clicked", async () => {
     const print = jest.spyOn(window, "print").mockImplementation(() => {});
     expect(print).not.toHaveBeenCalled();
     fireEvent.click(screen.getByRole("button", { name: "Print CV" }));

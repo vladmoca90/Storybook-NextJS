@@ -3,8 +3,6 @@ import { apiBaseUrl } from '@/lib/api';
 import { useApiData, withApiData } from '@/lib/api-client';
 import { calculateDiscountAmount, calculateSalePrice } from '@/lib/discounts';
 
-const productsUrl = `${apiBaseUrl}/api/products`;
-
 import appearance from "./appearance.module.css";
 import { useMemo, useState } from "react";
 import { ArrowRight, Search, Sparkles, Tag } from "lucide-react";
@@ -12,6 +10,8 @@ import type { ProductCategory } from "../data/types/products";
 import { ProductArt } from "./ProductArt";
 import ProductCard from "./components/ProductCard";
 import colors from "./discount-colors.module.css";
+
+const productsUrl = `${apiBaseUrl}/api/products`;
 
 const money = new Intl.NumberFormat("en-US", { style: "currency", currency: "USD" });
 const categories: Array<"All" | ProductCategory> = ["All", "Audio", "Home", "Kitchen", "Lifestyle", "Travel"];

@@ -1,4 +1,4 @@
-import { fireEvent, render, screen, within } from "@testing-library/react";
+import { waitFor, fireEvent, render, screen, within } from "@testing-library/react";
 import GothicShop from "@/app/gothic/GothicShop";
 
 describe("gothic project", () => {
@@ -39,8 +39,9 @@ describe("gothic project", () => {
     });
   });
 
-  it("navigates the carousel and filters the Halloween collection", () => {
+  it("navigates the carousel and filters the Halloween collection", async () => {
     render(<GothicShop />);
+    await waitFor(() => expect(screen.queryByText(/^Loading .*…$/)).not.toBeInTheDocument());
 
     expect(screen.getByRole("heading", { level: 1 })).toHaveTextContent(
       /For your\s*darker side\./,
@@ -72,8 +73,9 @@ describe("gothic project", () => {
     ).toHaveAttribute("aria-current", "true");
   });
 
-  it("filters accessories and restores all products", () => {
+  it("filters accessories and restores all products", async () => {
     render(<GothicShop />);
+    await waitFor(() => expect(screen.queryByText(/^Loading .*…$/)).not.toBeInTheDocument());
     const filters = within(screen.getByLabelText("Product categories"));
 
     fireEvent.click(filters.getByRole("button", { name: "Accessories" }));
@@ -89,8 +91,9 @@ describe("gothic project", () => {
     expect(screen.getAllByRole("heading", { level: 3 })).toHaveLength(4);
   });
 
-  it("searches products and recovers from an empty result", () => {
+  it("searches products and recovers from an empty result", async () => {
     render(<GothicShop />);
+    await waitFor(() => expect(screen.queryByText(/^Loading .*…$/)).not.toBeInTheDocument());
     fireEvent.click(screen.getByRole("button", { name: "Search collection" }));
     const search = screen.getByRole("textbox", { name: "Search products" });
 
@@ -109,8 +112,9 @@ describe("gothic project", () => {
     expect(screen.getAllByRole("heading", { level: 3 })).toHaveLength(4);
   });
 
-  it("adds a selected size to the bag, updates its total, and removes the item", () => {
+  it("adds a selected size to the bag, updates its total, and removes the item", async () => {
     render(<GothicShop />);
+    await waitFor(() => expect(screen.queryByText(/^Loading .*…$/)).not.toBeInTheDocument());
     fireEvent.click(
       screen.getByRole("button", { name: /The Vampire Coat.*£189\.00/ }),
     );

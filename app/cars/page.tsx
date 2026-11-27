@@ -3,23 +3,22 @@ import { apiBaseUrl } from '@/lib/api';
 import { useApiData, withApiData } from '@/lib/api-client';
 import { formatPrice, formatMileage } from '@/lib/car-format';
 
-const carsUrl = `${apiBaseUrl}/api/cars`;
 import appearance from "./appearance.module.css";
 import Link from 'next/link';
 import Image from 'next/image';
 import { useMemo, useState } from 'react';
 import '@/app/cars/showroom.css';
 
+const carsUrl = `${apiBaseUrl}/api/cars`;
+
 type SortOption = 'recommended' | 'price-low' | 'price-high' | 'mileage-low' | 'newest';
-
-
 
 function Home() {
   const cars = useApiData('cars');
   const makes = [...new Set(cars.map((car) => car.make))].sort();
-const fuels = [...new Set(cars.map((car) => car.fuel))].sort();
-const bodies = [...new Set(cars.map((car) => car.body))].sort();
-const transmissions = [...new Set(cars.map((car) => car.transmission))].sort();
+  const fuels = [...new Set(cars.map((car) => car.fuel))].sort();
+  const bodies = [...new Set(cars.map((car) => car.body))].sort();
+  const transmissions = [...new Set(cars.map((car) => car.transmission))].sort();
   const [query, setQuery] = useState('');
   const [make, setMake] = useState('');
   const [fuel, setFuel] = useState('');

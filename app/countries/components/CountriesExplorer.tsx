@@ -2,10 +2,11 @@
 import { apiBaseUrl } from '@/lib/api';
 import { useApiData, withApiData } from '@/lib/api-client';
 
-const countriesUrl = `${apiBaseUrl}/api/countries`;
 import appearance from "../appearance.module.css";
 import { useMemo, useState } from 'react';
 import type { PopulationFilter, SortOption } from "@/app/data/types/countries";
+
+const countriesUrl = `${apiBaseUrl}/api/countries`;
 
 const populationFormatter = new Intl.NumberFormat('en-GB');
 const compactFormatter = new Intl.NumberFormat('en-GB', { notation: 'compact', maximumFractionDigits: 1 });

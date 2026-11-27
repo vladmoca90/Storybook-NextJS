@@ -1,10 +1,11 @@
-import { fireEvent, render, screen } from "@testing-library/react";
+import { waitFor, fireEvent, render, screen } from "@testing-library/react";
 import CountriesExplorer from "@/app/countries/components/CountriesExplorer";
 
 describe("countries project", () => {
-  it("searches countries by capital", () => {
+  it("searches countries by capital", async () => {
     // Render the explorer with the complete country directory.
     render(<CountriesExplorer />);
+    await waitFor(() => expect(screen.queryByText(/^Loading .*…$/)).not.toBeInTheDocument());
 
     // Enter a capital city in the accessible search field to filter the directory.
     fireEvent.change(
