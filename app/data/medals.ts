@@ -15,4 +15,3 @@ export const data: CountryMedals[] = [
   { country: "United Kingdom", Gold: 27, Silver: 23, Bronze: 17 },
   { country: "United States", Gold: 46, Silver: 37, Bronze: 38 },
 ];
-
