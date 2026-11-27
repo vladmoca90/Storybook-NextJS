@@ -1,10 +1,11 @@
 import { useRef, useState } from "react";
 import { ArrowLeft, ArrowRight, ArrowUpRight } from "lucide-react";
-import { slides } from "@/app/data/gothic";
+import { useApiData } from '@/lib/api-client';
 import type { HeroCarouselProps } from "@/app/data/types/gothic";
 import styles from "../gothic.module.css";
 
 export default function HeroCarousel({ browse }: HeroCarouselProps) {
+  const { slides } = useApiData('gothic');
   const [slide, setSlide] = useState(0);
   const touchStart = useRef(0);
   const current = slides[slide];
@@ -34,9 +35,9 @@ export default function HeroCarousel({ browse }: HeroCarouselProps) {
         aria-live="polite"
       >
         <h1 className="mb-5 max-w-[680px] max-[700px]:mx-auto max-[700px]:max-w-[330px]">
-          {current.title}
+          <span className="whitespace-pre-line">{current.title}</span>
         </h1>
-        <p className="mb-[23px]">{current.description}</p>
+        <p className="mb-[23px]"><span className="whitespace-pre-line">{current.description}</span></p>
         <button
           className={`${styles.primary} inline-flex items-center justify-center gap-6 border px-[25px] py-[10px] max-[700px]:gap-5 max-[700px]:px-5 max-[700px]:py-[14px]`}
           onClick={() => browse(current.filter)}

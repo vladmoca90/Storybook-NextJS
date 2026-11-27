@@ -1,6 +1,7 @@
-import { experience } from "../resume-data";
+import { useApiData } from '@/lib/api-client';
 
 export default function WorkExperienceComponent() {
+  const { experience } = useApiData('cv');
   return (
     <section
       className="cv-experience grid grid-cols-1 gap-[1.5625rem] min-[68.8125rem]:grid-cols-[11rem_1fr] min-[68.8125rem]:gap-4 print:grid-cols-[7.5rem_1fr] print:gap-[1.125rem] cv-section scroll-mt-7 border-t-[0.0625rem] py-8 print:py-4"

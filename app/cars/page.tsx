@@ -1,19 +1,25 @@
 'use client';
+import { apiBaseUrl } from '@/lib/api';
+import { useApiData, withApiData } from '@/lib/api-client';
+import { formatPrice, formatMileage } from '@/lib/car-format';
+
+const carsUrl = `${apiBaseUrl}/api/cars`;
 import appearance from "./appearance.module.css";
 import Link from 'next/link';
 import Image from 'next/image';
 import { useMemo, useState } from 'react';
-import { cars, formatMileage, formatPrice } from '@/app/data/cars';
 import '@/app/cars/showroom.css';
 
 type SortOption = 'recommended' | 'price-low' | 'price-high' | 'mileage-low' | 'newest';
 
-const makes = [...new Set(cars.map((car) => car.make))].sort();
+
+
+function Home() {
+  const cars = useApiData('cars');
+  const makes = [...new Set(cars.map((car) => car.make))].sort();
 const fuels = [...new Set(cars.map((car) => car.fuel))].sort();
 const bodies = [...new Set(cars.map((car) => car.body))].sort();
 const transmissions = [...new Set(cars.map((car) => car.transmission))].sort();
-
-export default function Home() {
   const [query, setQuery] = useState('');
   const [make, setMake] = useState('');
   const [fuel, setFuel] = useState('');
@@ -44,7 +50,7 @@ export default function Home() {
         if (sort === 'newest') return b.year - a.year;
         return a.id - b.id;
       });
-  }, [body, fuel, make, maxPrice, query, sort, transmission]);
+  }, [cars, body, fuel, make, maxPrice, query, sort, transmission]);
 
   const resetFilters = () => {
     setQuery('');
@@ -201,3 +207,5 @@ export default function Home() {
     </main>
   );
 }
+
+export default withApiData(Home, 'cars', carsUrl);

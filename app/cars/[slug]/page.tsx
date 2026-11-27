@@ -2,7 +2,8 @@ import appearance from "../appearance.module.css";
 import Link from 'next/link';
 import Image from 'next/image';
 import { notFound } from 'next/navigation';
-import { cars, formatMileage, formatPrice } from '@/app/data/cars';
+import { formatMileage, formatPrice } from '@/lib/car-format';
+import { getCars } from '@/lib/api-server';
 import '@/app/cars/showroom.css';
 
 type CarDetailsPageProps = {
@@ -11,12 +12,9 @@ type CarDetailsPageProps = {
   }>;
 };
 
-export function generateStaticParams() {
-  return cars.map((car) => ({ slug: car.slug }));
-}
 
 export async function generateMetadata({ params }: CarDetailsPageProps) {
-  const { slug } = await params;
+  const [{ slug }, cars] = await Promise.all([params, getCars()]);
   const car = cars.find((item) => item.slug === slug);
 
   return {
@@ -26,7 +24,7 @@ export async function generateMetadata({ params }: CarDetailsPageProps) {
 }
 
 export default async function CarDetailsPage({ params }: CarDetailsPageProps) {
-  const { slug } = await params;
+  const [{ slug }, cars] = await Promise.all([params, getCars()]);
   const car = cars.find((item) => item.slug === slug);
 
   if (!car) {

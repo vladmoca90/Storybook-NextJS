@@ -1,6 +1,7 @@
-import { skills } from "../resume-data";
+import { useApiData } from '@/lib/api-client';
 
 export default function SkillsComponent() {
+  const { skills } = useApiData('cv');
   return (
     <section
       className="cv-section scroll-mt-7 border-t-[0.0625rem] py-8 print:py-4"

@@ -1,4 +1,8 @@
 "use client";
+import { apiBaseUrl } from '@/lib/api';
+import { useApiData, withApiData } from '@/lib/api-client';
+
+const quickListUrl = `${apiBaseUrl}/api/quick-list`;
 import { useId, useState } from "react";
 import type { SubmitEvent } from "react";
 import type { ListItem } from "@/app/data/types/quick-list";
@@ -6,9 +10,10 @@ import QuickListContent from "./components/QuickListContentComponent";
 import QuickListForm from "./components/QuickListFormComponent";
 import styles from "./quick-list.module.css";
 
-export default function QuickList() {
+function QuickList() {
+  const initialItems = useApiData('quick-list');
   const [value, setValue] = useState("");
-  const [items, setItems] = useState<ListItem[]>([]);
+  const [items, setItems] = useState<ListItem[]>(initialItems);
   const inputId = useId();
 
   function addItem(event: SubmitEvent<HTMLFormElement>) {
@@ -121,3 +126,5 @@ export default function QuickList() {
     </main>
   );
 }
+
+export default withApiData(QuickList, 'quick-list', quickListUrl);

@@ -1,6 +1,9 @@
 "use client";
+import { apiBaseUrl } from '@/lib/api';
+import { useApiData, withApiData } from '@/lib/api-client';
+
+const gothicUrl = `${apiBaseUrl}/api/gothic`;
 import { useRef, useState } from "react";
-import { products } from "@/app/data/gothic";
 import type { BagItem, GothicCategory, Product } from "@/app/data/types/gothic";
 import AnnouncementBar from "./components/AnnouncementBar";
 import ShopHeader from "./components/ShopHeader";
@@ -14,7 +17,8 @@ import ProductDetails from "./components/ProductDetails";
 import ShoppingBag from "./components/ShoppingBag";
 import styles from "./gothic.module.css";
 
-export default function GothicShop() {
+function GothicShop() {
+  const { products } = useApiData('gothic');
   const [category, setCategory] = useState<GothicCategory>("All");
   const [query, setQuery] = useState("");
   const [searchOpen, setSearchOpen] = useState(false);
@@ -154,3 +158,5 @@ export default function GothicShop() {
     </div>
   );
 }
+
+export default withApiData(GothicShop, 'gothic', gothicUrl);

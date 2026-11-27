@@ -1,7 +1,10 @@
 'use client';
+import { apiBaseUrl } from '@/lib/api';
+import { useApiData, withApiData } from '@/lib/api-client';
+
+const countriesUrl = `${apiBaseUrl}/api/countries`;
 import appearance from "../appearance.module.css";
 import { useMemo, useState } from 'react';
-import { countries } from "@/app/data/countries";
 import type { PopulationFilter, SortOption } from "@/app/data/types/countries";
 
 const populationFormatter = new Intl.NumberFormat('en-GB');
@@ -24,12 +27,13 @@ function ChevronIcon() {
   );
 }
 
-export default function CountriesExplorer() {
+function CountriesExplorer() {
+  const countries = useApiData('countries');
   const [query, setQuery] = useState('');
   const [population, setPopulation] = useState<PopulationFilter>('all');
   const [sort, setSort] = useState<SortOption>('name-asc');
 
-  const totalPopulation = useMemo(() => countries.reduce((sum, country) => sum + country.population, 0), []);
+  const totalPopulation = useMemo(() => countries.reduce((sum, country) => sum + country.population, 0), [countries]);
 
   const visibleCountries = useMemo(() => {
     const term = query.trim().toLocaleLowerCase();
@@ -51,7 +55,7 @@ export default function CountriesExplorer() {
         if (sort === 'population-asc') return a.population - b.population;
         return a.name.localeCompare(b.name);
       });
-  }, [population, query, sort]);
+  }, [countries, population, query, sort]);
 
   const clearFilters = () => {
     setQuery('');
@@ -244,3 +248,5 @@ export default function CountriesExplorer() {
     </main>
   );
 }
+
+export default withApiData(CountriesExplorer, 'countries', countriesUrl);

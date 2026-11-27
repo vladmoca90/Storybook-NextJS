@@ -1,12 +1,17 @@
 "use client";
+import { apiBaseUrl } from '@/lib/api';
+import { useApiData, withApiData } from '@/lib/api-client';
+import { WineCategory } from '@/app/data/types/wineCategory';
+
+const winesUrl = `${apiBaseUrl}/api/wines`;
 import { useRef, useState } from "react";
 import { Minus, Plus, Search, ShoppingBag, X } from "lucide-react";
-import { allWines, WineCategory } from "../data/wines";
 import type { WineBag } from "../data/types/wine";
 import WineCard from "./components/WineCard";
 import styles from "./wines.module.css";
 
-export default function WineShop() {
+function WineShop() {
+  const allWines = useApiData('wines');
   const [category, setCategory] = useState<WineCategory | "All wines">("All wines");
   const [query, setQuery] = useState("");
   const [bag, setBag] = useState<WineBag>({});
@@ -92,3 +97,5 @@ export default function WineShop() {
     </main>
   );
 }
+
+export default withApiData(WineShop, 'wines', winesUrl);

@@ -1,5 +1,5 @@
 import { ArrowRight } from "lucide-react";
-import { categories } from "@/app/data/gothic";
+import { useApiData } from '@/lib/api-client';
 import ProductCard from "./ProductCard";
 import type { ProductCollectionProps } from "@/app/data/types/gothic";
 import styles from "../gothic.module.css";
@@ -11,6 +11,7 @@ export default function ProductCollection({
   openProduct,
   onReset,
 }: ProductCollectionProps) {
+  const { categories } = useApiData('gothic');
   return (
     <section
       id="collection"

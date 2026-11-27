@@ -1,4 +1,8 @@
 "use client";
+import { apiBaseUrl } from '@/lib/api';
+import { useApiData, withApiData } from '@/lib/api-client';
+
+const airlinesUrl = `${apiBaseUrl}/api/airlines`;
 import appearance from "./appearance.module.css";
 import { useState } from "react";
 import {
@@ -11,9 +15,9 @@ import styles from "./departures.module.css";
 import DepartureFilters from "./components/DepartureFilters";
 import DeparturesIntro from "./components/DeparturesIntro";
 import DeparturesTable from "./components/DeparturesTable";
-import { airlines as flights } from "../data/airlines";
 
-export default function DeparturesBoard() {
+function DeparturesBoard() {
+  const flights = useApiData('airlines');
   const [query, setQuery] = useState("");
   const [terminal, setTerminal] = useState("All terminals");
   const [status, setStatus] = useState("All statuses");
@@ -158,3 +162,5 @@ export default function DeparturesBoard() {
     </div>
   );
 }
+
+export default withApiData(DeparturesBoard, 'airlines', airlinesUrl);

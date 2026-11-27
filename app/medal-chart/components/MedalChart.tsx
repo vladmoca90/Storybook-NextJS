@@ -1,10 +1,14 @@
 "use client";
+import { apiBaseUrl } from '@/lib/api';
+import { useApiData, withApiData } from '@/lib/api-client';
 
-import { colors, data } from "@/app/data/medals";
+const medalsUrl = `${apiBaseUrl}/api/medals`;
+
 import MedalLegend from "./MedalLegend";
 import MedalPlot from "./MedalPlot";
 
-export default function MedalChart() {
+function MedalChart() {
+  const { colors, data } = useApiData('medals');
   return (
     <div className={`w-[100%]`}>
       <MedalLegend colors={colors} />
@@ -12,3 +16,5 @@ export default function MedalChart() {
     </div>
   );
 }
+
+export default withApiData(MedalChart, 'medals', medalsUrl);

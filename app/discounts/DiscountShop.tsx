@@ -1,9 +1,13 @@
 "use client";
+import { apiBaseUrl } from '@/lib/api';
+import { useApiData, withApiData } from '@/lib/api-client';
+import { calculateDiscountAmount, calculateSalePrice } from '@/lib/discounts';
+
+const productsUrl = `${apiBaseUrl}/api/products`;
 
 import appearance from "./appearance.module.css";
 import { useMemo, useState } from "react";
 import { ArrowRight, Search, Sparkles, Tag } from "lucide-react";
-import { calculateDiscountAmount, calculateSalePrice, products } from "../data/products";
 import type { ProductCategory } from "../data/types/products";
 import { ProductArt } from "./ProductArt";
 import ProductCard from "./components/ProductCard";
@@ -15,16 +19,17 @@ const logoClass = `flex items-center gap-2.5 ${appearance.textSm} ${appearance.f
 const kickerClass = `flex items-center gap-2 ${appearance.text06875rem} ${appearance.fontExtrabold} ${appearance.uppercase} ${appearance.tracking17em} ${appearance.textStoreAccent}`;
 const headingClass = `${appearance.fontSerif} ${appearance.fontNormal} ${appearance.tracking055em}`;
 
-export default function DiscountShop() {
+function DiscountShop() {
+  const products = useApiData('products');
   const [category, setCategory] = useState<(typeof categories)[number]>("All");
   const [query, setQuery] = useState("");
-  const [selectedId, setSelectedId] = useState(1);
-  const [customDiscount, setCustomDiscount] = useState(products[0].discount);
+  const [selectedId, setSelectedId] = useState(products[0]?.id ?? 0);
+  const [customDiscount, setCustomDiscount] = useState(products[0]?.discount ?? 0);
   const selected = products.find((product) => product.id === selectedId) ?? products[0];
   const visibleProducts = useMemo(() => products.filter((product) => {
     const matchesCategory = category === "All" || product.category === category;
     return matchesCategory && product.name.toLowerCase().includes(query.toLowerCase());
-  }), [category, query]);
+  }), [products, category, query]);
 
   const selectProduct = (id: number) => {
     const product = products.find((item) => item.id === id);
@@ -33,6 +38,8 @@ export default function DiscountShop() {
     setCustomDiscount(product.discount);
     document.getElementById("calculator")?.scrollIntoView({ behavior: "smooth", block: "center" });
   };
+
+  if (!selected) return <p role="status" className="p-8">No products available.</p>;
 
   return (
     <main className={`${colors.theme} min-h-screen ${appearance.bgStoreCanvas} ${appearance.fontSans} ${appearance.textStoreInk}`}>
@@ -89,3 +96,5 @@ export default function DiscountShop() {
     </main>
   );
 }
+
+export default withApiData(DiscountShop, 'products', productsUrl);

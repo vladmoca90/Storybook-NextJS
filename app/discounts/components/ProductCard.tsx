@@ -1,6 +1,6 @@
 import appearance from "../appearance.module.css";
 import { ArrowRight } from "lucide-react";
-import { calculateSalePrice } from "../../data/products";
+import { calculateSalePrice } from "@/lib/discounts";
 import type { Product } from "../../data/types/products";
 import { ProductArt } from "../ProductArt";
 

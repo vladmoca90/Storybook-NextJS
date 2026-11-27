@@ -13,8 +13,8 @@ export type Product = {
 };
 
 export type GothicSlide = {
-  title: ReactNode;
-  description: ReactNode;
+  title: string;
+  description: string;
   image: string;
   cta: string;
   filter: GothicCategory;

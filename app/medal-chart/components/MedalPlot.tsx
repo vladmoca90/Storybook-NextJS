@@ -2,7 +2,7 @@
 
 import * as d3 from "d3";
 import { useEffect, useRef, useState } from "react";
-import { medalTypes } from "@/app/data/medals";
+import { useApiData } from '@/lib/api-client';
 import type { MedalType, CountryMedals } from "@/app/data/types/medals";
 import styles from "../MedalChart.module.css";
 
@@ -20,6 +20,7 @@ interface MedalPlotProps {
 }
 
 export default function MedalPlot({ data, colors }: MedalPlotProps) {
+  const { medalTypes } = useApiData('medals');
   const containerRef = useRef<HTMLDivElement>(null);
   const svgRef = useRef<SVGSVGElement>(null);
   const [tooltip, setTooltip] = useState<Tooltip | null>(null);

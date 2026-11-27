@@ -40,61 +40,25 @@ export const products: Product[] = [
 ];
 export const slides: GothicSlide[] = [
   {
-    title: (
-      <>
-        For your
-        <br />
-        darker side.
-      </>
-    ),
+    title: "For your\ndarker side.",
     image: "/gothic/hero.png",
-    description: (
-      <>
-        Gothic souls. Midnight muses.
-        <br />
-        Dress like yourself, after dark.
-      </>
-    ),
+    description: "Gothic souls. Midnight muses.\nDress like yourself, after dark.",
     cta: "Explore the collection",
     filter: "All",
     className: "romance",
   },
   {
-    title: (
-      <>
-        A night to
-        <br />
-        be someone else.
-      </>
-    ),
+    title: "A night to\nbe someone else.",
     image: "/gothic/hero-halloween.png",
-    description: (
-      <>
-        Velvet capes. Wicked intentions.
-        <br />
-        Find your Halloween alter ego.
-      </>
-    ),
+    description: "Velvet capes. Wicked intentions.\nFind your Halloween alter ego.",
     cta: "Discover Halloween",
     filter: "Costumes",
     className: "halloween",
   },
   {
-    title: (
-      <>
-        The devil is
-        <br />
-        in the details.
-      </>
-    ),
+    title: "The devil is\nin the details.",
     image: "/gothic/hero-details.png",
-    description: (
-      <>
-        From midnight lace to statement boots.
-        <br />
-        Make the darkness your own.
-      </>
-    ),
+    description: "From midnight lace to statement boots.\nMake the darkness your own.",
     cta: "Shop accessories",
     filter: "Accessories",
     className: "details",

@@ -1,6 +1,9 @@
 "use client";
+import { apiBaseUrl } from '@/lib/api';
+import { useApiData, withApiData } from '@/lib/api-client';
+
+const peopleUrl = `${apiBaseUrl}/api/people`;
 import { useState } from "react";
-import { people } from "../data/people";
 import styles from "./people.module.css";
 import DirectoryHeader from "./components/DirectoryHeader";
 import PeopleIntro from "./components/PeopleIntro";
@@ -8,9 +11,11 @@ import PeopleTable from "./components/PeopleTable";
 import PeoplePagination from "./components/PeoplePagination";
 
 const PAGE_SIZE = 10;
-const pageCount = Math.ceil(people.length / PAGE_SIZE);
 
-export default function PeopleDirectory() {
+
+function PeopleDirectory() {
+  const people = useApiData('people');
+  const pageCount = Math.max(1, Math.ceil(people.length / PAGE_SIZE));
   const [page, setPage] = useState(1);
   const start = (page - 1) * PAGE_SIZE;
   const visiblePeople = people.slice(start, start + PAGE_SIZE);
@@ -37,3 +42,5 @@ export default function PeopleDirectory() {
     </div>
   );
 }
+
+export default withApiData(PeopleDirectory, 'people', peopleUrl);
